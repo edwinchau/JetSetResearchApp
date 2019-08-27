@@ -1,0 +1,65 @@
+{
+  "_from": "react-native-simple-survey",
+  "_id": "react-native-simple-survey@1.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-dMDjvmpajF1nYnk5OwWwE1nxJ8Q1qw/yPkVAcc82pW6zG8iNaKE7xIf20LDCgBZG+in0brlKJYJONcLEns/6qA==",
+  "_location": "/react-native-simple-survey",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react-native-simple-survey",
+    "name": "react-native-simple-survey",
+    "escapedName": "react-native-simple-survey",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-simple-survey/-/react-native-simple-survey-1.2.0.tgz",
+  "_shasum": "2f818d6694e18c15de81160c47964b13d9840be3",
+  "_spec": "react-native-simple-survey",
+  "_where": "/Users/edwin.chau/Desktop/TestSurvey",
+  "author": {
+    "name": "devlinb"
+  },
+  "bugs": {
+    "url": "https://github.com/devlinb/react-native-simple-survey/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "react-native-selection-group": "^1.1.2"
+  },
+  "deprecated": false,
+  "description": "Simple JSON powered surveys for React Native",
+  "devDependencies": {
+    "eslint": "^5.14.1"
+  },
+  "homepage": "https://github.com/devlinb/react-native-simple-survey#readme",
+  "keywords": [
+    "react-native",
+    "survey",
+    "forms",
+    "first-run-experience",
+    "FRE",
+    "JSON-survey"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "react-native-simple-survey",
+  "peerDependencies": {
+    "react": ">=15.0.0",
+    "react-native": ">=0.50.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devlinb/react-native-simple-survey.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.2.0"
+}
