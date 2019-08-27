@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import styles from './Styles'
+
 const GREEN = 'rgba(141,196,63,1)';
 const PURPLE = 'rgba(108,48,237,1)';
 const defaultAnswers = { favoriteDate: 'nothing', favoriteColor: 'nothing', favoriteNumber: '0', favoritePet: 'nothing' };
+
 export default class SurveyCompletedScreenExample extends Component {
     static navigationOptions = () => {
         return {
@@ -38,25 +41,3 @@ export default class SurveyCompletedScreenExample extends Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    background: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: PURPLE,
-    },
-    container: {
-        minWidth: '70%',
-        maxWidth: '90%',
-        alignItems: 'stretch',
-        justifyContent: 'center',
-        backgroundColor: 'white',
-        elevation: 20,
-        borderRadius: 10,
-    },
-    questionText: {
-        marginBottom: 20,
-        fontSize: 20
-    },
-});

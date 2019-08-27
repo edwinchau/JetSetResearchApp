@@ -2,8 +2,8 @@ import {
   createStackNavigator,
   createAppContainer
 } from 'react-navigation';
-import SurveyCompletedScreenExample from './app/screens/SurveyCompletedScreenExample';
-import SurveyScreenExample from './app/screens/SurveyScreenExample';
+import SurveyCompletedScreenExample from './app/screens/SurveyCompletedScreenExample/SurveyCompletedScreenExample';
+import SurveyScreenExample from './app/screens/SurveyScreenExample/SurveyScreenExample';
 
 const stackNav = createStackNavigator({
   Survey: {
