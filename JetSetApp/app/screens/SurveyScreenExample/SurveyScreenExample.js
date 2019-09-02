@@ -7,7 +7,8 @@ import DismissKeyboard from 'react-native-dismiss-keyboard';
 import moment from "moment";
 
 import styles from './Styles'
-import { survey } from './ExampleQuestions';
+
+import SurveyLocations from '../../resources/surveyQuestions/SurveyLocations';
 
 const GREEN = 'rgba(141,196,63,1)';
 const PURPLE = 'rgba(108,48,237,1)';
@@ -15,11 +16,7 @@ const PURPLE = 'rgba(108,48,237,1)';
 export default class SurveyScreenExample extends Component {
     static navigationOptions = () => {
         return {
-            headerStyle: {
-                backgroundColor: GREEN,
-                height: 40,
-                elevation: 5,
-            },
+            headerStyle: styles.headerStyle,
             headerTintColor: '#fff',
             headerTitle: 'Sample Survey',
             headerTitleStyle: {
@@ -194,15 +191,6 @@ export default class SurveyScreenExample extends Component {
         );
     }
 
-
-
-
-
-
-
-
-
-
     showDateTimePicker = () => {
         this.setState({ isDateTimePickerVisible: true });
     };
@@ -225,7 +213,7 @@ export default class SurveyScreenExample extends Component {
     dateTimeOnFocus = () => {
         DismissKeyboard();
         this.showDateTimePicker();
-    }
+    };
 
     renderDateBox = (onChange, placeholder, value) => {
         return (
@@ -250,7 +238,7 @@ export default class SurveyScreenExample extends Component {
 
             </>
         );
-    }
+    };
 
     renderTimeBox = (onChange, placeholder, value) => {
         return (
@@ -276,23 +264,23 @@ export default class SurveyScreenExample extends Component {
 
             </>
         );
-    }
+    };
 
     answerSubmit = (answer) => {
-        this.onAnswerSubmitted(answer)
+        this.onAnswerSubmitted(answer);
         this.setState({surveyDateTime: ''});
-    }
+    };
 
     render() {
         return (
             <View style={[styles.background, { backgroundColor: this.state.backgroundColor }]}>
                 <View style={styles.container}>
                     <SimpleSurvey
-                        survey={survey}
+                        survey={SurveyLocations[this.props.navigation.getParam('survey')]}
                         renderSelector={this.renderButton.bind(this)}
                         containerStyle={styles.surveyContainer}
                         selectionGroupContainerStyle={styles.selectionGroupContainer}
-                        navButtonContainerStyle={{ flexDirection: 'row', justifyContent: 'space-around' }}
+                        navButtonContainerStyle={styles.navButtonContainer}
                         renderPrevious={this.renderPreviousButton.bind(this)}
                         renderNext={this.renderNextButton.bind(this)}
                         renderFinished={this.renderFinishedButton.bind(this)}

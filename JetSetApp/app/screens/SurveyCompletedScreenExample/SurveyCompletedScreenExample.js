@@ -10,18 +10,14 @@ const defaultAnswers = { favoriteDate: 'nothing', favoriteColor: 'nothing', favo
 export default class SurveyCompletedScreenExample extends Component {
     static navigationOptions = () => {
         return {
-            headerStyle: {
-                backgroundColor: GREEN,
-                height: 40,
-                elevation: 5,
-            },
+            headerStyle: styles.headerStyle,
             headerTintColor: '#fff',
             headerTitle: 'Survey Results',
             headerTitleStyle: {
                 flex: 1,
             }
         };
-    }
+    };
 
     render() {
         const answers = this.props.navigation.getParam('surveyAnswers', defaultAnswers);

@@ -34,6 +34,10 @@ let styles = StyleSheet.create({
         backgroundColor: 'white',
         alignContent: 'flex-end',
     },
+    navButtonContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+    },
     navButtonText: {
         margin: 10,
         fontSize: 20,
@@ -47,7 +51,6 @@ let styles = StyleSheet.create({
         marginBottom: 10,
     },
     navigationButton: {
-
         minHeight: 40,
         backgroundColor: 'rgba(141,196,63,1)',
         padding: 0,
@@ -91,6 +94,11 @@ let styles = StyleSheet.create({
         marginBottom: 20,
         fontSize: 20,
         marginLeft: 10
+    },
+    headerStyle: {
+        backgroundColor: 'rgba(141,196,63,1)',
+        height: 40,
+        elevation: 5,
     },
 });
 
