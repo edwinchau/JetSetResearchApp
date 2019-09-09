@@ -2,6 +2,7 @@ import {
   createStackNavigator,
   createAppContainer
 } from 'react-navigation';
+
 import SurveyCompletedScreenExample from './app/screens/SurveyCompletedScreenExample/SurveyCompletedScreenExample';
 import SurveyScreenExample from './app/screens/SurveyScreenExample/SurveyScreenExample';
 import HomeScreenExample from "./app/screens/HomeScreenExample/HomeScreenExample";
