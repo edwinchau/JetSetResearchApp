@@ -1,7 +1,12 @@
-import {survey as ExampleQuestions} from './ExampleQuestions';
+import {survey as BreakfastQuestions} from './BreakfastQuestions';
+import {survey as LunchQuestions} from './LunchQuestions';
+import {survey as DinnerQuestions} from './DinnerQuestions';
 
 let SurveyLocations = {};
 
-SurveyLocations['ExampleQuestions'] = ExampleQuestions;
+SurveyLocations['BreakfastQuestions'] = BreakfastQuestions;
+SurveyLocations['LunchQuestions'] = LunchQuestions;
+SurveyLocations['DinnerQuestions'] = DinnerQuestions;
+
 
 export default SurveyLocations

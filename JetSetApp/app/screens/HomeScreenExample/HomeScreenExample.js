@@ -22,8 +22,18 @@ export default class HomeScreenExample extends Component {
             <View style={styles.background}>
                 <View style={styles.container}>
                     <Button
-                        onPress={() => navigate('Survey', { survey: 'ExampleQuestions' })}
-                        title="Example Survey"
+                        onPress={() => navigate('Survey', { survey: 'BreakfastQuestions' })}
+                        title="Breakfast"
+                    />
+
+                    <Button
+                        onPress={() => navigate('Survey', { survey: 'LunchQuestions' })}
+                        title="Lunch"
+                    />
+
+                    <Button
+                        onPress={() => navigate('Survey', { survey: 'DinnerQuestions' })}
+                        title="Dinner"
                     />
                 </View>
             </View>
