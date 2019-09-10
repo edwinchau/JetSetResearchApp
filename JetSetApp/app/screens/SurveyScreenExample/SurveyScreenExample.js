@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Text, TextInput, View } from 'react-native';
+import { ScrollView, Button, Text, TextInput, View } from 'react-native';
 import { SimpleSurvey } from '../../../react-native-simple-survey';
 import { COLORS } from '../../resources/validColors';
 import DateTimePicker from "react-native-modal-datetime-picker";
@@ -274,26 +274,28 @@ export default class SurveyScreenExample extends Component {
     render() {
         return (
             <View style={[styles.background, { backgroundColor: this.state.backgroundColor }]}>
-                <View style={styles.container}>
-                    <SimpleSurvey
-                        survey={SurveyLocations[this.props.navigation.getParam('survey')]}
-                        renderSelector={this.renderButton.bind(this)}
-                        containerStyle={styles.surveyContainer}
-                        selectionGroupContainerStyle={styles.selectionGroupContainer}
-                        navButtonContainerStyle={styles.navButtonContainer}
-                        renderPrevious={this.renderPreviousButton.bind(this)}
-                        renderNext={this.renderNextButton.bind(this)}
-                        renderFinished={this.renderFinishedButton.bind(this)}
-                        renderQuestionText={this.renderQuestionText}
-                        onSurveyFinished={(answers) => this.onSurveyFinished(answers)}
-                        onAnswerSubmitted={(answer) => this.answerSubmit(answer)}
-                        renderTextInput={this.renderTextBox}
-                        renderDateInput={this.renderDateBox}
-                        renderTimeInput={this.renderTimeBox}
-                        renderNumericInput={this.renderNumericInput}
-                        renderInfo={this.renderInfoText}
-                    />
-                </View>
+                <ScrollView contentContainerStyle={{flexGrow: 1}} keyboardShouldPersistTaps='handled'>
+                    <View style={styles.container}>
+                        <SimpleSurvey
+                            survey={SurveyLocations[this.props.navigation.getParam('survey')]}
+                            renderSelector={this.renderButton.bind(this)}
+                            containerStyle={styles.surveyContainer}
+                            selectionGroupContainerStyle={styles.selectionGroupContainer}
+                            navButtonContainerStyle={styles.navButtonContainer}
+                            renderPrevious={this.renderPreviousButton.bind(this)}
+                            renderNext={this.renderNextButton.bind(this)}
+                            renderFinished={this.renderFinishedButton.bind(this)}
+                            renderQuestionText={this.renderQuestionText}
+                            onSurveyFinished={(answers) => this.onSurveyFinished(answers)}
+                            onAnswerSubmitted={(answer) => this.answerSubmit(answer)}
+                            renderTextInput={this.renderTextBox}
+                            renderDateInput={this.renderDateBox}
+                            renderTimeInput={this.renderTimeBox}
+                            renderNumericInput={this.renderNumericInput}
+                            renderInfo={this.renderInfoText}
+                        />
+                    </View>
+                </ScrollView>
             </View>
         );
     }

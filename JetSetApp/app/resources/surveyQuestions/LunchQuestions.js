@@ -30,7 +30,7 @@ export const survey = [
         placeholderText: 'Enter nap time',
     },
     {
-        questionType: 'TextInput',
+        questionType: 'NumericInput',
         questionText: 'How long was your nap in minutes',
         questionId: 'napDuration',
         optional: true,
