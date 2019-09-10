@@ -1,106 +1,113 @@
 export const survey = [
     {
-        questionType: 'Info',
-        questionText: 'Welcome to the React Native Simple Survey Example app! Tap next to continue'
-    },
-    {
-        questionType: 'DateInput',
-        questionText: 'Simple Survey supports date input',
-        questionId: 'favoriteDate',
-        placeholderText: 'Tell me your favorite date!',
-    },
-    {
         questionType: 'TimeInput',
-        questionText: 'Simple Survey supports time input',
-        questionId: 'favoriteTime',
+        questionText: 'What time did you have lunch',
+        questionId: 'mealTime',
         optional: true,
-        placeholderText: 'Tell me your favorite time!',
-    },
-    {
-        questionType: 'TextInput',
-        questionText: 'Simple Survey supports free form text input',
-        questionId: 'favoriteColor',
-        placeholderText: 'Tell me your favorite color!',
-    },
-    {
-        questionType: 'NumericInput',
-        questionText: 'It also supports numeric input. Enter your favorite number here!',
-        questionId: 'favoriteNumber',
-        optional: true,
-        placeholderText: '',
+        placeholderText: 'Enter meal time',
     },
     {
         questionType: 'SelectionGroup',
         questionText:
-            'Naturally Simple Survey also has multiple choice questions. What is your favorite pet?',
-        questionId: 'favoritePet',
+            'Have you had a nap since previous survey',
+        questionId: 'napTaken',
         options: [
             {
-                optionText: 'Dogs',
-                value: 'dog'
+                optionText: 'Yes',
+                value: 'YesNap'
             },
             {
-                optionText: 'Cats',
-                value: 'cat'
+                optionText: 'No',
+                value: 'NoNap'
+            }
+          ]
+        },
+    {
+        questionType: 'TimeInput',
+        questionText: 'What time did you start the nap?',
+        questionId: 'napTime',
+        optional: true,
+        placeholderText: 'Enter nap time',
+    },
+    {
+        questionType: 'TextInput',
+        questionText: 'How long was your nap in minutes',
+        questionId: 'napDuration',
+        optional: true,
+        placeholderText: 'Number of minutes',
+    },
+    {
+        questionType: 'TextInput',
+        questionText: 'How many caffeinated beverages did you have with the meal?',
+        questionId: 'numberCaffeine',
+        optional: true,
+        placeholderText: 'Number of beverages',
+    },
+    {
+        questionType: 'SelectionGroup',
+        questionText:
+            'Please select the number that represents your sleepiness level during the last five minutes',
+        questionId: 'kssResult',
+        options: [
+            {
+                optionText: '1. Extremely alert',
+                value: '1'
             },
             {
-                optionText: 'Ferrets',
-                value: 'ferret'
+                optionText: '2. Very alert',
+                value: '2'
             },
             {
-                optionText: 'Snakes',
-                value: 'snake'
+                optionText: '3. Alert',
+                value: '3'
             },
             {
-                optionText: 'Guinea pigs',
-                value: 'guinea'
+                optionText: '4. Rather alert ',
+                value: '4'
+            },
+            {
+                optionText: '5. Neither alert nor sleepy ',
+                value: '5'
+            },
+            {
+                optionText: '6. Some signs of sleepiness ',
+                value: '6'
             }
         ]
     },
     {
-        questionType: 'MultipleSelectionGroup',
+        questionType: 'SelectionGroup',
         questionText:
-            'Select your two favorite foods!',
-        questionId: 'favoriteFoods',
-        questionSettings: {
-            maxMultiSelect: 3,
-            minMultiSelect: 2,
-        },
+            'How much jetlag do you have?',
+        questionId: 'jetlagResult',
         options: [
             {
-                optionText: 'Sticky rice dumplings',
-                value: 'sticky rice dumplings'
+                optionText: '0 - Insignificant jetlag',
+                value: '0'
             },
             {
-                optionText: 'Pad Thai',
-                value: 'pad thai'
+                optionText: '1',
+                value: '1'
             },
             {
-                optionText: 'Steak and Eggs',
-                value: 'steak and eggs'
+                optionText: '2',
+                value: '2'
             },
             {
-                optionText: 'Tofu',
-                value: 'tofu'
+                optionText: '3',
+                value: '3'
             },
             {
-                optionText: 'Ice cream!',
-                value: 'ice crem'
+                optionText: '4',
+                value: '4'
             },
             {
-                optionText: 'Injera',
-                value: 'injera'
-            },
-            {
-                optionText: 'Ice cream!',
-                value: 'ice cream'
-            },
-            {
-                optionText: 'Tamales',
-                value: 'tamales'
+                optionText: '5 - Very bad jetlag',
+                value: '5'
             }
         ]
     },
+
     {
         questionType: 'Info',
         questionText: 'That is all for the demo, tap finish to see your results!'

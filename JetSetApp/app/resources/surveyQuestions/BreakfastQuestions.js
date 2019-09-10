@@ -1,28 +1,5 @@
 export const survey = [
     {
-        questionType: 'Info',
-        questionText: 'Welcome to the React Native Simple Survey Example app! Tap next to continue'
-    },
-    {
-        questionType: 'DateInput',
-        questionText: 'What is your flight date!',
-        questionId: 'flightDate',
-        placeholderText: 'Enter your flight date!',
-    },
-    {
-        questionType: 'TextInput',
-        questionText: 'What is your flight destination',
-        questionId: 'flightDestination',
-        placeholderText: 'Enter your flight destination!',
-    },
-    {
-        questionType: 'NumericInput',
-        questionText: 'What is your age!',
-        questionId: 'paticipantAge',
-        optional: true,
-        placeholderText: 'Enter your age',
-    },
-    {
         questionType: 'SelectionGroup',
         questionText:
             'Please select your flight',
@@ -37,6 +14,50 @@ export const survey = [
                 value: 'LHR'
             }
         ]
+    },
+    {
+        questionType: 'TimeInput',
+        questionText: 'What time did you have breakfast',
+        questionId: 'mealTime',
+        optional: true,
+        placeholderText: 'Enter meal time',
+    },
+    {
+        questionType: 'SelectionGroup',
+        questionText:
+            'Have you had a nap since previous survey',
+        questionId: 'napTaken',
+        options: [
+            {
+                optionText: 'Yes',
+                value: 'YesNap'
+            },
+            {
+                optionText: 'No',
+                value: 'NoNap'
+            }
+          ]
+        },
+    {
+        questionType: 'TimeInput',
+        questionText: 'What time did you start the nap?',
+        questionId: 'napTime',
+        optional: true,
+        placeholderText: 'Enter nap time',
+    },
+    {
+        questionType: 'TextInput',
+        questionText: 'How long was your nap in minutes',
+        questionId: 'napDuration',
+        optional: true,
+        placeholderText: 'Number of minutes',
+    },
+    {
+        questionType: 'TextInput',
+        questionText: 'How many caffeinated beverages did you have with the meal?',
+        questionId: 'numberCaffeine',
+        optional: true,
+        placeholderText: 'Number of beverages',
     },
     {
         questionType: 'SelectionGroup',
@@ -102,41 +123,7 @@ export const survey = [
             }
         ]
     },
-    {
-        questionType: 'MultipleSelectionGroup',
-        questionText:
-            'What did you have?',
-        questionId: 'mealsEaten',
-        questionSettings: {
-            maxMultiSelect: 4,
-            minMultiSelect: 1,
-        },
-        options: [
-            {
-                optionText: 'Breakfast',
-                value: 'breakfast'
-            },
-            {
-                optionText: 'Lunch',
-                value: 'lunch'
-            },
-            {
-                optionText: 'Dinner',
-                value: 'dinner'
-            },
-            {
-                optionText: 'Snacks',
-                value: 'snack'
-            }
-        ]
-    },
-    {
-        questionType: 'TimeInput',
-        questionText: 'What time did you eat your food',
-        questionId: 'mealTime',
-        optional: true,
-        placeholderText: 'Enter meal time',
-    },
+
     {
         questionType: 'Info',
         questionText: 'That is all for the demo, tap finish to see your results!'
