@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    StyleSheet,
+    StyleSheet, 
     Text,
     View,
     TouchableOpacity,
@@ -11,43 +11,48 @@ export default class SaveData extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <TouchableOpacity onPress={this.SaveData}>
+                <TouchableOpacity onPress={this.saveData}>
                     <Text>Click me to save data</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={this.displayData}>
-                    <Text>Click me to display data</Text>
+                    <Text>Click me to view data</Text>
                 </TouchableOpacity>
-
             </View>
         );
     }
 
     saveData() {
-        Let user = 'John Doe';
-        AsyncStorage.setItem('user', user);
+        // npm install react-native-fs --save
+        // var RNFS = require('react-native-fs');
+        // var path = RNFS.DocumentDirectoryPath + '/test.txt';
+
+        object = {
+            name: "John Doe",
+            email: "test@gmail.com",
+            city: "new city"
+        }
+        AsyncStorage.setItem('user', JSON.stringify(object));
     }
 
     displayData = async () => {
         try {
-            Let user = await AsyncStorage.getItem('user');
-            alert(user);
-        }
+            user = await AsyncStorage.getItem('user');
+            parsed = JSON.parse(user)
+            alert("User is " + user)
+        } 
         catch(error) {
-            alert(error);
+            alert(error)
         }
     }
+    // udshfiusdiuydfiu
 }
 
-// import React, { Component } from 'react';
-// import { Text, View } from 'react-native';
-
-// export default class SaveData extends Component {
-//   render() {
-//     return (
-//       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-//         <Text>Hello, world!</Text>
-//       </View>
-//     );
-//   }
-// }
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    }
+})
