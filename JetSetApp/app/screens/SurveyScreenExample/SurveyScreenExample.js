@@ -248,6 +248,7 @@ export default class SurveyScreenExample extends Component {
                     onConfirm={ this.handleTimePicked }
                     onCancel={ this.hideDateTimePicker }
                     mode={ 'time' }
+                    titleIOS={'Pick a time'}
                 />
 
                 <TextInput
