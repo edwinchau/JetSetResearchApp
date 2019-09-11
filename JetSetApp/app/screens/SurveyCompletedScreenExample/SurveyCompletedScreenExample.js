@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import styles from './Styles'
+import { SurveyAnswersParse } from '../../components/SurveyAnswersParse/SurveyAnswersParse'
 
 const GREEN = 'rgba(141,196,63,1)';
 const PURPLE = 'rgba(108,48,237,1)';
@@ -21,6 +22,9 @@ export default class SurveyCompletedScreenExample extends Component {
 
     render() {
         const answers = this.props.navigation.getParam('surveyAnswers', defaultAnswers);
+        const surveyQuestions = this.props.navigation.getParam('surveyQuestions');
+
+        SurveyAnswersParse(answers, surveyQuestions);
 
         return (
             <View style={styles.background}>
