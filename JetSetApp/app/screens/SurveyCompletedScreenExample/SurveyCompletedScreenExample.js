@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import styles from './Styles'
-import { SurveyAnswersParse } from '../../components/SurveyAnswersParse/SurveyAnswersParse'
+import { SurveyAnswersParse } from '../../resources/SurveyAnswersParse/SurveyAnswersParse'
 
 const GREEN = 'rgba(141,196,63,1)';
 const PURPLE = 'rgba(108,48,237,1)';
