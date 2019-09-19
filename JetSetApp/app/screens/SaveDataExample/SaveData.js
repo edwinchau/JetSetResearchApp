@@ -1,86 +1,157 @@
 import React, { Component } from 'react'
 import { View, Text, TouchableOpacity, TextInput, StyleSheet } from 'react-native'
 import * as FileSystem from 'expo-file-system';
-import { HeaderStyleInterpolator } from 'react-navigation';
 
+/**
+ * This class primarily serves to handle files within the phone system so that results can be stored 
+ * This class extends the Component class from the 'react' library and is only done for debugging purposes
+ */
 class SaveData extends Component {
+
+    // Debugger variables 
     state = {
         Content: '',
         Filename: ''
     }
+
+    /**
+     * Set the value of content to the text
+     * @param text the new value of Content 
+     * @returns Nothing  
+     */
     handleContent = (text) => {
         this.setState({ Content: text })
     }
+
+    /**
+     * Set the value of content to the text
+     * @param text the new value of Filename 
+     * @returns Nothing  
+     */    
     handleFilename = (text) => {
         this.setState({ Filename: text })
     }
 
+    /**
+     * Given an existing file name in the system, will append some text to that file
+     * @param text 
+     * @param filename
+     * @returns true if the append was a success otherwise false 
+     */
     appendToFile = (text, filename) => {
+        
+        // Get the file location 
         const fileLocation = FileSystem.documentDirectory + filename;
+        
+        // Get the file info
         const fileInfo = FileSystem.getInfoAsync(fileLocation);
 
         fileInfo.then(
             function(result) {
                 let exists = result.exists;
                 if (exists == true) {
+
+                    // Get the current value 
                     const currentValue = FileSystem.readAsStringAsync(fileLocation);
 
                     currentValue.then(
+
+                        // If file is able to be read 
                         function(result) {
                             let newValue = result + text 
                             FileSystem.writeAsStringAsync(fileLocation, newValue);   
                             console.log("Append to File: Success");
+                            return true;
                         },
+
+                        // File unable to be read
                         function(err) {
-                            alert(err);
+                            console.log(err);
                         }
                     )
                 } else {
-                    alert("Unable to find the file");
-                    console.log(fileLocation);
+                    console.log("Unable to find the file: " + fileLocation);
                 }
             }, 
             function(err) {
                 console.log(err);
             } 
         )
+        return false; 
     }
 
+    /**
+     * Given a filename, will save some text to that file with the name of filename. 
+     * If a file exists, then the file will be deleted and rewritten with only the text 
+     * 
+     * @param text 
+     * @param filename
+     * @returns true if saving to the file was a success otherwise false 
+     */
     saveNewFile = (text, filename) => {
+        
+        // Get file location 
         const fileLocation = FileSystem.documentDirectory + filename;
+        
+        // Get file info  
         const fileInfo = FileSystem.getInfoAsync(fileLocation);
         fileInfo.then(
             function(result) {
+
+                // Write to the file 
                 const confirmation = FileSystem.writeAsStringAsync(fileLocation, text);
                 confirmation.then(
+
+                    // Confirmation success 
                     function(result) {
                         console.log("Saved new file called "+ filename);
+                        return true;
                     },
+
+                    // Writing to file failed
                     function(err) {
                         console.log("Save new file error: " + err);
                     }
                 )
             }, function(err) {
-                console.log(err); // Error: "It broke"
+                console.log(err); 
             }
         );
+        return false;
     }
 
+    /**
+     * Given an existing filename, the function will delete that file 
+     * 
+     * @param filename the filename to be deleted 
+     * @returns true if the deletion was a success, false otherwise 
+     */
     deleteFile = (filename) => {
+
+        // Get the file directory 
         const fileDirectory = FileSystem.documentDirectory + filename;
+
+        // Get the file information 
         const fileInfo = FileSystem.getInfoAsync(fileDirectory);
 
         fileInfo.then(
             function (result) {
                 let exists = result.exists;
                 if (exists == true) {
+                    
+                    // Delete the file 
                     const deleteConfirm = FileSystem.deleteAsync(fileDirectory);
                     deleteConfirm.then(
+
+                        // File deleted 
                         function(result) {
-                            alert(filename + " has been deleted");
+                            console.log(filename + " has been deleted");
+                            return true;
                         }, 
+
+                        // File failed to delete 
                         function(err) {
-                            alert(filename + " could not be deleted (perhaps it already has?): " + err);
+                            console.log(err);
                         }
                     )
 
@@ -90,48 +161,79 @@ class SaveData extends Component {
                 console.log("File fetch error: " + err);
             }
         )
-
+        return false;
     }
 
+    /**
+     * Given an existing filename, the function will return the value of those files
+     * 
+     * @param filename 
+     * @returns the contents of the file, otherwise will return false if failed to get the file
+     */
     viewFile = (filename) => {
+
+        // Get file location 
         const fileLocation = FileSystem.documentDirectory + filename;
+        
+        // Get file information 
         const fileInfo = FileSystem.getInfoAsync(fileLocation);
         
         fileInfo.then(
             function(result) {
                 let exists = result.exists;
                 if (exists == true) {
+
+                    // Get the text from the file location 
                     const value = FileSystem.readAsStringAsync(fileLocation);
                     value.then(
+
+                        // Return the text 
                         function(result) {
-                            alert(result);
+                            console.log(result);
                             return result;
                         }, 
+
+                        // Failed to retrieve the text 
                         function(err) {
-                            alert("File " + filename + " does not exist: " + err);
+                            console.log(err);
                         }
                     )
                 } else {
-                    alert("File: " + filename + " does not exist");
+                    // File does not exist 
+                    console.log("File: " + filename + " does not exist");
                 }
             }
         )
+        return false;
     }
 
+    /**
+     * Will return and display all files that exist on the phone's app directory
+     * 
+     * @param Nothing
+     * @returns the list of directory, False if an error occurred  
+     */
     displayAllFiles = () => {
+        
+        // Get all the contents in the root directory of this app's file  
         const directory = FileSystem.readDirectoryAsync(FileSystem.documentDirectory);
         directory.then(
+            // Return the app's file 
             function(result) {
-                alert(result);
                 console.log(result);
                 return result;
             }, 
+            // Failed to extract files from the root directory 
             function(err){
-                alert(err);
+                console.log(err);
             }
-        ) 
+        )
+        return false; 
     }
 
+    /**
+     * The function which renders the debugging screen for this class 
+     */
     render() {
         return (
             <View style={styles.container}>
@@ -184,8 +286,10 @@ class SaveData extends Component {
         )
     }
 }
+
 export default SaveData
 
+// Stylesheet design for the debugging screens 
 const styles = StyleSheet.create({
     container: {
         paddingTop: 23,
