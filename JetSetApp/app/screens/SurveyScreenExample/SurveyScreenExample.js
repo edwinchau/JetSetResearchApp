@@ -66,7 +66,9 @@ export default class SurveyScreenExample extends Component {
         const answersAsObj = {};
         for (const elem of infoQuestionsRemoved) { answersAsObj[elem.questionId] = elem.value; }
 
-        this.props.navigation.navigate('SurveyCompleted', { surveyAnswers: answersAsObj, surveyQuestions: SurveyLocations[this.props.navigation.getParam('survey')] });
+        this.props.navigation.navigate('SurveyCompleted', { surveyAnswers: answersAsObj,
+            surveyQuestions: SurveyLocations[this.props.navigation.getParam('survey')],
+            surveyName: this.props.navigation.getParam('survey')});
     }
 
     /**
