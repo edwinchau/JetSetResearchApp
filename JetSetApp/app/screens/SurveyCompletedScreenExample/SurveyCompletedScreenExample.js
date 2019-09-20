@@ -17,7 +17,8 @@ export default class SurveyCompletedScreenExample extends Component {
             headerTitleStyle: {
                 flex: 1,
             },
-            headerLeft: null
+            headerLeft: null,
+            gesturesEnabled: false
         };
     };
 
