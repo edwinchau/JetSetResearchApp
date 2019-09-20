@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {Button, StyleSheet, Text, View} from 'react-native';
 
 import styles from './Styles'
 import { SurveyAnswersParse } from '../../resources/SurveyAnswersParse/SurveyAnswersParse'
@@ -16,13 +16,17 @@ export default class SurveyCompletedScreenExample extends Component {
             headerTitle: 'Survey Results',
             headerTitleStyle: {
                 flex: 1,
-            }
+            },
+            headerLeft: null,
+            gesturesEnabled: false
         };
     };
 
     render() {
+        const { navigate } = this.props.navigation;
         const answers = this.props.navigation.getParam('surveyAnswers', defaultAnswers);
         const surveyQuestions = this.props.navigation.getParam('surveyQuestions');
+        console.log(this.props.navigation.getParam('surveyName'));
 
         SurveyAnswersParse(answers, surveyQuestions);
 
@@ -36,7 +40,12 @@ export default class SurveyCompletedScreenExample extends Component {
                     {/*<Text style={styles.questionText}>Your favorite pet: {answers.favoritePet.value}</Text>*/}
                     {/*<Text style={styles.questionText}>Your favorite foods: {answers.favoriteFoods[0].value} and {answers.favoriteFoods[1].value}</Text>*/}
                     <Text>Raw JSON: {JSON.stringify(this.props.navigation.getParam('surveyAnswers', {}))}</Text>
+                    <Button
+                        onPress={() => navigate('Home')}
+                        title="Back Home"
+                    />
                 </View>
+
             </View>
         );
     }

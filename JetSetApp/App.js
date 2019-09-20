@@ -1,14 +1,15 @@
 import {
-  createStackNavigator,
-  createAppContainer
+    createStackNavigator,
+    createSwitchNavigator,
+    createAppContainer
 } from 'react-navigation';
 
 import SurveyCompletedScreenExample from './app/screens/SurveyCompletedScreenExample/SurveyCompletedScreenExample';
 import SurveyScreenExample from './app/screens/SurveyScreenExample/SurveyScreenExample';
 import HomeScreenExample from "./app/screens/HomeScreenExample/HomeScreenExample";
-import SaveData from "./app/screens/SaveDataExample/SaveData";
+import NewUser from "./app/screens/NewUser/NewUser";
 
-const stackNav = createStackNavigator(
+const appStack = createStackNavigator(
     {
       Home: HomeScreenExample,
       Survey: SurveyScreenExample,
@@ -19,9 +20,28 @@ const stackNav = createStackNavigator(
     }
 );
 
+const newUserStack = createStackNavigator(
+    {
+        NewUser: NewUser,
+        Survey: SurveyScreenExample,
+        SurveyCompleted: SurveyCompletedScreenExample,
+    },
+    {
+        initialRouteName: 'NewUser',
+    }
+);
 
-const AppContainer = createAppContainer(stackNav);
+const sections = createSwitchNavigator(
+    {
+        NewUserStack: newUserStack,
+        AppStack: appStack,
+    },
+    {
+        initialRouteName: 'NewUserStack',
+    }
+
+);
+
+const AppContainer = createAppContainer(sections);
 
 export default AppContainer;
-
-// export default SaveData;

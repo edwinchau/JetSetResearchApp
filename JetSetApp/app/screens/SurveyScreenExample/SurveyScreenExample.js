@@ -14,11 +14,11 @@ const GREEN = 'rgba(141,196,63,1)';
 const PURPLE = 'rgba(108,48,237,1)';
 
 export default class SurveyScreenExample extends Component {
-    static navigationOptions = () => {
+    static navigationOptions = ({ navigation }) => {
         return {
             headerStyle: styles.headerStyle,
             headerTintColor: '#fff',
-            headerTitle: 'Sample Survey',
+            headerTitle: navigation.getParam('survey'),
             headerTitleStyle: {
                 flex: 1,
             }
@@ -66,7 +66,9 @@ export default class SurveyScreenExample extends Component {
         const answersAsObj = {};
         for (const elem of infoQuestionsRemoved) { answersAsObj[elem.questionId] = elem.value; }
 
-        this.props.navigation.navigate('SurveyCompleted', { surveyAnswers: answersAsObj, surveyQuestions: SurveyLocations[this.props.navigation.getParam('survey')] });
+        this.props.navigation.navigate('SurveyCompleted', { surveyAnswers: answersAsObj,
+            surveyQuestions: SurveyLocations[this.props.navigation.getParam('survey')],
+            surveyName: this.props.navigation.getParam('survey')});
     }
 
     /**
