@@ -170,41 +170,26 @@ class SaveData extends Component {
      * @param filename
      * @returns the contents of the file, otherwise will return false if failed to get the file
      */
-    static viewFile = (filename) => {
+    static viewFile = async (filename) => {
 
         // Get file location
         const fileLocation = FileSystem.documentDirectory + filename;
 
-        // Get file information
-        const fileInfo = FileSystem.getInfoAsync(fileLocation);
+        // Get the text from the file location
+        const fileData = await FileSystem.readAsStringAsync(fileLocation).then(
+            // Return the text
+            function (result) {
+                return result;
+            },
 
-        fileInfo.then(
-            function(result) {
-                let exists = result.exists;
-                if (exists == true) {
-
-                    // Get the text from the file location
-                    const value = FileSystem.readAsStringAsync(fileLocation);
-                    value.then(
-
-                        // Return the text
-                        function(result) {
-                            console.log(result);
-                            return result;
-                        },
-
-                        // Failed to retrieve the text
-                        function(err) {
-                            console.log(err);
-                        }
-                    )
-                } else {
-                    // File does not exist
-                    console.log("File: " + filename + " does not exist");
-                }
+            // Failed to retrieve the text
+            function (err) {
+                console.log(err);
+                return false;
             }
         )
-        return false;
+
+        return fileData
     }
 
     /**

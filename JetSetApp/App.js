@@ -8,6 +8,7 @@ import SurveyCompletedScreenExample from './app/screens/SurveyCompletedScreenExa
 import SurveyScreenExample from './app/screens/SurveyScreenExample/SurveyScreenExample';
 import HomeScreenExample from "./app/screens/HomeScreenExample/HomeScreenExample";
 import NewUser from "./app/screens/NewUser/NewUser";
+import Authentication from "./app/screens/Authentication/Authentication";
 
 const appStack = createStackNavigator(
     {
@@ -35,9 +36,10 @@ const sections = createSwitchNavigator(
     {
         NewUserStack: newUserStack,
         AppStack: appStack,
+        Authentication: Authentication,
     },
     {
-        initialRouteName: 'NewUserStack',
+        initialRouteName: 'Authentication',
     }
 
 );

@@ -8,7 +8,7 @@ import moment from "moment";
 
 import styles from './Styles'
 
-import SurveyLocations from '../../resources/surveyQuestions/SurveyLocations';
+import SurveyLocations from '../../resources/SurveyQuestions/SurveyLocations';
 
 const GREEN = 'rgba(141,196,63,1)';
 const PURPLE = 'rgba(108,48,237,1)';
