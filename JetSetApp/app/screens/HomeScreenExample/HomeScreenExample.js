@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, Button} from 'react-native';
 
 import styles from './Styles'
+import SaveData from '../../resources/SaveData/SaveData';
 
 export default class HomeScreenExample extends Component {
     static navigationOptions = () => {
@@ -34,6 +35,18 @@ export default class HomeScreenExample extends Component {
                     <Button
                         onPress={() => navigate('Survey', { survey: 'DinnerQuestions' })}
                         title="Dinner"
+                    />
+
+                    <Text>Testing Features</Text>
+
+                    <Button
+                        onPress={() => SaveData.displayAllFiles()}
+                        title="View Files"
+                    />
+
+                    <Button
+                        onPress={() => SaveData.deleteFile("NewUserQuestions.json")}
+                        title="Delete User Save"
                     />
                 </View>
             </View>

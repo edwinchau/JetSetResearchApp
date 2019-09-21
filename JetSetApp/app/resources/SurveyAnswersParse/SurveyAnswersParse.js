@@ -38,8 +38,5 @@ export const SurveyAnswersParse = (surveyAnswers, surveyQuestions) => {
 
     csvString = csvString.slice(0,-1);
 
-    console.log(questionList);
-    console.log(csvString);
-
     return csvString;
 }

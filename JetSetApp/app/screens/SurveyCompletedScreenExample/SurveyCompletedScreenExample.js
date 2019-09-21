@@ -3,6 +3,7 @@ import {Button, StyleSheet, Text, View} from 'react-native';
 
 import styles from './Styles'
 import { SurveyAnswersParse } from '../../resources/SurveyAnswersParse/SurveyAnswersParse'
+import SaveData from '../../resources/SaveData/SaveData';
 
 const GREEN = 'rgba(141,196,63,1)';
 const PURPLE = 'rgba(108,48,237,1)';
@@ -24,11 +25,25 @@ export default class SurveyCompletedScreenExample extends Component {
 
     render() {
         const { navigate } = this.props.navigation;
-        const answers = this.props.navigation.getParam('surveyAnswers', defaultAnswers);
+        let answers = this.props.navigation.getParam('surveyAnswers');
         const surveyQuestions = this.props.navigation.getParam('surveyQuestions');
         console.log(this.props.navigation.getParam('surveyName'));
 
-        SurveyAnswersParse(answers, surveyQuestions);
+        let fileSaveLocation = this.props.navigation.getParam('surveyName');
+
+        /**
+         * Saves the user data as a JSON instead of a CSV. If there are any files that need to be saved a saved as a JSON
+         * include it in the if statement.
+         */
+        if (this.props.navigation.getParam('surveyName') === "NewUserQuestions") {
+            fileSaveLocation = fileSaveLocation + ".json";
+            answers = JSON.stringify(answers);
+        } else {
+            fileSaveLocation = fileSaveLocation + ".csv";
+            answers = SurveyAnswersParse(answers, surveyQuestions);
+        }
+
+        SaveData.saveNewFile(answers, fileSaveLocation);
 
         return (
             <View style={styles.background}>
