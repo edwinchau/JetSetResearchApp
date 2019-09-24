@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Button} from 'react-native';
 
 import styles from './Styles'
 import SaveData from '../../resources/SaveData/SaveData';
+import SendData from '../../resources/SendData/SendData';
 
 export default class HomeScreenExample extends Component {
     static navigationOptions = () => {
@@ -36,7 +37,14 @@ export default class HomeScreenExample extends Component {
                         onPress={() => navigate('Survey', { survey: 'DinnerQuestions' })}
                         title="Dinner"
                     />
-
+                </View>
+                <View style={styles.container}>
+                    <Button
+                        onPress={() => SendData.sendDataEmail()}
+                        title="Send Data"
+                    />
+                </View>
+                <View style={styles.container}>
                     <Text>Testing Features</Text>
 
                     <Button

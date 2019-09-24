@@ -38,12 +38,12 @@ export default class SurveyCompletedScreenExample extends Component {
         if (this.props.navigation.getParam('surveyName') === "NewUserQuestions") {
             fileSaveLocation = fileSaveLocation + ".json";
             answers = JSON.stringify(answers);
+
+            SaveData.saveNewFile(answers, fileSaveLocation);
         } else {
             fileSaveLocation = fileSaveLocation + ".csv";
             answers = SurveyAnswersParse(answers, surveyQuestions);
         }
-
-        SaveData.saveNewFile(answers, fileSaveLocation);
 
         return (
             <View style={styles.background}>
