@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "babel-preset-expo": "^6.0.0",
+    "jest": "^24.9.0",
     "prop-types": "^15.7.2",
     "react-native-dismiss-keyboard": "^1.0.0",
     "react-native-modal-datetime-picker": "^7.5.0",
