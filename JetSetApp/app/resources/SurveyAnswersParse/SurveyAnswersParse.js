@@ -40,3 +40,19 @@ export const SurveyAnswersParse = (surveyAnswers, surveyQuestions) => {
 
     return csvString;
 }
+
+export const SurveyQuestions = (surveyQuestions) => {
+
+    let csvString = "";
+
+    // Obtaining a list of survey questions
+    surveyQuestions.forEach(function(question) {
+        if (question.questionId !== undefined) {
+            csvString = csvString + question.questionId + ",";
+        }
+    });
+
+    csvString = csvString.slice(0,-1);
+
+    return csvString;
+}

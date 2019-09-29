@@ -278,7 +278,7 @@ export default class SurveyScreenExample extends Component {
         return (
             <View style={[styles.background, { backgroundColor: this.state.backgroundColor }]}>
                 <ScrollView contentContainerStyle={{flexGrow: 1}} keyboardShouldPersistTaps='handled'>
-                    <View style={styles.container}>
+
                         <SimpleSurvey
                             survey={SurveyLocations[this.props.navigation.getParam('survey')]}
                             renderSelector={this.renderButton.bind(this)}
@@ -297,7 +297,7 @@ export default class SurveyScreenExample extends Component {
                             renderNumericInput={this.renderNumericInput}
                             renderInfo={this.renderInfoText}
                         />
-                    </View>
+
                 </ScrollView>
             </View>
         );

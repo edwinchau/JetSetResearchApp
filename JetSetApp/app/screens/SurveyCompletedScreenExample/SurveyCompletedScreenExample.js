@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
 
 import styles from './Styles'
-import { SurveyAnswersParse } from '../../resources/SurveyAnswersParse/SurveyAnswersParse'
+import { SurveyAnswersParse, SurveyQuestions } from '../../resources/SurveyAnswersParse/SurveyAnswersParse'
 import SaveData from '../../resources/SaveData/SaveData';
+import * as FileSystem from "expo-file-system";
 
 const GREEN = 'rgba(141,196,63,1)';
 const PURPLE = 'rgba(108,48,237,1)';
@@ -22,6 +23,7 @@ export default class SurveyCompletedScreenExample extends Component {
             gesturesEnabled: false
         };
     };
+
 
     render() {
         const { navigate } = this.props.navigation;
@@ -43,6 +45,9 @@ export default class SurveyCompletedScreenExample extends Component {
         } else {
             fileSaveLocation = fileSaveLocation + ".csv";
             answers = SurveyAnswersParse(answers, surveyQuestions);
+            let questions = SurveyQuestions(surveyQuestions);
+
+            SaveData.saveSurveyResults(fileSaveLocation, answers,questions);
         }
 
         return (

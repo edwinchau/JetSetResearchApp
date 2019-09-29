@@ -216,6 +216,20 @@ class SaveData extends Component {
         return false;
     }
 
+    static saveSurveyResults = (fileSaveLocation, answers, surveyQuestions) => {
+
+        const checkUser = FileSystem.readAsStringAsync(FileSystem.documentDirectory + fileSaveLocation).then(
+            function (result) {
+                let saveLine = result + "\n" + answers
+                SaveData.saveNewFile(saveLine, fileSaveLocation);
+            },
+            function (err) {
+                let saveLine = surveyQuestions + "\n" + answers;
+                SaveData.saveNewFile(saveLine, fileSaveLocation);
+            }
+        )
+    }
+
     /**
      * The function which renders the debugging screen for this class
      */
