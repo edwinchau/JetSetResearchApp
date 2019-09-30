@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from "moment-timezone";
 
 /**
  * Generates a CSV string given survey answers and survey questions. Both survey answers and the survey questions need
@@ -10,15 +11,20 @@ import React from 'react';
  */
 export const SurveyAnswersParse = (surveyAnswers, surveyQuestions) => {
     let questionList = [];
+    let timeDateQuestions = [];
 
     // Obtaining a list of survey questions
     surveyQuestions.forEach(function(question) {
         if (question.questionId !== undefined) {
             questionList.push(question.questionId);
+
+            if (question.questionType == 'TimeInput' || question.questionType == 'DateInput') {
+                timeDateQuestions.push(question.questionId);
+            }
         }
     });
 
-    let csvString = "";
+    let csvString = String(moment(Date.now()).tz('Australia/Sydney')) + ",";
 
     // Generating the CSV string
     questionList.forEach(function(question) {
@@ -27,6 +33,11 @@ export const SurveyAnswersParse = (surveyAnswers, surveyQuestions) => {
         if (answer !== undefined) {
             if (typeof answer === 'object') {
                 answer = answer["value"];
+            }
+
+            if (timeDateQuestions.includes(question)) {
+                let sydneyTimeConversion = moment(new Date(answer));
+                answer = String(sydneyTimeConversion.tz('Australia/Sydney'));
             }
 
             csvString = csvString + answer + ",";
@@ -43,7 +54,7 @@ export const SurveyAnswersParse = (surveyAnswers, surveyQuestions) => {
 
 export const SurveyQuestions = (surveyQuestions) => {
 
-    let csvString = "";
+    let csvString = "timeDateCompleted,";
 
     // Obtaining a list of survey questions
     surveyQuestions.forEach(function(question) {
