@@ -5,6 +5,10 @@ import * as FileSystem from 'expo-file-system';
 /**
  * This class primarily serves to handle files within the phone system so that results can be stored
  * This class extends the Component class from the 'react' library and is only done for debugging purposes
+ * 
+ * Note: This JS File is very broken, as all methods that have promises do not return the value as expected. 
+ * The core functionality itself works except the functions that is supposed to return something i.e. viewFile and displayFile.
+ * This has been replaced by using console.log to display the returned values that it is meant to return instead...
  */
 class SaveData extends Component {
 
@@ -179,6 +183,7 @@ class SaveData extends Component {
         const fileData = await FileSystem.readAsStringAsync(fileLocation).then(
             // Return the text
             function (result) {
+                console.log(result);
                 return result;
             },
 
@@ -226,6 +231,54 @@ class SaveData extends Component {
             function (err) {
                 let saveLine = surveyQuestions + "\n" + answers;
                 SaveData.saveNewFile(saveLine, fileSaveLocation);
+            }
+        )
+    }
+
+    static deleteAllFiles = () => {
+        // Get all the contents in the root directory of this app's file
+        const directory = FileSystem.readDirectoryAsync(FileSystem.documentDirectory);
+        directory.then(
+            // Return the app's file
+            function(result) {
+                for (var i = 0; i < result.length; i++) {
+                    let filename = result[i];
+                    const fileDirectory = FileSystem.documentDirectory + filename;
+                    const fileInfo = FileSystem.getInfoAsync(fileDirectory);
+
+                    fileInfo.then(
+                        function (result) {
+                            let exists = result.exists;
+                            if (exists == true) {
+            
+                                // Delete the file
+                                const deleteConfirm = FileSystem.deleteAsync(fileDirectory);
+                                
+                                deleteConfirm.then(
+            
+                                    // File deleted
+                                    function(result) {
+                                        console.log(filename + " has been deleted");
+                                        return true;
+                                    },
+            
+                                    // File failed to delete
+                                    function(err) {
+                                        console.log(err);
+                                    }
+                                )
+            
+                            }
+                        },
+                        function (err) {
+                            console.log("File fetch error: " + err);
+                        }
+                    )
+                }
+            },
+            // Failed to extract files from the root directory
+            function(err){
+                console.log(err);
             }
         )
     }
@@ -279,6 +332,12 @@ class SaveData extends Component {
                     onPress={() => this.appendToFile(this.state.Content, this.state.Filename)
                     }>
                     <Text style={styles.submitButtonText}> Append to File </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.submitButton}
+                    onPress={() => this.deleteAllFiles()
+                    }>
+                    <Text style={styles.submitButtonText}> Delete All Files </Text>
                 </TouchableOpacity>
 
             </View>
