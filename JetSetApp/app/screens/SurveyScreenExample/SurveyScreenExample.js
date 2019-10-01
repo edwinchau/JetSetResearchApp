@@ -4,8 +4,6 @@ import { SimpleSurvey } from '../../../react-native-simple-survey';
 import { COLORS } from '../../resources/validColors';
 import DateTimePicker from "react-native-modal-datetime-picker";
 import DismissKeyboard from 'react-native-dismiss-keyboard';
-// import moment from "moment";
-import moment from "moment-timezone";
 
 import styles from './Styles'
 
