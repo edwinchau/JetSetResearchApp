@@ -9,6 +9,38 @@ export const survey = [
     {
         questionType: 'SelectionGroup',
         questionText:
+            'How many cups of caffeinated beverages have you consumed since the last survey? Consider cups of tea, coffee, colas, and energy drinks. 1 cup = 250 mL = 8 fluid ounces.',
+        questionId: 'numberCaffeine',
+        options: [
+            {
+                optionText: 'None',
+                value: '0'
+            },
+            {
+                optionText: '1 cup',
+                value: '1'
+            },
+            {
+                optionText: '2 cups',
+                value: '2'
+            },
+            {
+                optionText: '3 cups',
+                value: '3'
+            },
+            {
+                optionText: '4 cups',
+                value: '4'
+            },
+            {
+                optionText: '5 or more cups',
+                value: '5'
+            }
+        ]
+    },
+    {
+        questionType: 'SelectionGroup',
+        questionText:
             'Have you had a nap since previous survey',
         questionId: 'napTaken',
         options: [
@@ -24,24 +56,37 @@ export const survey = [
         },
     {
         questionType: 'TimeInput',
-        questionText: 'What time did you start the nap?',
+        questionText: 'If yes, what time did you start the nap?',
         questionId: 'napTime',
         optional: true,
         placeholderText: 'Enter nap time',
     },
     {
-        questionType: 'NumericInput',
-        questionText: 'How long was your nap in minutes',
+        questionType: 'SelectionGroup',
+        questionText: 'If yes, how long was the nap?',
         questionId: 'napDuration',
-        optional: true,
-        placeholderText: 'Number of minutes',
-    },
-    {
-        questionType: 'TextInput',
-        questionText: 'How many caffeinated beverages did you have with the meal?',
-        questionId: 'numberCaffeine',
-        optional: true,
-        placeholderText: 'Number of beverages',
+        options: [
+            {
+                optionText: 'Did not have a nap',
+                value: '0'
+            },
+            {
+                optionText: 'Less than 30 minutes',
+                value: '1'
+            },
+            {
+                optionText: '30 minutes to less than 1 hour',
+                value: '2'
+            },
+            {
+                optionText: '1 to 2 hours',
+                value: '3'
+            },
+            {
+                optionText: 'More than 2 hours',
+                value: '4'
+            }
+        ]
     },
     {
         questionType: 'SelectionGroup',
@@ -139,7 +184,42 @@ export const survey = [
           }
         ]
     },
-
+    {
+        questionType: 'SelectionGroup',
+        questionText:
+            'What is your current level of muscle soreness?',
+        questionId: 'muscleSoreness',
+        options: [
+            {
+                optionText: 'No soreness',
+                value: '0'
+            },
+            {
+                optionText: 'Dull feeling of soreness',
+                value: '1'
+            },
+            {
+                optionText: 'Light, continuous soreness',
+                value: '2'
+            },
+            {
+                optionText: 'More than light soreness',
+                value: '3'
+            },
+            {
+                optionText: 'Annoying soreness',
+                value: '4'
+            },
+            {
+                optionText: 'Severe soreness',
+                value: '5'
+            },
+            {
+                optionText: 'Intolerable soreness',
+                value: '6'
+            }
+        ]
+    },
     {
         questionType: 'Info',
         questionText: 'That is all for the demo, tap finish to see your results!'
