@@ -18,5 +18,17 @@ export const survey = [
                 value: 'LHR'
             }
         ]
-    }
+    },
+    {
+        questionType: 'TimeInput',
+        questionText: 'What time to change? (TESTING ONLY)',
+        questionId: 'swapTimeTesting',
+        placeholderText: 'TESTING ONLY',
+    },
+    {
+        questionType: 'NumericInput',
+        questionText: 'How many Seconds before going back to normal? (TESTING ONLY)',
+        questionId: 'swapSecondsTesting',
+        placeholderText: 'TESTING ONLY',
+    },
 ];

@@ -40,6 +40,10 @@ export const SurveyAnswersParse = (surveyAnswers, surveyQuestions) => {
                 answer = String(sydneyTimeConversion.tz('Australia/Sydney'));
             }
 
+            if (answer === 'Invalid date') {
+                answer = "";
+            }
+
             csvString = csvString + answer + ",";
 
         } else {

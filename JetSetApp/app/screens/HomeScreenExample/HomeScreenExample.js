@@ -5,6 +5,9 @@ import moment from 'moment';
 import styles from './Styles'
 import SaveData from '../../resources/SaveData/SaveData';
 import SendData from '../../resources/SendData/SendData';
+import * as FileSystem from "expo-file-system";
+
+let test = 1;
 
 export default class HomeScreenExample extends Component {
     static navigationOptions = () => {
@@ -33,9 +36,18 @@ export default class HomeScreenExample extends Component {
     render() {
         const { navigate } = this.props.navigation;
 
+        FileSystem.readAsStringAsync(FileSystem.documentDirectory + "NewUserQuestions.json").then(
+            function (result) {
+                result = JSON.parse(result);
+                test = parseInt(result['swapSecondsTesting']);
+            },
+            function (err) {
+            }
+        )
+
         let survey;
 
-        if (parseInt(moment(this.state.time).format('ss')) % 2 === 0) {
+        if (parseInt(moment(this.state.time).format('ss')) % test === 0) {
             survey = (<Fragment>
                 <Button
                     onPress={() => navigate('Survey', { survey: 'BreakfastQuestions' })}
