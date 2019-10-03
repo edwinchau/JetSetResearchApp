@@ -10,7 +10,7 @@ export default class ResearcherScreen extends Component {
 
     state = {
         typedPassword: '',
-        thisPassword: 'abc123'
+        adminPassword: 'abc123'
     };
 
     handlePassword = (text) => {
@@ -18,7 +18,7 @@ export default class ResearcherScreen extends Component {
     }
 
     checkPassword = () => {
-        if (this.state.thisPassword !== this.state.typedPassword) {
+        if (this.state.adminPassword !== this.state.typedPassword) {
             return false; 
         }
         return true;
@@ -39,16 +39,6 @@ export default class ResearcherScreen extends Component {
         } else {
             alert("Incorrect password");
         }
-    }
-
-    prompt = () => {
-        // const title = 'Please Enter The Admin Password';
-        // const buttons = [
-        //     { text: 'Cancel', type: 'cancel' },
-        //     { text: 'Option A', onPress: () => this.setState({userSelection: 'Option A'}) },
-        //     { text: 'Option B', onPress: () => this.setState({userSelection: 'Option B'}) }
-        // ];
-        // Alert.alert(title, message, buttons);
     }
 
     render() {
