@@ -46,6 +46,7 @@ export default class ResearcherScreen extends Component {
             <View style={styles.container}>
                 <TextInput
                     placeholder="Please Type in Admin Password First"
+                    style = {styles.input}
                     secureTextEntry={true}
                     onChangeText={this.handlePassword}
                 />
@@ -58,12 +59,7 @@ export default class ResearcherScreen extends Component {
                     onPress={() => this.sendEmail()
                     }>
                     <Text style={styles.submitButtonText}> Send Data </Text>
-                </TouchableOpacity>      
-                <TouchableOpacity style={styles.button}
-                    onPress={() => this.prompt()
-                    }>
-                    <Text style={styles.submitButtonText}> Prompt </Text>
-                </TouchableOpacity>         
+                </TouchableOpacity>              
             </View>
         )
     }

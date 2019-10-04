@@ -1,30 +1,26 @@
 import { StyleSheet } from 'react-native';
 
-let styles = StyleSheet.create({
-    background: {
+const styles = StyleSheet.create({
+    container: {
         flex: 1,
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'rgba(108,48,237,1)',
+        backgroundColor: 'purple'
     },
-    container: {
-        paddingTop: 400,
-    },
-    questionText: {
-        marginBottom: 20,
-        fontSize: 20
-    },
-    headerStyle: {
-        backgroundColor: 'rgba(141,196,63,1)',
-        height: 40,
-        elevation: 5,
+    input: {
+        height: 40, borderColor: 'gray', borderWidth: 1
     },
     button: {
-        backgroundColor: '#7a42f4',
-        padding: 10,
-        margin: 15,
-        height: 40,
-    },
+        backgroundColor: 'green',
+        borderColor: 'green',
+        borderWidth: 1,
+        fontSize: 24,
+        fontWeight: 'bold',
+        overflow: 'hidden',
+        padding: 12,
+        textAlign:'center',        
+    }
 });
 
 module.exports = styles;
