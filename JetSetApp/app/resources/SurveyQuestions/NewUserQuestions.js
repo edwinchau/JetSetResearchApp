@@ -10,25 +10,55 @@ export const survey = [
         questionId: 'flightDetails',
         options: [
             {
-                optionText: 'JFK-SYD dep 21:00 from New York; arrive 7:30 Syd time',
+                optionText: 'JFK-SYD dep 21:00 (12:00 Sydney time) from New York; arrive 17:30 (7:30 New York time)',
                 value: 'JFK'
             },
             {
-                optionText: 'LHR-SYD dep 10:00 from London; arrive 17:00 Syd time',
+                optionText: ' LHR-SYD dep 10:00 (21:00 Sydney time) from London; arrive 6:00 (17:00 London time)',
                 value: 'LHR'
             }
         ]
     },
     {
-        questionType: 'TimeInput',
-        questionText: 'What time to change? (TESTING ONLY)',
-        questionId: 'swapTimeTesting',
-        placeholderText: 'TESTING ONLY',
+        questionType: 'DateInput',
+        questionText: 'What day is your flight?',
+        questionId: 'dateOfFlight',
+        placeholderText: 'Date of flight',
     },
     {
         questionType: 'NumericInput',
-        questionText: 'How many Seconds before going back to normal? (TESTING ONLY)',
-        questionId: 'swapSecondsTesting',
-        placeholderText: 'TESTING ONLY',
+        questionText: 'How long is your flight in hours?',
+        questionId: 'lengthOfFlight',
+        placeholderText: 'Duration of flight',
+    },
+    {
+        questionType: 'TimeInput',
+        questionText: 'What time do you usually have breakfast?',
+        questionId: 'timeOfBreakfast',
+        placeholderText: 'Breakfast time',
+    },
+    {
+        questionType: 'TimeInput',
+        questionText: 'What time do you usually have lunch?',
+        questionId: 'timeOfLunch',
+        placeholderText: 'Lunch time',
+    },
+    {
+        questionType: 'TimeInput',
+        questionText: 'What time do you usually have dinner?',
+        questionId: 'timeOfDinner',
+        placeholderText: 'Dinner time',
+    },
+    {
+        questionType: 'TimeInput',
+        questionText: 'What time do you usually go to bed?',
+        questionId: 'timeOfSleep',
+        placeholderText: 'Bed time',
+    },
+    {
+        questionType: 'TimeInput',
+        questionText: 'What time do you usually wake up?',
+        questionId: 'timeOfWakeup',
+        placeholderText: 'Wake up time',
     },
 ];
