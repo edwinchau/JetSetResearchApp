@@ -187,35 +187,63 @@ export const survey = [
     {
         questionType: 'SelectionGroup',
         questionText:
-            'What is your current level of muscle soreness?',
-        questionId: 'muscleSoreness',
+            'While you are sitting do you have any pain in your..?',
+        questionId: 'painLocation',
         options: [
             {
-                optionText: 'No soreness',
+                optionText: 'Calves',
+                value: 'Calves'
+            },
+            {
+                optionText: 'Knees',
+                value: 'Knees'
+            },
+            {
+                optionText: 'Lower back',
+                value: 'Lower back'
+            },
+            {
+                optionText: 'Neck',
+                value: 'Neck'
+            },
+            {
+                optionText: 'None of the above',
+                value: 'None of the above'
+            }
+        ]
+    },
+    {
+        questionType: 'SelectionGroup',
+        questionText:
+            'What is your current level of pain?',
+        questionId: 'painScale',
+        options: [
+            {
+                optionText: 'No pain',
                 value: '0'
             },
             {
-                optionText: 'Dull feeling of soreness',
+                optionText: 'Dull feeling of pain',
                 value: '1'
             },
             {
-                optionText: 'Light, continuous soreness',
+                optionText: 'Light, continuous pain',
                 value: '2'
             },
             {
-                optionText: 'More than light soreness',
+                optionText: 'More than light pain',
                 value: '3'
             },
             {
-                optionText: 'Annoying soreness',
+                optionText: 'Annoying pain',
                 value: '4'
             },
             {
-                optionText: 'Severe soreness',
+                optionText: 'Severe pain',
                 value: '5'
             },
             {
-                optionText: 'Intolerable soreness',
+                optionText: 'Intolerable pain',
                 value: '6'
             }
         ]
