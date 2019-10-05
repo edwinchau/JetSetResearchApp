@@ -100,6 +100,12 @@ export default class HomeScreenExample extends Component {
                     />
                 </View>
                 <View style={styles.container}>
+                    <Button
+                        onPress={() => navigate('ResearcherPage')}
+                        title="Admin Page"
+                    />
+                </View>
+                <View style={styles.container}>
                     <Text>Testing Features</Text>
 
                     <Button
