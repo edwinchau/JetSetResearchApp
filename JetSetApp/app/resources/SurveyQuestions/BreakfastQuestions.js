@@ -59,39 +59,39 @@ export const survey = [
         questionId: 'kssResult',
         options: [
           {
-              optionText: '1. Extremely alert',
+              optionText: 'Extremely alert',
               value: '1'
           },
           {
-              optionText: '2. Very alert',
+              optionText: 'Very alert',
               value: '2'
           },
           {
-              optionText: '3. Alert',
+              optionText: 'Alert',
               value: '3'
           },
           {
-              optionText: '4. Rather alert ',
+              optionText: 'Rather alert ',
               value: '4'
           },
           {
-              optionText: '5. Neither alert nor sleepy ',
+              optionText: 'Neither alert nor sleepy ',
               value: '5'
           },
           {
-              optionText: '6. Some signs of sleepiness ',
+              optionText: 'Some signs of sleepiness ',
               value: '6'
           },
           {
-              optionText: '7. Sleepy, but no effort to keep awake ',
+              optionText: 'Sleepy, but no effort to keep awake ',
               value: '7'
           },
           {
-              optionText: '8. Sleepy, some effort to keep awake ',
+              optionText: 'Sleepy, some effort to keep awake ',
               value: '8'
           },
           {
-              optionText: '9. Very sleepy, great effort to keep awake, fighting sleep ',
+              optionText: 'Very sleepy, great effort to keep awake, fighting sleep ',
               value: '9'
           }
         ]
