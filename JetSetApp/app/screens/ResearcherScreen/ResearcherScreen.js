@@ -7,6 +7,17 @@ import SendData from '../../resources/SendData/SendData';
 
 export default class ResearcherScreen extends Component {
 
+    static navigationOptions = () => {
+        return {
+            headerStyle: styles.headerStyle,
+            headerTintColor: '#fff',
+            headerTitle: 'Researcher Menu',
+            headerTitleStyle: {
+                flex: 1,
+            }
+        };
+    };
+
 
     state = {
         typedPassword: '',
@@ -43,6 +54,7 @@ export default class ResearcherScreen extends Component {
 
     render() {
         return (
+
             <View style={styles.container}>
                 <TextInput
                     placeholder="Please Type in Admin Password First"
@@ -59,7 +71,7 @@ export default class ResearcherScreen extends Component {
                     onPress={() => this.sendEmail()
                     }>
                     <Text style={styles.submitButtonText}> Send Data </Text>
-                </TouchableOpacity>              
+                </TouchableOpacity>
             </View>
         )
     }

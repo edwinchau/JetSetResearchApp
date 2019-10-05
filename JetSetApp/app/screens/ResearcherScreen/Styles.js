@@ -20,7 +20,12 @@ const styles = StyleSheet.create({
         overflow: 'hidden',
         padding: 12,
         textAlign:'center',        
-    }
+    },
+    headerStyle: {
+        backgroundColor: 'rgba(141,196,63,1)',
+        height: 40,
+        elevation: 5,
+    },
 });
 
 module.exports = styles;
