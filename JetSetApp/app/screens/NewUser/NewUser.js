@@ -25,10 +25,6 @@ export default class NewUser extends Component {
                         onPress={() => navigate('Survey', { survey: 'NewUserQuestions' })}
                         title="New User"
                     />
-                    <Button
-                        onPress={() => navigate('ResearcherPage')}
-                        title="Admin Page"
-                    />
                 </View>
             </View>
         );

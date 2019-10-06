@@ -28,7 +28,6 @@ const newUserStack = createStackNavigator(
         NewUser: NewUser,
         Survey: SurveyScreenExample,
         SurveyCompleted: SurveyCompletedScreenExample,
-        ResearcherPage: ResearcherPage
     },
     {
         initialRouteName: 'NewUser',
