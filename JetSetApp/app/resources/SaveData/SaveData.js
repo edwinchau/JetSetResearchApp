@@ -5,11 +5,15 @@ import * as FileSystem from 'expo-file-system';
 /**
  * This class primarily serves to handle files within the phone system so that results can be stored
  * This class extends the Component class from the 'react' library and is only done for debugging purposes
- * 
- * Note: This JS File is very broken, as all methods that have promises do not return the value as expected. 
+ *
+ * Note: This JS File is very broken, as all methods that have promises do not return the value as expected.
  * The core functionality itself works except the functions that is supposed to return something i.e. viewFile and displayFile.
  * This has been replaced by using console.log to display the returned values that it is meant to return instead...
  */
+
+
+
+
 class SaveData extends Component {
 
     // Debugger variables
@@ -250,24 +254,24 @@ class SaveData extends Component {
                         function (result) {
                             let exists = result.exists;
                             if (exists == true) {
-            
+
                                 // Delete the file
                                 const deleteConfirm = FileSystem.deleteAsync(fileDirectory);
-                                
+
                                 deleteConfirm.then(
-            
+
                                     // File deleted
                                     function(result) {
                                         console.log(filename + " has been deleted");
                                         return true;
                                     },
-            
+
                                     // File failed to delete
                                     function(err) {
                                         console.log(err);
                                     }
                                 )
-            
+
                             }
                         },
                         function (err) {
