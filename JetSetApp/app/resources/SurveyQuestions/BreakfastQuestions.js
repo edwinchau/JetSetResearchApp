@@ -59,39 +59,39 @@ export const survey = [
         questionId: 'kssResult',
         options: [
           {
-              optionText: '1. Extremely alert',
+              optionText: 'Extremely alert',
               value: '1'
           },
           {
-              optionText: '2. Very alert',
+              optionText: 'Very alert',
               value: '2'
           },
           {
-              optionText: '3. Alert',
+              optionText: 'Alert',
               value: '3'
           },
           {
-              optionText: '4. Rather alert ',
+              optionText: 'Rather alert ',
               value: '4'
           },
           {
-              optionText: '5. Neither alert nor sleepy ',
+              optionText: 'Neither alert nor sleepy ',
               value: '5'
           },
           {
-              optionText: '6. Some signs of sleepiness ',
+              optionText: 'Some signs of sleepiness ',
               value: '6'
           },
           {
-              optionText: '7. Sleepy, but no effort to keep awake ',
+              optionText: 'Sleepy, but no effort to keep awake ',
               value: '7'
           },
           {
-              optionText: '8. Sleepy, some effort to keep awake ',
+              optionText: 'Sleepy, some effort to keep awake ',
               value: '8'
           },
           {
-              optionText: '9. Very sleepy, great effort to keep awake, fighting sleep ',
+              optionText: 'Very sleepy, great effort to keep awake, fighting sleep ',
               value: '9'
           }
         ]
@@ -151,35 +151,63 @@ export const survey = [
     {
         questionType: 'SelectionGroup',
         questionText:
-            'What is your current level of muscle soreness?',
-        questionId: 'muscleSoreness',
+            'While you are sitting do you have any pain in your..?',
+        questionId: 'painLocation',
         options: [
             {
-                optionText: 'No soreness',
+                optionText: 'Calves',
+                value: 'Calves'
+            },
+            {
+                optionText: 'Knees',
+                value: 'Knees'
+            },
+            {
+                optionText: 'Lower back',
+                value: 'Lower back'
+            },
+            {
+                optionText: 'Neck',
+                value: 'Neck'
+            },
+            {
+                optionText: 'None of the above',
+                value: 'None of the above'
+            }
+        ]
+    },
+    {
+        questionType: 'SelectionGroup',
+        questionText:
+            'What is your current level of pain?',
+        questionId: 'painScale',
+        options: [
+            {
+                optionText: 'No pain',
                 value: '0'
             },
             {
-                optionText: 'Dull feeling of soreness',
+                optionText: 'Dull feeling of pain',
                 value: '1'
             },
             {
-                optionText: 'Light, continuous soreness',
+                optionText: 'Light, continuous pain',
                 value: '2'
             },
             {
-                optionText: 'More than light soreness',
+                optionText: 'More than light pain',
                 value: '3'
             },
             {
-                optionText: 'Annoying soreness',
+                optionText: 'Annoying pain',
                 value: '4'
             },
             {
-                optionText: 'Severe soreness',
+                optionText: 'Severe pain',
                 value: '5'
             },
             {
-                optionText: 'Intolerable soreness',
+                optionText: 'Intolerable pain',
                 value: '6'
             }
         ]

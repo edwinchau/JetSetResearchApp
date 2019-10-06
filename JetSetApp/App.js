@@ -9,12 +9,14 @@ import SurveyScreenExample from './app/screens/SurveyScreenExample/SurveyScreenE
 import HomeScreenExample from "./app/screens/HomeScreenExample/HomeScreenExample";
 import NewUser from "./app/screens/NewUser/NewUser";
 import Authentication from "./app/screens/Authentication/Authentication";
+import ResearcherPage from "./app/screens/ResearcherScreen/ResearcherScreen"
 
 const appStack = createStackNavigator(
     {
       Home: HomeScreenExample,
       Survey: SurveyScreenExample,
       SurveyCompleted: SurveyCompletedScreenExample,
+      ResearcherPage: ResearcherPage
     },
     {
       initialRouteName: 'Home',
