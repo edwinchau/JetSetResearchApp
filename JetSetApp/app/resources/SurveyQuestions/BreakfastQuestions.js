@@ -1,7 +1,12 @@
+//import Emoji from 'react-native-emoji';
+import React, {Component} from 'react';
+import {
+    Emoji
+} from 'react-native-emoji';
 export const survey = [
     {
         questionType: 'TimeInput',
-        questionText: 'What time did you fall asleep last night',
+        questionText: 'What time did you go to sleep',
         questionId: 'sleepTime',
         optional: false,
         placeholderText: 'Enter time went to sleep',
@@ -209,6 +214,58 @@ export const survey = [
             {
                 optionText: 'Intolerable pain',
                 value: '6'
+            }
+        ]
+    },
+    {
+        questionType: 'SelectionGroup',
+        questionText:
+            'What is your current level of pain?',
+        questionId: 'painScale',
+        options: [
+            {
+                optionText: '🤩 The most happy',
+                value: '0'
+            },
+            {
+                optionText: '😍 Extremely happy',
+                value: '1'
+            },
+            {
+                optionText: '😀 Very happy',
+                value: '2'
+            },
+            {
+                optionText: '😊 Somewhat happy',
+                value: '3'
+            },
+            {
+                optionText: '😏 A little happy',
+                value: '4'
+            },
+            {
+                optionText: '😐 Neutral',
+                value: '5'
+            },
+            {
+                optionText: '😑 A little unhappy',
+                value: '6'
+            },
+            {
+                optionText: '😒 Somewhat unhappy',
+                value: '7'
+            },
+            {
+                optionText: '😣 Very unhappy',
+                value: '8'
+            },
+            {
+                optionText: '😭 Extremely unhappy',
+                value: '9'
+            },
+            {
+                optionText: '🤮 The most unhappy',
+                value: '10'
             }
         ]
     },
