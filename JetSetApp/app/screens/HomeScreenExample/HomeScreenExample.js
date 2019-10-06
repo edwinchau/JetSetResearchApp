@@ -14,7 +14,8 @@ import { Permissions } from "expo-permissions";
 
 export default class HomeScreenExample extends Component {
     askPermissions = async () => {
-        const { status: existingStatus } = await Permissions.getAsync(
+        alert("You need to enable notifications for this app in settings.");
+/*        const { status: existingStatus } = await Permissions.getAsync(
             Permissions.NOTIFICATIONS
         );
         let finalStatus = existingStatus;
@@ -24,7 +25,7 @@ export default class HomeScreenExample extends Component {
         }
         if (finalStatus !== "granted") {
             return false;
-        }
+        }*/
         return true;
     };
 
@@ -201,7 +202,7 @@ export default class HomeScreenExample extends Component {
                 </View>
                 <View style={styles.container}>
                     <Button
-                        title="Please accept notifications permissions"
+                        title="Notifications permission"
                         onPress={() => this.askPermissions()}
                     />
                 </View>
