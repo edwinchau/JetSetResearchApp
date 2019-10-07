@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NewUser/> snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(108,48,237,1)",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "stretch",
+        "backgroundColor": "white",
+        "borderRadius": 10,
+        "elevation": 20,
+        "justifyContent": "center",
+        "maxWidth": "90%",
+        "minWidth": "70%",
+      }
+    }
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityStates={Array []}
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#007AFF",
+                "fontSize": 18,
+                "padding": 8,
+                "textAlign": "center",
+              },
+            ]
+          }
+        >
+          New User
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

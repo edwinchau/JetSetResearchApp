@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ResearcherScreen/> snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "purple",
+      "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "center",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    onChangeText={[Function]}
+    placeholder="Please Type in Admin Password First"
+    rejectResponderTermination={true}
+    secureTextEntry={true}
+    style={
+      Object {
+        "borderColor": "gray",
+        "borderWidth": 1,
+        "height": 40,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "green",
+        "borderColor": "green",
+        "borderWidth": 1,
+        "fontSize": 24,
+        "fontWeight": "bold",
+        "opacity": 1,
+        "overflow": "hidden",
+        "padding": 12,
+        "textAlign": "center",
+      }
+    }
+  >
+    <Text>
+       Delete All Files 
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "green",
+        "borderColor": "green",
+        "borderWidth": 1,
+        "fontSize": 24,
+        "fontWeight": "bold",
+        "opacity": 1,
+        "overflow": "hidden",
+        "padding": 12,
+        "textAlign": "center",
+      }
+    }
+  >
+    <Text>
+       Send Data 
+    </Text>
+  </View>
+</View>
+`;

@@ -116,7 +116,7 @@ export default class HomeScreenExample extends Component {
     }
 
     render() {
-        const { navigate } = this.props.navigation;
+        const { navigation } = this.props;
 
         FileSystem.readAsStringAsync(FileSystem.documentDirectory + "NewUserQuestions.json").then(
             function (result) {
@@ -132,34 +132,34 @@ export default class HomeScreenExample extends Component {
         if (parseInt(moment(this.state.time).format('ss')) % globalResult === 0) {
             survey = (<Fragment>
                 <Button
-                    onPress={() => navigate('Survey', { survey: 'BreakfastQuestions' })}
+                    onPress={() => navigation.navigate('Survey', { survey: 'BreakfastQuestions' })}
                     title="Breakfast"
                 />
 
                 <Button
-                    onPress={() => navigate('Survey', { survey: 'LunchQuestions' })}
+                    onPress={() => navigation.navigate('Survey', { survey: 'LunchQuestions' })}
                     title="Lunch"
                 />
 
                 <Button
-                    onPress={() => navigate('Survey', { survey: 'DinnerQuestions' })}
+                    onPress={() => navigation.navigate('Survey', { survey: 'DinnerQuestions' })}
                     title="Dinner"
                 />
             </Fragment>)
         } else {
             survey = (<Fragment>
                 <Button
-                    onPress={() => navigate('Survey', { survey: 'BreakfastQuestions' })}
+                    onPress={() => navigation.navigate('Survey', { survey: 'BreakfastQuestions' })}
                     title="Breakfast 1"
                 />
 
                 <Button
-                    onPress={() => navigate('Survey', { survey: 'LunchQuestions' })}
+                    onPress={() => navigation.navigate('Survey', { survey: 'LunchQuestions' })}
                     title="Lunch 1"
                 />
 
                 <Button
-                    onPress={() => navigate('Survey', { survey: 'DinnerQuestions' })}
+                    onPress={() => navigation.navigate('Survey', { survey: 'DinnerQuestions' })}
                     title="Dinner 1"
                 />
             </Fragment>)
@@ -183,7 +183,7 @@ export default class HomeScreenExample extends Component {
                 </View>
                 <View style={styles.container}>
                     <Button
-                        onPress={() => navigate('ResearcherPage')}
+                        onPress={() => navigation.navigate('ResearcherPage')}
                         title="Admin Page"
                     />
                 </View>

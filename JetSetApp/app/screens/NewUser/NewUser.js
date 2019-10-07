@@ -16,13 +16,13 @@ export default class NewUser extends Component {
     };
 
     render() {
-        const { navigate } = this.props.navigation;
+        const { navigation } = this.props;
 
         return (
             <View style={styles.background}>
                 <View style={styles.container}>
                     <Button
-                        onPress={() => navigate('Survey', { survey: 'NewUserQuestions' })}
+                        onPress={() => navigation.navigate('Survey', { survey: 'NewUserQuestions' })}
                         title="New User"
                     />
                 </View>
