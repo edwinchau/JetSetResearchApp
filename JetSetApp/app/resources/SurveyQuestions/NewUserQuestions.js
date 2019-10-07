@@ -61,4 +61,8 @@ export const survey = [
         questionId: 'timeOfWakeup',
         placeholderText: 'Wake up time',
     },
+    {
+        questionType: 'Info',
+        questionText: 'Thank you for adding your details, your response has been logged!'
+    },
 ];

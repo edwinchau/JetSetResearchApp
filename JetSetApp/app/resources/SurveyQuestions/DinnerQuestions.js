@@ -337,6 +337,6 @@ export const survey = [
     },
     {
         questionType: 'Info',
-        questionText: 'That is all for the demo, tap finish to see your results!'
+        questionText: 'Thank you for completing the Dinner Survey! Your answers have been logged'
     },
 ];
