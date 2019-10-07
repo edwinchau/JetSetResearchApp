@@ -4,6 +4,7 @@ import { SimpleSurvey } from '../../../react-native-simple-survey';
 import { COLORS } from '../../resources/validColors';
 import DateTimePicker from "react-native-modal-datetime-picker";
 import DismissKeyboard from 'react-native-dismiss-keyboard';
+import moment from 'moment';
 
 import styles from './Styles'
 
@@ -202,11 +203,13 @@ export default class SurveyScreenExample extends Component {
 
     handleDatePicked = date => {
         this.hideDateTimePicker();
+        date = moment(date).format('MM/DD/YYYY');
         this.setState({surveyDateTime: String(date)});
     };
 
     handleTimePicked = time => {
         this.hideDateTimePicker();
+        time = moment(time).format('h:mm a');
         this.setState({surveyDateTime: String(time)});
     };
 
