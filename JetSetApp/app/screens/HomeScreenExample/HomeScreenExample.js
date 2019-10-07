@@ -62,7 +62,7 @@ export default class HomeScreenExample extends Component {
             },
             {
                 repeat: "day",
-                time: new Date().getTime() + 2000
+                time: new Date().getTime() + 3000
                 //time: new Date().getTime() + 46800000
             }
         );
