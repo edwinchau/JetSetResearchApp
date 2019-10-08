@@ -35,14 +35,15 @@ export const SurveyAnswersParse = (surveyAnswers, surveyQuestions) => {
                 answer = answer["value"];
             }
 
-            if (timeDateQuestions.includes(question)) {
-                let sydneyTimeConversion = moment(new Date(answer));
-                answer = String(sydneyTimeConversion.tz('Australia/Sydney'));
-            }
-
-            if (answer === 'Invalid date') {
-                answer = "";
-            }
+            // Since the date/time is now parsed on input, there is no need to parse it here
+            // if (timeDateQuestions.includes(question)) {
+            //     let sydneyTimeConversion = moment(new Date(answer));
+            //     answer = String(sydneyTimeConversion.tz('Australia/Sydney'));
+            // }
+            //
+            // if (answer === 'Invalid date') {
+            //     answer = "";
+            // }
 
             csvString = csvString + answer + ",";
 
