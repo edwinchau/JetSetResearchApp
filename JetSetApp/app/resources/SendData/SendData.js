@@ -2,50 +2,42 @@ import React, { Component } from 'react';
 import * as MailComposer from 'expo-mail-composer';
 import * as FileSystem from 'expo-file-system';
 
-function verifyResearcher() {
-
-    let password = 'abc123';
-
-    if (password === 'abc123') {
-        return true;
-    }
-
-    return false;
-}
-
 class SendData extends Component {
 
     static sendDataEmail = () => {
-        if (verifyResearcher() == true ) {
-            // Get all the contents in the root directory of this app's file
-            const directory = FileSystem.readDirectoryAsync(FileSystem.documentDirectory);
-            directory.then(
-                // Return the app's file
-                function(result) {
 
-                    result.forEach(function(element, index){
-                        result[index] = FileSystem.documentDirectory + result[index];
-                    });
+        // Get all the contents in the root directory of this app's file
+        const directory = FileSystem.readDirectoryAsync(FileSystem.documentDirectory);
+        directory.then(
+            // Return the app's file
+            function(result) {
 
-                    let mailOptions =  {
-                        recipients: ['test@test.com'],
-                        subject: 'JetSet Results',
-                        attachments: result,
+                result.forEach(function(element, index){
+                    result[index] = FileSystem.documentDirectory + result[index];
+                });
+
+                FileSystem.readAsStringAsync(FileSystem.documentDirectory + "NewUserQuestions.json").then(
+                    function(result1) {
+
+                        result1 = JSON.parse(result1)['userID']
+
+                        let mailOptions =  {
+                            recipients: ['test@test.com'],
+                            subject: 'JetSet Results UserID:' + result1,
+                            attachments: result,
+                        }
+
+                        // Open email client
+                        MailComposer.composeAsync(mailOptions);
                     }
+                )
 
-                    // Open email client
-                    MailComposer.composeAsync(mailOptions);
-
-                },
-                // Failed to extract files from the root directory
-                function(err){
-                    console.log(err);
-                }
-            )
-        } else {
-            alert("Wrong Password");
-        }
-
+            },
+            // Failed to extract files from the root directory
+            function(err){
+                console.log(err);
+            }
+        )
     }
 }
 

@@ -4,6 +4,12 @@ export const survey = [
         questionText: 'Welcome New User'
     },
     {
+        questionType: 'NumericInput',
+        questionText: 'What is your User ID?',
+        questionId: 'userID',
+        placeholderText: 'User ID',
+    },
+    {
         questionType: 'SelectionGroup',
         questionText:
             'Please select your flight',
