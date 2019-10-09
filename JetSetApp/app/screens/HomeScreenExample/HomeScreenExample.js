@@ -1,13 +1,15 @@
 import React, {Component, Fragment} from 'react';
 import { StyleSheet, Text, View, Button} from 'react-native';
 import moment from 'moment';
+import 'moment-timezone';
+import * as FileSystem from "expo-file-system";
 
 import styles from './Styles'
 import SaveData from '../../resources/SaveData/SaveData';
 import SendData from '../../resources/SendData/SendData';
-import * as FileSystem from "expo-file-system";
+import { flightData } from '../../resources/FlightData/FlightData';
 
-let globalResult = 1;
+let userSave = {};
 
 import { Notifications } from "expo";
 import { Permissions } from "expo-permissions";
@@ -105,11 +107,11 @@ export default class HomeScreenExample extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { time: Date.now() };
+        this.state = { time: moment() };
     }
 
     componentDidMount() {
-        this.interval = setInterval(() => this.setState({ time: Date.now() }), 1000);
+        this.interval = setInterval(() => this.setState({ time: moment() }), 1000);
     }
     componentWillUnmount() {
         clearInterval(this.interval);
@@ -120,47 +122,76 @@ export default class HomeScreenExample extends Component {
 
         FileSystem.readAsStringAsync(FileSystem.documentDirectory + "NewUserQuestions.json").then(
             function (result) {
-                result = JSON.parse(result);
-                globalResult = parseInt(result['swapSecondsTesting']);
+                userSave = JSON.parse(result);
             },
             function (err) {
             }
         )
 
+        let flightStart  = -1;
+        let flightEnd = -1;
+
+        try {
+            let userFlightCode = userSave['flightDetails']['value'];
+            let flightDate = userSave['dateOfFlight'];
+
+            let singleFlightData;
+
+            flightData.forEach((flight) => {
+                if (flight['flightCode'] === userFlightCode) {
+                    singleFlightData = flight;
+                }
+            })
+
+            let utcOffset = singleFlightData['flightTimeUTCOffset'];
+            let flightDuration = singleFlightData['flightLength'] + singleFlightData['flightLengthOffset'];
+            let flightDateTime = flightDate + " " + singleFlightData['flightTimeStart']
+
+            flightStart = moment(flightDateTime, 'DD/MM/YYYY hh:mm A').utcOffset(utcOffset, true);
+            flightEnd = flightStart.clone().add(flightDuration, 'minutes');
+
+            console.log(this.state.time.format());
+            console.log(flightStart.format());
+            console.log(flightEnd.format());
+            console.log(moment(this.state.time).isBetween(flightStart, flightEnd));
+
+        } catch (e) {
+        }
+
         let survey;
 
-        if (parseInt(moment(this.state.time).format('ss')) % globalResult === 0) {
+        if (flightStart !== -1 && this.state.time.isBetween(flightStart, flightEnd)) {
             survey = (<Fragment>
                 <Button
                     onPress={() => navigation.navigate('Survey', { survey: 'BreakfastQuestions' })}
-                    title="Breakfast"
+                    title="Breakfast During"
                 />
 
                 <Button
                     onPress={() => navigation.navigate('Survey', { survey: 'LunchQuestions' })}
-                    title="Lunch"
+                    title="Lunch During"
                 />
 
                 <Button
                     onPress={() => navigation.navigate('Survey', { survey: 'DinnerQuestions' })}
-                    title="Dinner"
+                    title="Dinner During"
                 />
             </Fragment>)
         } else {
             survey = (<Fragment>
                 <Button
                     onPress={() => navigation.navigate('Survey', { survey: 'BreakfastQuestions' })}
-                    title="Breakfast 1"
+                    title="Breakfast Pre/Post"
                 />
 
                 <Button
                     onPress={() => navigation.navigate('Survey', { survey: 'LunchQuestions' })}
-                    title="Lunch 1"
+                    title="Lunch Pre/Post"
                 />
 
                 <Button
                     onPress={() => navigation.navigate('Survey', { survey: 'DinnerQuestions' })}
-                    title="Dinner 1"
+                    title="Dinner Pre/Post"
                 />
             </Fragment>)
         }
@@ -168,7 +199,7 @@ export default class HomeScreenExample extends Component {
         return (
             <View style={styles.background}>
                 <View style={styles.container}>
-                    <Text>Time: {moment(this.state.time).format()}</Text>
+                    <Text>Time: {this.state.time.format('MMMM Do YYYY, h:mm:ss a')}</Text>
                 </View>
                 <View style={styles.container}>
 

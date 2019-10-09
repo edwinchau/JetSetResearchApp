@@ -32,12 +32,6 @@ export const survey = [
         placeholderText: 'Date of flight',
     },
     {
-        questionType: 'NumericInput',
-        questionText: 'How long is your flight in hours?',
-        questionId: 'lengthOfFlight',
-        placeholderText: 'Duration of flight',
-    },
-    {
         questionType: 'TimeInput',
         questionText: 'What time do you usually have breakfast?',
         questionId: 'timeOfBreakfast',

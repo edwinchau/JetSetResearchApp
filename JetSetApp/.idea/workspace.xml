@@ -3,14 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="6062d5e6-1bc0-4882-85df-84657eab5d5a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/SendData/SendData.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/SendData/SendData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/resources/SurveyQuestions/NewUserQuestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/SurveyQuestions/NewUserQuestions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/HomeScreenExample/HomeScreenExample.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/HomeScreenExample/HomeScreenExample.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/SurveyScreenExample/SurveyScreenExample.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/SurveyScreenExample/SurveyScreenExample.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -67,6 +75,8 @@
       <updated>1570143116132</updated>
       <workItem from="1570143118509" duration="7514000" />
       <workItem from="1570344179425" duration="2244000" />
+      <workItem from="1570517892078" duration="655000" />
+      <workItem from="1570552537889" duration="7265000" />
     </task>
     <servers />
   </component>

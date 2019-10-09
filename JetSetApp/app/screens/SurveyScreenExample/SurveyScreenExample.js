@@ -203,7 +203,7 @@ export default class SurveyScreenExample extends Component {
 
     handleDatePicked = date => {
         this.hideDateTimePicker();
-        date = moment(date).format('MM/DD/YYYY');
+        date = moment(date).format('DD/MM/YYYY');
         this.setState({surveyDateTime: String(date)});
     };
 
