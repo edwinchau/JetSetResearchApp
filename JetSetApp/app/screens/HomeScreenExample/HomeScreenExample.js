@@ -150,11 +150,6 @@ export default class HomeScreenExample extends Component {
             flightStart = moment(flightDateTime, 'DD/MM/YYYY hh:mm A').utcOffset(utcOffset, true);
             flightEnd = flightStart.clone().add(flightDuration, 'minutes');
 
-            console.log(this.state.time.format());
-            console.log(flightStart.format());
-            console.log(flightEnd.format());
-            console.log(moment(this.state.time).isBetween(flightStart, flightEnd));
-
         } catch (e) {
         }
 
