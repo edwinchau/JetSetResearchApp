@@ -12,22 +12,10 @@ import { flightData } from '../../resources/FlightData/FlightData';
 let userSave = {};
 
 import { Notifications } from "expo";
-import { Permissions } from "expo-permissions";
 
 export default class HomeScreenExample extends Component {
     askPermissions = async () => {
         alert("You need to enable notifications for this app in settings.");
-/*        const { status: existingStatus } = await Permissions.getAsync(
-            Permissions.NOTIFICATIONS
-        );
-        let finalStatus = existingStatus;
-        if (existingStatus !== "granted") {
-            const { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS);
-            finalStatus = status;
-        }
-        if (finalStatus !== "granted") {
-            return false;
-        }*/
         return true;
     };
 
@@ -39,9 +27,8 @@ export default class HomeScreenExample extends Component {
             },
             {
                 repeat: "day",
-                time: new Date().getTime() + 1000
-                //unix epoch time for 9:00am in Sydney 1570080556
-                //time: new Date().getTime() + 3600000
+                // 1 hr
+                time: new Date().getTime() + 3600
             }
         );
         console.log(breakfastNotification);
@@ -52,8 +39,8 @@ export default class HomeScreenExample extends Component {
             },
             {
                 repeat: "day",
-                time: new Date().getTime() + 2000
-                //time: new Date().getTime() + 25200000
+                // 7 hrs
+                time: new Date().getTime() + 25200
             }
         );
         console.log(lunchNotification);
@@ -64,8 +51,8 @@ export default class HomeScreenExample extends Component {
             },
             {
                 repeat: "day",
-                time: new Date().getTime() + 3000
-                //time: new Date().getTime() + 46800000
+                // 13 hours
+                time: new Date().getTime() + 46800
             }
         );
         console.log(dinnerNotification);
@@ -78,7 +65,8 @@ export default class HomeScreenExample extends Component {
                 body: "Don't forget to record when you ate your first meal!"
             },
             {
-                time: new Date().getTime() + 1000
+                // 1 hour since departure
+                time: new Date().getTime() + 3600
             }
         );
         console.log(firstMealNotification);
@@ -88,10 +76,22 @@ export default class HomeScreenExample extends Component {
                 body: "Don't forget to record when you ate your second meal!"
             },
             {
-                time: new Date().getTime() + 2000
+                // 5 hours since departure
+                time: new Date().getTime() + 18000
             }
         );
         console.log(secondMealNotification);
+        let thirdMealNotification = Notifications.scheduleLocalNotificationAsync(
+            {
+                title: "ON FLIGHT: Second meal survey reminder",
+                body: "Don't forget to record when you ate your second meal!"
+            },
+            {
+                // 16 hours since departure
+                time: new Date().getTime() + 57600
+            }
+        );
+        console.log(thirdMealNotification);
     };
 
     static navigationOptions = () => {
@@ -234,7 +234,7 @@ export default class HomeScreenExample extends Component {
                 </View>
                 <View style={styles.container}>
                     <Button
-                        title="Start scheduled notifications"
+                        title="Start pre/post flight notifications"
                         onPress={() => this.scheduleNotification()}
                     />
                 </View>
