@@ -31,7 +31,6 @@ export default class HomeScreenExample extends Component {
                 time: new Date().getTime() + 3600
             }
         );
-        console.log(breakfastNotification);
         let lunchNotification = Notifications.scheduleLocalNotificationAsync(
             {
                 title: "Lunch survey and PVT reminder (7hrs)",
@@ -43,7 +42,6 @@ export default class HomeScreenExample extends Component {
                 time: new Date().getTime() + 25200
             }
         );
-        console.log(lunchNotification);
         let dinnerNotification = Notifications.scheduleLocalNotificationAsync(
             {
                 title: "Dinner survey and PVT reminder (13hrs)",
@@ -55,7 +53,6 @@ export default class HomeScreenExample extends Component {
                 time: new Date().getTime() + 46800
             }
         );
-        console.log(dinnerNotification);
     };
 
     scheduleFlightNotification = async () => {
@@ -69,7 +66,6 @@ export default class HomeScreenExample extends Component {
                 time: new Date().getTime() + 3600
             }
         );
-        console.log(firstMealNotification);
         let secondMealNotification = Notifications.scheduleLocalNotificationAsync(
             {
                 title: "ON FLIGHT: Second meal survey reminder",
@@ -80,7 +76,6 @@ export default class HomeScreenExample extends Component {
                 time: new Date().getTime() + 18000
             }
         );
-        console.log(secondMealNotification);
         let thirdMealNotification = Notifications.scheduleLocalNotificationAsync(
             {
                 title: "ON FLIGHT: Second meal survey reminder",
@@ -91,7 +86,6 @@ export default class HomeScreenExample extends Component {
                 time: new Date().getTime() + 57600
             }
         );
-        console.log(thirdMealNotification);
     };
 
     static navigationOptions = () => {
