@@ -41,6 +41,38 @@ export const survey = [
     {
         questionType: 'SelectionGroup',
         questionText:
+            'How many alcoholic beverages have you consumed since the last survey? 1 beverage = 175 mL wine = 30mL spirits = 300 mL beer = 1/2 pint beer.',
+        questionId: 'numberAlcohol',
+        options: [
+            {
+                optionText: 'None',
+                value: '0'
+            },
+            {
+                optionText: '1 cup',
+                value: '1'
+            },
+            {
+                optionText: '2 cups',
+                value: '2'
+            },
+            {
+                optionText: '3 cups',
+                value: '3'
+            },
+            {
+                optionText: '4 cups',
+                value: '4'
+            },
+            {
+                optionText: '5 or more cups',
+                value: '5'
+            }
+        ]
+    },
+    {
+        questionType: 'SelectionGroup',
+        questionText:
             'Have you had a nap since previous survey',
         questionId: 'napTaken',
         options: [
