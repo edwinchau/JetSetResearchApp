@@ -286,52 +286,28 @@ export const survey = [
     {
         questionType: 'SelectionGroup',
         questionText:
-            'What is your current level of pain?',
-        questionId: 'painScale',
+            'Please select the number that represents your current mood',
+        questionId: 'moodScale',
         options: [
             {
-                optionText: '🤩 The most happy',
-                value: '0'
-            },
-            {
-                optionText: '😍 Extremely happy',
+                optionText: '1. 😍',
                 value: '1'
             },
             {
-                optionText: '😀 Very happy',
+                optionText: '2. 😀',
                 value: '2'
             },
             {
-                optionText: '😊 Somewhat happy',
+                optionText: '3. 😐',
                 value: '3'
             },
             {
-                optionText: '😏 A little happy',
+                optionText: '4. 😒',
                 value: '4'
             },
             {
-                optionText: '😐 Neutral',
+                optionText: '5. 😣',
                 value: '5'
-            },
-            {
-                optionText: '😑 A little unhappy',
-                value: '6'
-            },
-            {
-                optionText: '😒 Somewhat unhappy',
-                value: '7'
-            },
-            {
-                optionText: '😣 Very unhappy',
-                value: '8'
-            },
-            {
-                optionText: '😭 Extremely unhappy',
-                value: '9'
-            },
-            {
-                optionText: '🤮 The most unhappy',
-                value: '10'
             }
         ]
     },
