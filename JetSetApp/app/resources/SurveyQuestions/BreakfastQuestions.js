@@ -247,6 +247,6 @@ export const survey = [
     },
     {
         questionType: 'Info',
-        questionText: 'Thank you for completing the Breakfast Survey! Your answers have been logged'
+        questionText: 'Thank you for completing the Breakfast Survey! Your answers have been logged. Please complete the PVT test if you have not completed it already'
     },
 ];
