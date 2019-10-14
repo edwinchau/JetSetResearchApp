@@ -9,7 +9,7 @@ export const survey = [
     {
         questionType: 'SelectionGroup',
         questionText:
-            'How many cups of caffeinated beverages have you consumed since the last survey? Consider cups of tea, coffee, colas, and energy drinks. 1 cup = 250 mL = 8 fluid ounces.',
+            'How many cups of caffeinated beverages have you consumed since lunch? Consider cups of tea, coffee, colas, and energy drinks. 1 cup = 250 mL = 8 fluid ounces.',
         questionId: 'numberCaffeine',
         optional: false,
         options: [
@@ -42,7 +42,7 @@ export const survey = [
     {
         questionType: 'SelectionGroup',
         questionText:
-            'How many alcoholic beverages have you consumed since the last survey? 1 beverage = 175 mL wine = 30mL spirits = 300 mL beer = 1/2 pint beer.',
+            'How many alcoholic beverages have you consumed since lunch? 1 beverage = 175 mL wine = 30mL spirits = 300 mL beer = 1/2 pint beer.',
         questionId: 'numberAlcohol',
         optional: false,
         options: [
@@ -75,7 +75,7 @@ export const survey = [
     {
         questionType: 'SelectionGroup',
         questionText:
-            'Have you had a nap since previous survey',
+            'Have you had a nap since lunch',
         questionId: 'napTaken',
         optional: false,
         options: [

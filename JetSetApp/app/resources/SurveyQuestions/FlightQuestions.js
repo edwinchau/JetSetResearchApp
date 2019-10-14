@@ -9,16 +9,16 @@ export const survey = [
     optional: false,
     options: [
         {
-            optionText: 'Breakfast',
-            value: 'breakfast'
+            optionText: 'First in-flight meal service',
+            value: 'firstMeal'
         },
         {
-            optionText: 'Lunch',
-            value: 'lunch'
+            optionText: 'Second in-flight meal service',
+            value: 'secondMeal'
         },
         {
-            optionText: 'Dinner',
-            value: 'dinner'
+            optionText: 'Third in-flight meal service',
+            value: 'thirdMeal'
         }
 
     {

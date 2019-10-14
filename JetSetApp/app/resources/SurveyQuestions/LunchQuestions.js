@@ -9,7 +9,7 @@ export const survey = [
     {
         questionType: 'SelectionGroup',
         questionText:
-            'How many cups of caffeinated beverages have you consumed since the last survey? Consider cups of tea, coffee, colas, and energy drinks. 1 cup = 250 mL = 8 fluid ounces.',
+            'How many cups of caffeinated beverages have you consumed since breakfast? Consider cups of tea, coffee, colas, and energy drinks. 1 cup = 250 mL = 8 fluid ounces.',
         questionId: 'numberCaffeine',
         optional: false,
         options: [
@@ -42,7 +42,7 @@ export const survey = [
     {
         questionType: 'SelectionGroup',
         questionText:
-            'How many alcoholic beverages have you consumed since the last survey? 1 beverage = 175 mL wine = 30mL spirits = 300 mL beer = 1/2 pint beer.',
+            'How many alcoholic beverages have you consumed since breakfast? 1 beverage = 175 mL wine = 30mL spirits = 300 mL beer = 1/2 pint beer.',
         questionId: 'numberAlcohol',
         optional: false,
         options: [
@@ -69,58 +69,6 @@ export const survey = [
             {
                 optionText: '5 or more cups',
                 value: '5'
-            }
-        ]
-    },
-    {
-        questionType: 'SelectionGroup',
-        questionText:
-            'Have you had a nap since the previous survey',
-        questionId: 'napTaken',
-        optional: false,
-        options: [
-            {
-                optionText: 'Yes',
-                value: 'YesNap'
-            },
-            {
-                optionText: 'No',
-                value: 'NoNap'
-            }
-          ]
-        },
-    {
-        questionType: 'TimeInput',
-        questionText: 'If yes, what time did you start the nap?',
-        questionId: 'napTime',
-        optional: true,
-        placeholderText: 'Enter nap time',
-    },
-    {
-        questionType: 'SelectionGroup',
-        questionText: 'If yes, how long was the nap?',
-        questionId: 'napDuration',
-        optional: false,
-        options: [
-            {
-                optionText: 'Did not have a nap',
-                value: '0'
-            },
-            {
-                optionText: 'Less than 30 minutes',
-                value: '1'
-            },
-            {
-                optionText: '30 minutes to less than 1 hour',
-                value: '2'
-            },
-            {
-                optionText: '1 to 2 hours',
-                value: '3'
-            },
-            {
-                optionText: 'More than 2 hours',
-                value: '4'
             }
         ]
     },
