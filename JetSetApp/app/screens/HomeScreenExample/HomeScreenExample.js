@@ -151,37 +151,45 @@ export default class HomeScreenExample extends Component {
 
         if (flightStart !== -1 && this.state.time.isBetween(flightStart, flightEnd)) {
             survey = (<Fragment>
-                <Button
+                <View style={styles.breakfast}>
+                <Button color="#ffffff"
                     onPress={() => navigation.navigate('Survey', { survey: 'BreakfastQuestions' })}
                     title="Breakfast During"
                 />
-
-                <Button
+                </View>
+                <View style={styles.lunch}>
+                <Button color="#ffffff"
                     onPress={() => navigation.navigate('Survey', { survey: 'LunchQuestions' })}
                     title="Lunch During"
                 />
-
-                <Button
+                </View>
+                <View style={styles.dinner}>
+                <Button color="#ffffff"
                     onPress={() => navigation.navigate('Survey', { survey: 'DinnerQuestions' })}
                     title="Dinner During"
                 />
+                </View>
             </Fragment>)
         } else {
             survey = (<Fragment>
-                <Button
+                <View style={styles.breakfast}>
+                <Button color="#ffffff"
                     onPress={() => navigation.navigate('Survey', { survey: 'BreakfastQuestions' })}
                     title="Breakfast Pre/Post"
                 />
-
-                <Button
+                </View>
+                <View style={styles.lunch}>
+                <Button color="#ffffff"
                     onPress={() => navigation.navigate('Survey', { survey: 'LunchQuestions' })}
                     title="Lunch Pre/Post"
                 />
-
-                <Button
+                </View>
+                <View style={styles.dinner}>
+                <Button color="#ffffff"
                     onPress={() => navigation.navigate('Survey', { survey: 'DinnerQuestions' })}
                     title="Dinner Pre/Post"
                 />
+                </View>
             </Fragment>)
         }
 
@@ -190,56 +198,44 @@ export default class HomeScreenExample extends Component {
                 <View style={styles.container}>
                     <Text>Time: {this.state.time.format('MMMM Do YYYY, h:mm:ss a')}</Text>
                 </View>
-                <View style={styles.container}>
-
                     {survey}
-
-                </View>
-                <View style={styles.container}>
-                    <Button
+                <View style={styles.admin}>
+                    <Button color="#ffffff"
                         onPress={() => SendData.sendDataEmail()}
                         title="Send Data"
                     />
                 </View>
-                <View style={styles.container}>
-                    <Button
+                <View style={styles.admin}>
+                    <Button color="#ffffff"
                         onPress={() => navigation.navigate('ResearcherPage')}
                         title="Admin Page"
                     />
                 </View>
                 <View style={styles.container}>
                     <Text>Testing Features</Text>
-
-                    <Button
+                </View>
+                <View style={styles.other}>
+                    <Button color="#ffffff"
                         onPress={() => SaveData.displayAllFiles()}
                         title="View Files"
                     />
-
-                    <Button
+                    <Button color="#ffffff"
                         onPress={() => SaveData.deleteFile("NewUserQuestions.json")}
                         title="Delete User Save"
                     />
-                </View>
-                <View style={styles.container}>
-                    <Button
+                    <Button color="#ffffff"
                         title="Notifications permission"
                         onPress={() => this.askPermissions()}
                     />
-                </View>
-                <View style={styles.container}>
-                    <Button
+                    <Button color="#ffffff"
                         title="Start pre/post flight notifications"
                         onPress={() => this.scheduleNotification()}
                     />
-                </View>
-                <View style={styles.container}>
-                    <Button
+                    <Button color="#ffffff"
                         title="Start during flight notifications"
                         onPress={() => this.scheduleFlightNotification()}
                     />
-                </View>
-                <View style={styles.container}>
-                    <Button
+                    <Button color="#ffffff"
                         title="Cancel all notifications"
                         onPress={() => Notifications.cancelAllScheduledNotificationsAsync()}
                     />

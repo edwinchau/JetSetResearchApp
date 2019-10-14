@@ -21,7 +21,7 @@ export default class NewUser extends Component {
         return (
             <View style={styles.background}>
                 <View style={styles.container}>
-                    <Button
+                    <Button color="#000000"
                         onPress={() => navigation.navigate('Survey', { survey: 'NewUserQuestions' })}
                         title="New User"
                     />

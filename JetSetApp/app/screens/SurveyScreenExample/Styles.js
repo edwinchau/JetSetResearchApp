@@ -5,7 +5,7 @@ let styles = StyleSheet.create({
         margin: 10,
         height: 30,
         width: 140,
-        borderRadius: 10,
+        borderRadius: 15,
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -16,22 +16,30 @@ let styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: 'white',
         elevation: 20,
-        borderRadius: 10,
+        borderRadius: 15,
+        paddingTop: 13,
+        paddingBottom: 13,
+        marginTop: 10,
+        marginBottom: 10,
     },
     surveyContainer: {
         width: 'auto',
         alignSelf: 'center',
-        backgroundColor: 'white',
+        backgroundColor: 'rgba(222,122,34,1)',
         borderBottomLeftRadius: 5,
         borderBottomRightRadius: 5,
         borderTopLeftRadius: 5,
         borderTopRightRadius: 5,
         alignContent: 'center',
-        padding: 5
+        borderRadius: 15,
+        paddingTop: 13,
+        paddingBottom: 13,
+        marginTop: 90,
+        marginBottom: 10,
     },
     selectionGroupContainer: {
         flexDirection: 'column',
-        backgroundColor: 'white',
+        backgroundColor: 'rgba(222,122,34,1)',
         alignContent: 'flex-end',
     },
     navButtonContainer: {
@@ -42,8 +50,6 @@ let styles = StyleSheet.create({
         margin: 10,
         fontSize: 20,
         color: 'white',
-
-
         width: 'auto'
     },
     answers: {
@@ -59,22 +65,22 @@ let styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-
     background: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: 'white',
     },
     questionText: {
         marginBottom: 20,
-        fontSize: 20
+        fontSize: 20,
+        color: 'white',
     },
     textBox: {
         borderWidth: 1,
-        borderColor: 'rgba(204,204,204,1)',
-        backgroundColor: 'white',
+        borderColor: 'white',
+        backgroundColor: 'rgba(222,122,34,1)',
         borderRadius: 10,
-
         padding: 10,
         textAlignVertical: 'top',
         marginLeft: 10,
@@ -82,8 +88,8 @@ let styles = StyleSheet.create({
     },
     numericInput: {
         borderWidth: 1,
-        borderColor: 'rgba(204,204,204,1)',
-        backgroundColor: 'white',
+        borderColor: 'white',
+        backgroundColor: 'rgba(222,122,34,1)',
         borderRadius: 10,
         padding: 10,
         textAlignVertical: 'top',
@@ -96,7 +102,7 @@ let styles = StyleSheet.create({
         marginLeft: 10
     },
     headerStyle: {
-        backgroundColor: 'rgba(141,196,63,1)',
+        backgroundColor: 'rgba(106,177,135,1)',
         height: 40,
         elevation: 5,
     },

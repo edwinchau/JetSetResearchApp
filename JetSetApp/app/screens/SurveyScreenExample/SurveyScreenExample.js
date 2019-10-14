@@ -10,8 +10,8 @@ import styles from './Styles'
 
 import SurveyLocations from '../../resources/SurveyQuestions/SurveyLocations';
 
-const GREEN = 'rgba(141,196,63,1)';
-const PURPLE = 'rgba(108,48,237,1)';
+const GREEN = 'black';
+const PURPLE = 'white';
 
 export default class SurveyScreenExample extends Component {
     static navigationOptions = ({ navigation }) => {

@@ -5,7 +5,7 @@ let styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'rgba(108,48,237,1)',
+        backgroundColor: 'white',
     },
     container: {
         minWidth: '70%',
@@ -18,10 +18,11 @@ let styles = StyleSheet.create({
     },
     questionText: {
         marginBottom: 20,
-        fontSize: 20
+        fontSize: 20,
+        color: 'white',
     },
     headerStyle: {
-        backgroundColor: 'rgba(141,196,63,1)',
+        backgroundColor: 'rgba(106,177,135,1)',
         height: 40,
         elevation: 5,
     },
