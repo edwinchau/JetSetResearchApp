@@ -22,7 +22,7 @@ export const survey = [
         questionType: 'TimeInput',
         questionText: 'What time did you have breakfast',
         questionId: 'mealTime',
-        optional: true,
+        optional: false,
         placeholderText: 'Enter meal time',
     },
     {
@@ -30,6 +30,7 @@ export const survey = [
         questionText:
             'How many cups of caffeinated beverages have you consumed since waking up? Consider cups of tea, coffee, colas, and energy drinks. 1 cup = 250 mL = 8 fluid ounces.',
         questionId: 'numberCaffeine',
+        optional: false,
         options: [
             {
                 optionText: 'None',
@@ -60,8 +61,9 @@ export const survey = [
     {
         questionType: 'SelectionGroup',
         questionText:
-            'Please select the number that represents your sleepiness level during the last five minutes',
+            'Please select the response that represents your sleepiness level during the last five minutes',
         questionId: 'kssResult',
+        optional: false,
         options: [
           {
               optionText: 'Extremely alert',
@@ -106,6 +108,7 @@ export const survey = [
         questionText:
             'How much jetlag do you have?',
         questionId: 'jetlagResult',
+        optional: false,
         options: [
             {
                 optionText: '0 - Insignificant jetlag',
@@ -158,6 +161,7 @@ export const survey = [
         questionText:
             'While you are sitting do you have any pain in your..?',
         questionId: 'painLocation',
+        optional: false,
         options: [
             {
                 optionText: 'Calves',
@@ -186,6 +190,7 @@ export const survey = [
         questionText:
             'What is your current level of pain?',
         questionId: 'painScale',
+        optional: false,
         options: [
             {
                 optionText: 'No pain',
@@ -222,6 +227,7 @@ export const survey = [
         questionText:
             'Please select the number that represents your current mood',
         questionId: 'moodScale',
+        optional: false,
         options: [
             {
                 optionText: '1. 😍',

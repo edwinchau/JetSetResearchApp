@@ -3,7 +3,7 @@ export const survey = [
         questionType: 'TimeInput',
         questionText: 'What time did you have dinner',
         questionId: 'mealTime',
-        optional: true,
+        optional: false,
         placeholderText: 'Enter meal time',
     },
     {
@@ -11,6 +11,7 @@ export const survey = [
         questionText:
             'How many cups of caffeinated beverages have you consumed since the last survey? Consider cups of tea, coffee, colas, and energy drinks. 1 cup = 250 mL = 8 fluid ounces.',
         questionId: 'numberCaffeine',
+        optional: false,
         options: [
             {
                 optionText: 'None',
@@ -43,6 +44,7 @@ export const survey = [
         questionText:
             'How many alcoholic beverages have you consumed since the last survey? 1 beverage = 175 mL wine = 30mL spirits = 300 mL beer = 1/2 pint beer.',
         questionId: 'numberAlcohol',
+        optional: false,
         options: [
             {
                 optionText: 'None',
@@ -75,6 +77,7 @@ export const survey = [
         questionText:
             'Have you had a nap since previous survey',
         questionId: 'napTaken',
+        optional: false,
         options: [
             {
                 optionText: 'Yes',
@@ -97,6 +100,7 @@ export const survey = [
         questionType: 'SelectionGroup',
         questionText: 'If yes, how long was the nap?',
         questionId: 'napDuration',
+        optional: false,
         options: [
             {
                 optionText: 'Did not have a nap',
@@ -131,8 +135,12 @@ export const survey = [
         questionType: 'SelectionGroup',
         questionText: 'If yes, please enter the duration of physical activity:',
         questionId: 'activityDuraction',
-        optional: true,
+        optional: false,
         options: [
+          {
+              optionText: 'No activity',
+              value: 'No activity'
+          },
           {
               optionText: '< 30 min ',
               value: 'Under 30 min'
@@ -158,7 +166,8 @@ export const survey = [
     {
         questionType: 'SelectionGroup',
         questionText:
-            'Please select the number that represents your sleepiness level during the last five minutes',
+            'Please select the response that represents your sleepiness level during the last five minutes',
+        optional: false,
         questionId: 'kssResult',
         options: [
           {
@@ -204,6 +213,7 @@ export const survey = [
         questionText:
             'How much jetlag do you have?',
         questionId: 'jetlagResult',
+        optional: false,
         options: [
           {
               optionText: '0 - Insignificant jetlag',
@@ -255,6 +265,7 @@ export const survey = [
         questionType: 'SelectionGroup',
         questionText:
             'While you are sitting do you have any pain in your..?',
+            optional: false,
         questionId: 'painLocation',
         options: [
             {
@@ -284,6 +295,7 @@ export const survey = [
         questionText:
             'What is your current level of pain?',
         questionId: 'painScale',
+        optional: false,
         options: [
             {
                 optionText: 'No pain',
@@ -320,6 +332,7 @@ export const survey = [
         questionText:
             'Please select the number that represents your current mood',
         questionId: 'moodScale',
+        optional: false,
         options: [
             {
                 optionText: '1. 😍',
