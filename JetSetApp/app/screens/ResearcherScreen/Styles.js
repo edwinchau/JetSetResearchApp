@@ -9,7 +9,11 @@ const styles = StyleSheet.create({
         backgroundColor: 'white'
     },
     input: {
-        height: 40, borderColor: 'gray', borderWidth: 1
+        height: 40,
+        borderColor: 'gray',
+        borderWidth: 1,
+        minWidth: '70%',
+        maxWidth: '90%',
     },
     button: {
         minWidth: '70%',

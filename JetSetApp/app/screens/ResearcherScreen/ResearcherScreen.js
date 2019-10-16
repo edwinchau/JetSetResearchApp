@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, TextInput} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, TextInput, ScrollView} from 'react-native';
 
 import styles from './Styles'
 import SaveData from '../../resources/SaveData/SaveData';
@@ -30,7 +30,7 @@ export default class ResearcherScreen extends Component {
 
     checkPassword = () => {
         if (this.state.adminPassword !== this.state.typedPassword) {
-            return false; 
+            return false;
         }
         return true;
     }
@@ -54,7 +54,7 @@ export default class ResearcherScreen extends Component {
 
     render() {
         return (
-
+            <ScrollView contentContainerStyle={{flexGrow: 1}} keyboardShouldPersistTaps='handled'>
             <View style={styles.container}>
                 <TextInput
                     placeholder="Please Type in Admin Password First"
@@ -66,13 +66,14 @@ export default class ResearcherScreen extends Component {
                     onPress={() => this.deleteAllFiles()
                     }>
                     <Text style={styles.submitButtonText}> Delete All Files </Text>
-                </TouchableOpacity>   
+                </TouchableOpacity>
                 <TouchableOpacity style={styles.button}
                     onPress={() => this.sendEmail()
                     }>
                     <Text style={styles.submitButtonText}> Send Data </Text>
                 </TouchableOpacity>
             </View>
+            </ScrollView>
         )
     }
 }
