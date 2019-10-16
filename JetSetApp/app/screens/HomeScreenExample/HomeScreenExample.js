@@ -1,10 +1,12 @@
 import React, {Component, Fragment} from 'react';
-import { StyleSheet, Text, View, Button} from 'react-native';
+import { StyleSheet, Text, View, Button, Image} from 'react-native';
 import moment from 'moment';
 import 'moment-timezone';
 import * as FileSystem from "expo-file-system";
 
 import styles from './Styles'
+import styles1 from '../../resources/Styles'
+
 import SaveData from '../../resources/SaveData/SaveData';
 import SendData from '../../resources/SendData/SendData';
 import { flightData } from '../../resources/FlightData/FlightData';
@@ -90,11 +92,12 @@ export default class HomeScreenExample extends Component {
 
     static navigationOptions = () => {
         return {
-            headerStyle: styles.headerStyle,
+            headerStyle: styles1.headerStyle,
             headerTintColor: '#fff',
             headerTitle: 'JetSet',
             headerTitleStyle: {
                 flex: 1,
+                textAlign: 'center'
             }
         };
     };
@@ -147,45 +150,45 @@ export default class HomeScreenExample extends Component {
         } catch (e) {
         }
 
+        // SURVEY BUTTONS
         let survey;
-
         if (flightStart !== -1 && this.state.time.isBetween(flightStart, flightEnd)) {
             survey = (<Fragment>
-                <View style={styles.breakfast}>
-                <Button color="#ffffff"
-                    onPress={() => navigation.navigate('Survey', { survey: 'BreakfastQuestions' })}
-                    title="Breakfast During"
-                />
+                <View style={styles1.homeButton}>
+                    <Button color="orange"
+                        onPress={() => navigation.navigate('Survey', { survey: 'BreakfastQuestions' })}
+                        title="Breakfast During"
+                    />
                 </View>
-                <View style={styles.lunch}>
-                <Button color="#ffffff"
-                    onPress={() => navigation.navigate('Survey', { survey: 'LunchQuestions' })}
-                    title="Lunch During"
-                />
+                <View style={styles1.homeButton}>
+                    <Button color="orange"
+                        onPress={() => navigation.navigate('Survey', { survey: 'LunchQuestions' })}
+                        title="Lunch During"
+                    />
                 </View>
-                <View style={styles.dinner}>
-                <Button color="#ffffff"
-                    onPress={() => navigation.navigate('Survey', { survey: 'DinnerQuestions' })}
-                    title="Dinner During"
-                />
+                <View style={styles1.homeButton}>
+                    <Button color="orange"
+                        onPress={() => navigation.navigate('Survey', { survey: 'DinnerQuestions' })}
+                        title="Dinner During"
+                    />
                 </View>
             </Fragment>)
         } else {
             survey = (<Fragment>
-                <View style={styles.breakfast}>
-                <Button color="#ffffff"
+                <View style={styles1.homeButton}>
+                <Button color="orange"
                     onPress={() => navigation.navigate('Survey', { survey: 'BreakfastQuestions' })}
                     title="Breakfast Pre/Post"
                 />
                 </View>
-                <View style={styles.lunch}>
-                <Button color="#ffffff"
+                <View style={styles1.homeButton}>
+                <Button color="orange"
                     onPress={() => navigation.navigate('Survey', { survey: 'LunchQuestions' })}
                     title="Lunch Pre/Post"
                 />
                 </View>
-                <View style={styles.dinner}>
-                <Button color="#ffffff"
+                <View style={styles1.homeButton}>
+                <Button color="orange"
                     onPress={() => navigation.navigate('Survey', { survey: 'DinnerQuestions' })}
                     title="Dinner Pre/Post"
                 />
@@ -194,52 +197,59 @@ export default class HomeScreenExample extends Component {
         }
 
         return (
-            <View style={styles.background}>
-                <View style={styles.container}>
-                    <Text>Time: {this.state.time.format('MMMM Do YYYY, h:mm:ss a')}</Text>
-                </View>
-                    {survey}
-                <View style={styles.admin}>
-                    <Button color="#ffffff"
+            
+            <View style={styles1.background}>
+                <Image style={styles1.usydlogo} source={require('../../../assets/usydlogo.png')}/>
+                <Text>
+                    <Text style={{fontWeight: "bold"}}>Current Date: </Text>
+                    {this.state.time.format('MMMM Do YYYY')}
+                </Text>
+                <Text>
+                    <Text style={{fontWeight: "bold"}}>Current Time: </Text>
+                    {this.state.time.format('h:mm:ss a')}
+                </Text>
+                {survey}
+                <View style={styles1.homeButton}>
+                    <Button color="orange"
                         onPress={() => SendData.sendDataEmail()}
                         title="Send Data"
                     />
                 </View>
-                <View style={styles.admin}>
-                    <Button color="#ffffff"
+                <View style={styles1.homeButton}>
+                    <Button color="orange"
                         onPress={() => navigation.navigate('ResearcherPage')}
                         title="Admin Page"
                     />
                 </View>
-                <View style={styles.container}>
+                {/* <View style={styles.container}>
                     <Text>Testing Features</Text>
                 </View>
                 <View style={styles.other}>
-                    <Button color="#ffffff"
+                    <Button color="orange"
                         onPress={() => SaveData.displayAllFiles()}
                         title="View Files"
                     />
-                    <Button color="#ffffff"
+                    <Button color="orange"
                         onPress={() => SaveData.deleteFile("NewUserQuestions.json")}
                         title="Delete User Save"
                     />
-                    <Button color="#ffffff"
+                    <Button color="orange"
                         title="Notifications permission"
                         onPress={() => this.askPermissions()}
                     />
-                    <Button color="#ffffff"
+                    <Button color="orange"
                         title="Start pre/post flight notifications"
                         onPress={() => this.scheduleNotification()}
                     />
-                    <Button color="#ffffff"
+                    <Button color="orange"
                         title="Start during flight notifications"
                         onPress={() => this.scheduleFlightNotification()}
                     />
-                    <Button color="#ffffff"
+                    <Button color="orange"
                         title="Cancel all notifications"
                         onPress={() => Notifications.cancelAllScheduledNotificationsAsync()}
                     />
-                </View>
+                </View> */}
             </View>
         );
     }

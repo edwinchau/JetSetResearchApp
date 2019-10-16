@@ -6,8 +6,7 @@ import DateTimePicker from "react-native-modal-datetime-picker";
 import DismissKeyboard from 'react-native-dismiss-keyboard';
 import moment from 'moment';
 
-import styles from './Styles'
-import styles1 from '../../resources/Styles'
+import styles from '../../resources/Styles'
 
 import SurveyLocations from '../../resources/SurveyQuestions/SurveyLocations';
 
@@ -17,7 +16,7 @@ const UNSELECTED_COLOUR = 'orange';
 export default class SurveyScreenExample extends Component {
     static navigationOptions = ({ navigation }) => {
         return {
-            headerStyle: styles1.headerStyle,
+            headerStyle: styles.headerStyle,
             headerTintColor: 'black',
             headerTitle: navigation.getParam('survey'),
             headerTitleStyle: {
@@ -159,7 +158,7 @@ export default class SurveyScreenExample extends Component {
         return (
             <View>
                 <TextInput
-                    style={styles1.textBox}
+                    style={styles.textBox}
                     onChangeText={text => onChange(text)}
                     numberOfLines={3}
                     underlineColorAndroid={'white'}
@@ -176,7 +175,7 @@ export default class SurveyScreenExample extends Component {
 
     renderNumericInput(onChange, value) {
         return (<TextInput
-            style={styles1.numericInput}
+            style={styles.numericInput}
             onChangeText={text => { onChange(text); }}
             value={String(value)}
             keyboardType={'numeric'}
@@ -186,7 +185,7 @@ export default class SurveyScreenExample extends Component {
 
     renderInfoText(infoText) {
         return (
-            <Text style={styles1.infoText}>{infoText}</Text>
+            <Text style={styles.infoText}>{infoText}</Text>
         );
     }
 
@@ -226,7 +225,7 @@ export default class SurveyScreenExample extends Component {
 
                 <TextInput
                     onFocus = {this.dateTimeOnFocus}
-                    style={styles1.textBox}
+                    style={styles.textBox}
                     onContentSizeChange={text => onChange(this.state.surveyDateTime)}
                     numberOfLines={3}
                     placeholder={placeholder}
@@ -252,7 +251,7 @@ export default class SurveyScreenExample extends Component {
 
                 <TextInput
                     onFocus = {this.dateTimeOnFocus}
-                    style={styles1.textBox}
+                    style={styles.textBox}
                     onContentSizeChange={text => onChange(this.state.surveyDateTime)}
                     numberOfLines={3}
                     placeholder={placeholder}
@@ -278,7 +277,7 @@ export default class SurveyScreenExample extends Component {
                             survey={SurveyLocations[this.props.navigation.getParam('survey')]}
                             renderSelector={this.renderButton.bind(this)}
                             containerStyle={styles.surveyContainer}
-                            selectionGroupContainerStyle={styles1.selectionGroupContainer}
+                            selectionGroupContainerStyle={styles.selectionGroupContainer}
                             navButtonContainerStyle={styles.navButtonContainer}
                             renderPrevious={this.renderPreviousButton.bind(this)}
                             renderNext={this.renderNextButton.bind(this)}

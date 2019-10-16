@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Text, View, Button, Image} from 'react-native';
 
-import styles from './Styles'
+import styles from '../../resources/Styles'
 
 export default class NewUser extends Component {
     static navigationOptions = () => {

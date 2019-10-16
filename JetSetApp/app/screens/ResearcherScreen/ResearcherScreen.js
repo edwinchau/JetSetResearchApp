@@ -1,7 +1,8 @@
-import React, {Component, Fragment} from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, TextInput} from 'react-native';
+ import React, {Component, Fragment} from 'react';
+import { Text, View, TextInput, Button, ScrollView} from 'react-native';
 
 import styles from './Styles'
+import styles1 from '../../resources/Styles'
 import SaveData from '../../resources/SaveData/SaveData';
 import SendData from '../../resources/SendData/SendData';
 
@@ -9,8 +10,8 @@ export default class ResearcherScreen extends Component {
 
     static navigationOptions = () => {
         return {
-            headerStyle: styles.headerStyle,
-            headerTintColor: '#fff',
+            headerStyle: styles1.headerStyle,
+            headerTintColor: 'black',
             headerTitle: 'Researcher Menu',
             headerTitleStyle: {
                 flex: 1,
@@ -54,24 +55,25 @@ export default class ResearcherScreen extends Component {
 
     render() {
         return (
-
-            <View style={styles.container}>
+            <View style={styles1.background}>
                 <TextInput
                     placeholder="Please Type in Admin Password First"
                     style = {styles.input}
                     secureTextEntry={true}
                     onChangeText={this.handlePassword}
                 />
-                <TouchableOpacity style={styles.button}
-                    onPress={() => this.deleteAllFiles()
-                    }>
-                    <Text style={styles.submitButtonText}> Delete All Files </Text>
-                </TouchableOpacity>   
-                <TouchableOpacity style={styles.button}
-                    onPress={() => this.sendEmail()
-                    }>
-                    <Text style={styles.submitButtonText}> Send Data </Text>
-                </TouchableOpacity>
+
+                <Button 
+                    style={styles1.buttonContainer}
+                    onPress={() => this.deleteAllFiles()}
+                    title="Delete All Files"
+                />
+
+                <Button
+                    style={styles1.buttonContainer}
+                    onPress={() => this.deleteAllFiles()}
+                    title="Send Data"
+                />
             </View>
         )
     }
