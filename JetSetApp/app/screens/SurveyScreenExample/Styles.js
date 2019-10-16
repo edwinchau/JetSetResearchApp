@@ -39,7 +39,8 @@ let styles = StyleSheet.create({
     },
     selectionGroupContainer: {
         flexDirection: 'column',
-        backgroundColor: 'rgba(222,122,34,1)',
+        // backgroundColor: 'rgba(222,122,34,1)',
+        backgroundColor: 'black',
         alignContent: 'flex-end',
     },
     navButtonContainer: {
@@ -74,7 +75,7 @@ let styles = StyleSheet.create({
     questionText: {
         marginBottom: 20,
         fontSize: 20,
-        color: 'white',
+        color: 'black',
     },
     textBox: {
         borderWidth: 1,

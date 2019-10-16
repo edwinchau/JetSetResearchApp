@@ -7,17 +7,18 @@ import DismissKeyboard from 'react-native-dismiss-keyboard';
 import moment from 'moment';
 
 import styles from './Styles'
+import styles1 from '../../resources/Styles'
 
 import SurveyLocations from '../../resources/SurveyQuestions/SurveyLocations';
 
-const GREEN = 'black';
-const PURPLE = 'white';
+const SELECTED_COLOUR = 'black';
+const UNSELECTED_COLOUR = 'orange';
 
 export default class SurveyScreenExample extends Component {
     static navigationOptions = ({ navigation }) => {
         return {
-            headerStyle: styles.headerStyle,
-            headerTintColor: '#fff',
+            headerStyle: styles1.headerStyle,
+            headerTintColor: 'black',
             headerTitle: navigation.getParam('survey'),
             headerTitleStyle: {
                 flex: 1,
@@ -29,7 +30,7 @@ export default class SurveyScreenExample extends Component {
         super(props);
         this.state = {
             isDateTimePickerVisible: false,
-            backgroundColor: PURPLE,
+            backgroundColor: UNSELECTED_COLOUR,
             surveyDateTime: ''
         };
     }
@@ -93,10 +94,10 @@ export default class SurveyScreenExample extends Component {
         return (
             <View style={{ flexGrow: 1, maxWidth: 100, marginTop: 10, marginBottom: 10 }}>
                 <Button
-                    color={GREEN}
+                    color={SELECTED_COLOUR}
                     onPress={onPress}
                     disabled={!enabled}
-                    backgroundColor={GREEN}
+                    backgroundColor={SELECTED_COLOUR}
                     title={'Previous'}
                 />
             </View>
@@ -107,10 +108,10 @@ export default class SurveyScreenExample extends Component {
         return (
             <View style={{ flexGrow: 1, maxWidth: 100, marginTop: 10, marginBottom: 10 }}>
                 <Button
-                    color={GREEN}
+                    color={SELECTED_COLOUR}
                     onPress={onPress}
                     disabled={!enabled}
-                    backgroundColor={GREEN}
+                    backgroundColor={SELECTED_COLOUR}
                     title={'Next'}
                 />
             </View>
@@ -124,7 +125,7 @@ export default class SurveyScreenExample extends Component {
                     title={'finished'}
                     onPress={onPress }
                     disabled={!enabled}
-                    color={GREEN}
+                    color={SELECTED_COLOUR}
                 />
             </View>
         );
@@ -139,7 +140,7 @@ export default class SurveyScreenExample extends Component {
                 <Button
                     title={data.optionText}
                     onPress={onPress}
-                    color={isSelected ? GREEN : PURPLE}
+                    color={isSelected ? SELECTED_COLOUR : UNSELECTED_COLOUR}
                     key={`button_${index}`}
                 />
             </View>
@@ -158,7 +159,7 @@ export default class SurveyScreenExample extends Component {
         return (
             <View>
                 <TextInput
-                    style={styles.textBox}
+                    style={styles1.textBox}
                     onChangeText={text => onChange(text)}
                     numberOfLines={3}
                     underlineColorAndroid={'white'}
@@ -175,10 +176,8 @@ export default class SurveyScreenExample extends Component {
 
     renderNumericInput(onChange, value) {
         return (<TextInput
-            style={styles.numericInput}
+            style={styles1.numericInput}
             onChangeText={text => { onChange(text); }}
-            underlineColorAndroid={'white'}
-            placeholderTextColor={'rgba(184,184,184,1)'}
             value={String(value)}
             keyboardType={'numeric'}
             maxLength={3}
@@ -187,9 +186,7 @@ export default class SurveyScreenExample extends Component {
 
     renderInfoText(infoText) {
         return (
-            <View style={{ marginLeft: 10, marginRight: 10 }}>
-                <Text style={styles.infoText}>{infoText}</Text>
-            </View>
+            <Text style={styles1.infoText}>{infoText}</Text>
         );
     }
 
@@ -229,12 +226,11 @@ export default class SurveyScreenExample extends Component {
 
                 <TextInput
                     onFocus = {this.dateTimeOnFocus}
-                    style={styles.textBox}
+                    style={styles1.textBox}
                     onContentSizeChange={text => onChange(this.state.surveyDateTime)}
                     numberOfLines={3}
-                    underlineColorAndroid={'white'}
                     placeholder={placeholder}
-                    placeholderTextColor={'rgba(184,184,184,1)'}
+                    placeholderTextColor={'rgba(105,105,105,1)'}
                     value={this.state.surveyDateTime}
                     blurOnSubmit
                 />
@@ -256,12 +252,11 @@ export default class SurveyScreenExample extends Component {
 
                 <TextInput
                     onFocus = {this.dateTimeOnFocus}
-                    style={styles.textBox}
+                    style={styles1.textBox}
                     onContentSizeChange={text => onChange(this.state.surveyDateTime)}
                     numberOfLines={3}
-                    underlineColorAndroid={'white'}
                     placeholder={placeholder}
-                    placeholderTextColor={'rgba(184,184,184,1)'}
+                    placeholderTextColor={'rgba(105,105,105,1)'}
                     value={this.state.surveyDateTime}
                     blurOnSubmit
                 />
@@ -277,14 +272,13 @@ export default class SurveyScreenExample extends Component {
 
     render() {
         return (
-            <View style={[styles.background, { backgroundColor: this.state.backgroundColor }]}>
+            <View style={[styles.background, { backgroundColor: '#DF4425' }]}>
                 <ScrollView contentContainerStyle={{flexGrow: 1}} keyboardShouldPersistTaps='handled'>
-
                         <SimpleSurvey
                             survey={SurveyLocations[this.props.navigation.getParam('survey')]}
                             renderSelector={this.renderButton.bind(this)}
                             containerStyle={styles.surveyContainer}
-                            selectionGroupContainerStyle={styles.selectionGroupContainer}
+                            selectionGroupContainerStyle={styles1.selectionGroupContainer}
                             navButtonContainerStyle={styles.navButtonContainer}
                             renderPrevious={this.renderPreviousButton.bind(this)}
                             renderNext={this.renderNextButton.bind(this)}
