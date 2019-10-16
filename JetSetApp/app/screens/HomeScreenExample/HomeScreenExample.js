@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import { StyleSheet, Text, View, Button} from 'react-native';
+import {StyleSheet, Text, View, Button, ScrollView} from 'react-native';
 import moment from 'moment';
 import 'moment-timezone';
 import * as FileSystem from "expo-file-system";
@@ -194,53 +194,53 @@ export default class HomeScreenExample extends Component {
         }
 
         return (
-            <View style={styles.background}>
-                <View style={styles.container}>
-                    <Text>Time: {this.state.time.format('MMMM Do YYYY, h:mm:ss a')}</Text>
+            <ScrollView contentContainerStyle={{flexGrow: 1}} keyboardShouldPersistTaps='handled'>
+                <View style={styles.background}>
+                    <View style={styles.container}>
+                        <Text>Time: {this.state.time.format('MMMM Do YYYY, h:mm:ss a')}</Text>
+                    </View>
+                        {survey}
+                    <View style={styles.admin}>
+                        <Button color="#ffffff"
+                            onPress={() => navigation.navigate('ResearcherPage')}
+                            title="Admin Page"
+                        />
+                    </View>
+                    <View style={styles.container}>
+                        <Text>Testing Features</Text>
+                    </View>
+                    <View style={styles.other}>
+                        <Button color="#ffffff"
+                                onPress={() => SendData.sendDataEmail()}
+                                title="Send Data"
+                        />
+                        <Button color="#ffffff"
+                            onPress={() => SaveData.displayAllFiles()}
+                            title="View Files"
+                        />
+                        <Button color="#ffffff"
+                            onPress={() => SaveData.deleteFile("NewUserQuestions.json")}
+                            title="Delete User Save"
+                        />
+                        <Button color="#ffffff"
+                            title="Notifications permission"
+                            onPress={() => this.askPermissions()}
+                        />
+                        <Button color="#ffffff"
+                            title="Start pre/post flight notifications"
+                            onPress={() => this.scheduleNotification()}
+                        />
+                        <Button color="#ffffff"
+                            title="Start during flight notifications"
+                            onPress={() => this.scheduleFlightNotification()}
+                        />
+                        <Button color="#ffffff"
+                            title="Cancel all notifications"
+                            onPress={() => Notifications.cancelAllScheduledNotificationsAsync()}
+                        />
+                    </View>
                 </View>
-                    {survey}
-                <View style={styles.admin}>
-                    <Button color="#ffffff"
-                        onPress={() => SendData.sendDataEmail()}
-                        title="Send Data"
-                    />
-                </View>
-                <View style={styles.admin}>
-                    <Button color="#ffffff"
-                        onPress={() => navigation.navigate('ResearcherPage')}
-                        title="Admin Page"
-                    />
-                </View>
-                <View style={styles.container}>
-                    <Text>Testing Features</Text>
-                </View>
-                <View style={styles.other}>
-                    <Button color="#ffffff"
-                        onPress={() => SaveData.displayAllFiles()}
-                        title="View Files"
-                    />
-                    <Button color="#ffffff"
-                        onPress={() => SaveData.deleteFile("NewUserQuestions.json")}
-                        title="Delete User Save"
-                    />
-                    <Button color="#ffffff"
-                        title="Notifications permission"
-                        onPress={() => this.askPermissions()}
-                    />
-                    <Button color="#ffffff"
-                        title="Start pre/post flight notifications"
-                        onPress={() => this.scheduleNotification()}
-                    />
-                    <Button color="#ffffff"
-                        title="Start during flight notifications"
-                        onPress={() => this.scheduleFlightNotification()}
-                    />
-                    <Button color="#ffffff"
-                        title="Cancel all notifications"
-                        onPress={() => Notifications.cancelAllScheduledNotificationsAsync()}
-                    />
-                </View>
-            </View>
+            </ScrollView>
         );
     }
 }
