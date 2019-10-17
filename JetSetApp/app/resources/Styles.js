@@ -79,13 +79,15 @@ let styles = StyleSheet.create({
         padding: 10,
         textAlignVertical: 'top',
         marginLeft: 10,
-        marginRight: 10
+        marginRight: 10,
+        minWidth: '70%',
+        maxWidth: '90%',
     },
     nextPreviousButton: {
-        flexGrow: 1, 
-        maxWidth: 100, 
-        marginTop: 10, 
-        marginBottom: 10 
+        flexGrow: 1,
+        maxWidth: 100,
+        marginTop: 10,
+        marginBottom: 10
     },
     navButtonContainer: {
         flexDirection: 'row',
@@ -121,7 +123,9 @@ let styles = StyleSheet.create({
         borderRadius: 10,
         padding: 10,
         marginLeft: 10,
-        marginRight: 10
+        marginRight: 10,
+        minWidth: '70%',
+        maxWidth: '90%',
     },
     adminButton: {
         alignItems: 'center',
