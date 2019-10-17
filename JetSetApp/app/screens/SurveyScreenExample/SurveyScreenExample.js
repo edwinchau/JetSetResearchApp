@@ -91,7 +91,7 @@ export default class SurveyScreenExample extends Component {
 
     renderPreviousButton(onPress, enabled) {
         return (
-            <View style={{ flexGrow: 1, maxWidth: 100, marginTop: 10, marginBottom: 10 }}>
+            <View style={styles.nextPreviousButton}>
                 <Button
                     color={SELECTED_COLOUR}
                     onPress={onPress}
@@ -105,7 +105,7 @@ export default class SurveyScreenExample extends Component {
 
     renderNextButton(onPress, enabled) {
         return (
-            <View style={{ flexGrow: 1, maxWidth: 100, marginTop: 10, marginBottom: 10 }}>
+            <View style={styles.nextPreviousButton}>
                 <Button
                     color={SELECTED_COLOUR}
                     onPress={onPress}
@@ -119,7 +119,7 @@ export default class SurveyScreenExample extends Component {
 
     renderFinishedButton(onPress, enabled) {
         return (
-            <View style={{ flexGrow: 1, maxWidth: 100, marginTop: 10, marginBottom: 10 }}>
+            <View style={styles.nextPreviousButton}>
                 <Button
                     title={'finished'}
                     onPress={onPress }
@@ -271,8 +271,9 @@ export default class SurveyScreenExample extends Component {
 
     render() {
         return (
-            <View style={[styles.background, { backgroundColor: '#DF4425' }]}>
-                <ScrollView contentContainerStyle={{flexGrow: 1}} keyboardShouldPersistTaps='handled'>
+            <View style={styles.background}>
+                <View style={{paddingVertical: 15}}>
+                    <ScrollView contentContainerStyle={{flexGrow: 1}} keyboardShouldPersistTaps='handled'>
                         <SimpleSurvey
                             survey={SurveyLocations[this.props.navigation.getParam('survey')]}
                             renderSelector={this.renderButton.bind(this)}
@@ -291,8 +292,9 @@ export default class SurveyScreenExample extends Component {
                             renderNumericInput={this.renderNumericInput}
                             renderInfo={this.renderInfoText}
                         />
+                    </ScrollView>
+                </View>
 
-                </ScrollView>
             </View>
         );
     }

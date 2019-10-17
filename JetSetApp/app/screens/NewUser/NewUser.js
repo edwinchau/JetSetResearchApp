@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Text, View, Button, Image} from 'react-native';
+import {Text, View, Image, TouchableOpacity} from 'react-native';
 
 import styles from '../../resources/Styles'
 
@@ -21,13 +21,21 @@ export default class NewUser extends Component {
 
         return (
             <View style={styles.background}>
-                <Image style={{width: 100, height: 100, }} source={require('../../../assets/usydlogo.png')}/>
-                <Text style={{fontWeight: "bold"}}>JetSet Survey App</Text>
-                <View style={styles.container}>
-                    <Button color="black"
+                <View style={styles.elementPadding}>
+                    <Image style={styles.usydlogo} source={require('../../../assets/usydlogo.png')}/>
+                </View>
+
+                <View style={styles.elementPadding}>
+                    <Text style={{fontWeight: "bold", fontSize: 20}}>JetSet Survey App</Text>
+                </View>
+
+                <View style={styles.elementPadding}>
+                    <TouchableOpacity
+                        style={styles.adminButton}
                         onPress={() => navigation.navigate('Survey', { survey: 'NewUserQuestions' })}
-                        title="New User"
-                    />
+                    >
+                        <Text style={styles.buttonTextColour}> New Users </Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         );

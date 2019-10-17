@@ -22,23 +22,25 @@ let styles = StyleSheet.create({
         borderRadius:50,
     },
     surveyContainer: {
-        width: 'auto',
-        alignSelf: 'center',
-        backgroundColor: 'rgba(222,122,34,1)',
-        borderBottomLeftRadius: 5,
-        borderBottomRightRadius: 5,
-        borderTopLeftRadius: 5,
-        borderTopRightRadius: 5,
-        alignContent: 'center',
-        borderRadius: 15,
-        paddingTop: 13,
-        paddingBottom: 13,
-        marginTop: 90,
-        marginBottom: 10,
+        // width: 'auto',
+        // alignSelf: 'center',
+        // backgroundColor: 'rgba(222,122,34,1)',
+        // borderBottomLeftRadius: 5,
+        // borderBottomRightRadius: 5,
+        // borderTopLeftRadius: 5,
+        // borderTopRightRadius: 5,
+        // alignContent: 'center',
+        // borderRadius: 15,
+        // paddingTop: 13,
+        // paddingBottom: 13,
+        // marginTop: 90,
+        // marginBottom: 10,
     },
     questionText: {
         marginBottom: 20,
-        fontSize: 20
+        fontSize: 20,
+        fontWeight: 'bold',
+        textAlign: 'center'
     },
     headerStyle: {
         backgroundColor: '#DF4425',
@@ -57,7 +59,7 @@ let styles = StyleSheet.create({
     numericInput: {
         borderWidth: 1,
         borderColor: 'black',
-        backgroundColor: 'rgba(222,122,34,1)',
+        backgroundColor: '#DF4425',
         borderRadius: 10,
         padding: 10,
         textAlignVertical: 'top',
@@ -66,34 +68,39 @@ let styles = StyleSheet.create({
     },
     selectionGroupContainer: {
         flexDirection: 'column',
-        // backgroundColor: 'rgba(222,122,34,1)',
-        backgroundColor: 'orange',
+        backgroundColor: '#DF4425',
         alignContent: 'flex-end',
     },
     textBox: {
         borderWidth: 1,
         borderColor: 'black',
-        backgroundColor: 'rgba(222,122,34,1)',
+        backgroundColor: '#DF4425',
         borderRadius: 10,
         padding: 10,
         textAlignVertical: 'top',
         marginLeft: 10,
         marginRight: 10
     },
+    nextPreviousButton: {
+        flexGrow: 1, 
+        maxWidth: 100, 
+        marginTop: 10, 
+        marginBottom: 10 
+    },
     navButtonContainer: {
         flexDirection: 'row',
         justifyContent: 'space-around',
     },
-    homeButton: {
+    homeButtonContainer: {
         minWidth: '70%',
         maxWidth: '90%',
         alignItems: 'stretch',
         justifyContent: 'center',
-        backgroundColor: 'orange',
+        backgroundColor: 'black',
         elevation: 20,
         borderRadius: 15,
-        paddingTop: 13,
-        paddingBottom: 13,
+        paddingTop: 5,
+        paddingBottom: 5,
         marginTop: 10,
         marginBottom: 10,
     },
@@ -108,20 +115,33 @@ let styles = StyleSheet.create({
         borderRadius:50,
         flexDirection: 'column'
     },
-    button: {
-        minWidth: '70%',
-        maxWidth: '90%',
-        alignItems: 'stretch',
-        justifyContent: 'center',
-        backgroundColor: 'orange',
-        fontSize: 30,
-        fontWeight: 'bold',
-        borderRadius: 15,
-        paddingTop: 13,
-        paddingBottom: 13,
-        marginTop: 10,
-        marginBottom: 10,
+    passwordTextbox: {
+        borderWidth: 1,
+        borderColor: 'black',
+        borderRadius: 10,
+        padding: 10,
+        marginLeft: 10,
+        marginRight: 10
     },
+    adminButton: {
+        alignItems: 'center',
+        backgroundColor: 'black',
+        padding: 10,
+    },
+    backgroundAdmin: {
+        flex: 1,
+        alignItems: 'center',
+        backgroundColor: '#DF4425',
+        paddingVertical: 10 // Pads from the top of the container
+        // justifyContent: 'space-between'
+    },
+    elementPadding: {
+        paddingVertical: 5
+    },
+    buttonTextColour: {
+        color: 'white',
+        fontWeight: 'bold'
+    }
 });
 
 module.exports = styles;

@@ -1,7 +1,7 @@
 export const survey = [
     {
         questionType: 'Info',
-        questionText: 'Welcome New User'
+        questionText: 'Welcome and thank you for participating the JetSet Survey App!, press next to proceed'
     },
     {
         questionType: 'NumericInput',

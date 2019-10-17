@@ -1,8 +1,7 @@
  import React, {Component, Fragment} from 'react';
-import { Text, View, TextInput, Button, ScrollView} from 'react-native';
+import { Text, View, TextInput, Button, ScrollView, TouchableOpacity, TouchableElement} from 'react-native';
 
-import styles from './Styles'
-import styles1 from '../../resources/Styles'
+import styles from '../../resources/Styles'
 import SaveData from '../../resources/SaveData/SaveData';
 import SendData from '../../resources/SendData/SendData';
 
@@ -10,7 +9,7 @@ export default class ResearcherScreen extends Component {
 
     static navigationOptions = () => {
         return {
-            headerStyle: styles1.headerStyle,
+            headerStyle: styles.headerStyle,
             headerTintColor: 'black',
             headerTitle: 'Researcher Menu',
             headerTitleStyle: {
@@ -55,25 +54,34 @@ export default class ResearcherScreen extends Component {
 
     render() {
         return (
-            <View style={styles1.background}>
-                <TextInput
-                    placeholder="Please Type in Admin Password First"
-                    style = {styles.input}
-                    secureTextEntry={true}
-                    onChangeText={this.handlePassword}
-                />
+            <View style={styles.backgroundAdmin}>
+                <View style = {styles.elementPadding}>
+                    <TextInput
+                        placeholder=" Please Type in Admin Password First "
+                        style = {styles.passwordTextbox}
+                        secureTextEntry={true}
+                        onChangeText={this.handlePassword}
+                    />
+                </View> 
 
-                <Button 
-                    style={styles1.buttonContainer}
-                    onPress={() => this.deleteAllFiles()}
-                    title="Delete All Files"
-                />
+                <View style = {styles.elementPadding}>
+                    <TouchableOpacity
+                        style={styles.adminButton}
+                        onPress={() => this.deleteAllFiles()}
+                    >
+                        <Text style={styles.buttonTextColour}> Delete All Files </Text>
+                    </TouchableOpacity>
+                </View> 
 
-                <Button
-                    style={styles1.buttonContainer}
-                    onPress={() => this.deleteAllFiles()}
-                    title="Send Data"
-                />
+                <View style = {styles.elementPadding}>
+                    <TouchableOpacity
+                    style={styles.adminButton}
+                    onPress={() => this.sendEmail()}>
+                        <Text style={styles.buttonTextColour}> Send Email </Text>
+                    </TouchableOpacity>
+                </View> 
+
+
             </View>
         )
     }
