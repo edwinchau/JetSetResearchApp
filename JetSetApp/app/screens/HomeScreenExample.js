@@ -4,11 +4,11 @@ import moment from 'moment';
 import 'moment-timezone';
 import * as FileSystem from "expo-file-system";
 
-import styles from '../../resources/Styles'
+import styles from '../resources/Styles'
 
-import SaveData from '../../resources/SaveData/SaveData';
-import SendData from '../../resources/SendData/SendData';
-import { flightData } from '../../resources/FlightData/FlightData';
+import SaveData from '../resources/SaveData';
+import SendData from '../resources/SendData';
+import { flightData } from '../resources/FlightData';
 
 let userSave = {};
 
@@ -205,7 +205,7 @@ export default class HomeScreenExample extends Component {
         return (
 
             <View style={styles.background}>
-                <Image style={styles.usydlogo} source={require('../../../assets/usydlogo.png')}/>
+                <Image style={styles.usydlogo} source={require('../../assets/usydlogo.png')}/>
                 <Text>
                     <Text style={{fontWeight: "bold"}}>Current Date: </Text>
                     {this.state.time.format('MMMM Do YYYY')}

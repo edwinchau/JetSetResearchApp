@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b408cc8c-086e-4daa-8917-f342d6ae0d80" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/JetSetApp/__test__/SaveData.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/JetSetApp/__test__/SaveData.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JetSetApp/app/resources/SaveData/SaveData.js" beforeDir="false" afterPath="$PROJECT_DIR$/JetSetApp/app/resources/SaveData/SaveData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JetSetApp/app/resources/SaveData.js" beforeDir="false" afterPath="$PROJECT_DIR$/JetSetApp/app/resources/SaveData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JetSetApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/JetSetApp/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

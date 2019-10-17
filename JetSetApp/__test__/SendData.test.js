@@ -1,4 +1,4 @@
-import SendData from "../app/resources/SendData/SendData"
+import SendData from "../app/resources/SendData"
 
 test("Simple test",()=>{
   

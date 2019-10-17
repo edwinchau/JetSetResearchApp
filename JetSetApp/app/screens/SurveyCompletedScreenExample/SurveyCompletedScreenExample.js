@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
 
 import styles from './Styles'
-import { SurveyAnswersParse, SurveyQuestions } from '../../resources/SurveyAnswersParse/SurveyAnswersParse'
-import SaveData from '../../resources/SaveData/SaveData';
+import { SurveyAnswersParse, SurveyQuestions } from '../../resources/SurveyAnswersParse'
+import SaveData from '../../resources/SaveData';
 import * as FileSystem from "expo-file-system";
 
 const GREEN = 'rgba(141,196,63,1)';

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { ScrollView, Button, Text, TextInput, View } from 'react-native';
-import { SimpleSurvey } from '../../../react-native-simple-survey';
-import { COLORS } from '../../resources/validColors';
+import { SimpleSurvey } from '../../react-native-simple-survey';
+import { COLORS } from '../resources/validColors';
 import DateTimePicker from "react-native-modal-datetime-picker";
 import DismissKeyboard from 'react-native-dismiss-keyboard';
 import moment from 'moment';
 
-import styles from '../../resources/Styles'
+import styles from '../resources/Styles'
 
-import SurveyLocations from '../../resources/SurveyQuestions/SurveyLocations';
+import SurveyLocations from '../resources/SurveyQuestions/SurveyLocations';
 
 const SELECTED_COLOUR = 'black';
 const UNSELECTED_COLOUR = 'orange';

@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import styles from './Styles'
-import SaveData from '../../resources/SaveData/SaveData';
+import SaveData from '../../resources/SaveData';
 import * as FileSystem from "expo-file-system";
 
 export default class Authentication extends Component {

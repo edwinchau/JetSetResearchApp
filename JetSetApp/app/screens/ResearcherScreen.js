@@ -1,9 +1,9 @@
  import React, {Component, Fragment} from 'react';
 import { Text, View, TextInput, Button, ScrollView, TouchableOpacity, TouchableElement} from 'react-native';
 
-import styles from '../../resources/Styles'
-import SaveData from '../../resources/SaveData/SaveData';
-import SendData from '../../resources/SendData/SendData';
+import styles from '../resources/Styles'
+import SaveData from '../resources/SaveData';
+import SendData from '../resources/SendData';
 
 export default class ResearcherScreen extends Component {
 

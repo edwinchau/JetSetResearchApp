@@ -1,4 +1,4 @@
-import SaveData from "../app/resources/SaveData/SaveData"
+import SaveData from "../app/resources/SaveData"
 import * as FileSystem from 'expo-file-system';
 
 var promiseHolder = 0;

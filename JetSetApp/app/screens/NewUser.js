@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Text, View, Image, TouchableOpacity} from 'react-native';
 
-import styles from '../../resources/Styles'
+import styles from '../resources/Styles'
 
 export default class NewUser extends Component {
     static navigationOptions = () => {
@@ -22,7 +22,7 @@ export default class NewUser extends Component {
         return (
             <View style={styles.background}>
                 <View style={styles.elementPadding}>
-                    <Image style={styles.usydlogo} source={require('../../../assets/usydlogo.png')}/>
+                    <Image style={styles.usydlogo} source={require('../../assets/usydlogo.png')}/>
                 </View>
 
                 <View style={styles.elementPadding}>
