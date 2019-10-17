@@ -203,66 +203,63 @@ export default class HomeScreenExample extends Component {
 
         // To Get the testing feature, uncomment ScrollView and the block of code
         return (
+
             <View style={styles.background}>
-                <ScrollView contentContainerStyle={{flexGrow: 1}} keyboardShouldPersistTaps='handled'>
+                <Image style={styles.usydlogo} source={require('../../../assets/usydlogo.png')}/>
+                <Text>
+                    <Text style={{fontWeight: "bold"}}>Current Date: </Text>
+                    {this.state.time.format('MMMM Do YYYY')}
+                </Text>
+                <Text>
+                    <Text style={{fontWeight: "bold"}}>Current Time: </Text>
+                    {this.state.time.format('h:mm:ss a')}
+                </Text>
+                {survey}
 
-                    <View style={styles.background}>
-                        <Image style={styles.usydlogo} source={require('../../../assets/usydlogo.png')}/>
-                        <Text>
-                            <Text style={{fontWeight: "bold"}}>Current Date: </Text>
-                            {this.state.time.format('MMMM Do YYYY')}
-                        </Text>
-                        <Text>
-                            <Text style={{fontWeight: "bold"}}>Current Time: </Text>
-                            {this.state.time.format('h:mm:ss a')}
-                        </Text>
-                        {survey}
+                {/*<View style={styles.homeButtonContainer}>
+                    <TouchableOpacity
+                        onPress={() => SendData.sendDataEmail()}
+                    >
+                        <Text style={[styles.buttonTextColour, {textAlign: 'center', fontSize: 17}]}> SEND DATA </Text>
+                    </TouchableOpacity>
+                </View>*/}
 
-                        <View style={styles.homeButtonContainer}>
-                            <TouchableOpacity
-                                onPress={() => SendData.sendDataEmail()}
-                            >
-                                <Text style={[styles.buttonTextColour, {textAlign: 'center', fontSize: 17}]}> SEND DATA </Text>
-                            </TouchableOpacity>
-                        </View>
+                <View style={styles.homeButtonContainer}>
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate('ResearcherPage')}
+                    >
+                        <Text style={[styles.buttonTextColour, {textAlign: 'center', fontSize: 17}]}> RESEARCHER MENU </Text>
+                    </TouchableOpacity>
+                </View>
 
-                        <View style={styles.homeButtonContainer}>
-                            <TouchableOpacity
-                                onPress={() => navigation.navigate('ResearcherPage')}
-                            >
-                                <Text style={[styles.buttonTextColour, {textAlign: 'center', fontSize: 17}]}> RESEARCHER MENU </Text>
-                            </TouchableOpacity>
-                        </View>
+                {/* <Text style={{fontSize: 20}}>Testing Features</Text>
 
-                        {/* <Text style={{fontSize: 20}}>Testing Features</Text>
-
-                        <Button color="black"
-                            onPress={() => SaveData.displayAllFiles()}
-                            title="View Files"
-                        />
-                        <Button color="black"
-                            onPress={() => SaveData.deleteFile("NewUserQuestions.json")}
-                            title="Delete User Save"
-                        />
-                        <Button color="black"
-                            title="Notifications permission"
-                            onPress={() => this.askPermissions()}
-                        />
-                        <Button color="black"
-                            title="Start pre/post flight notifications"
-                            onPress={() => this.scheduleNotification()}
-                        />
-                        <Button color="black"
-                            title="Start during flight notifications"
-                            onPress={() => this.scheduleFlightNotification()}
-                        />
-                        <Button color="black"
-                            title="Cancel all notifications"
-                            onPress={() => Notifications.cancelAllScheduledNotificationsAsync()}
-                        /> */}
-                    </View>
-                </ScrollView>
+                <Button color="black"
+                    onPress={() => SaveData.displayAllFiles()}
+                    title="View Files"
+                />
+                <Button color="black"
+                    onPress={() => SaveData.deleteFile("NewUserQuestions.json")}
+                    title="Delete User Save"
+                />
+                <Button color="black"
+                    title="Notifications permission"
+                    onPress={() => this.askPermissions()}
+                />
+                <Button color="black"
+                    title="Start pre/post flight notifications"
+                    onPress={() => this.scheduleNotification()}
+                />
+                <Button color="black"
+                    title="Start during flight notifications"
+                    onPress={() => this.scheduleFlightNotification()}
+                />
+                <Button color="black"
+                    title="Cancel all notifications"
+                    onPress={() => Notifications.cancelAllScheduledNotificationsAsync()}
+                /> */}
             </View>
+
         );
     }
 }
