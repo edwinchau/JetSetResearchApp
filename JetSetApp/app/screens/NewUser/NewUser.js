@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Button} from 'react-native';
+import {Text, View, Image, TouchableOpacity} from 'react-native';
 
-import styles from './Styles'
+import styles from '../../resources/Styles'
 
 export default class NewUser extends Component {
     static navigationOptions = () => {
         return {
             headerStyle: styles.headerStyle,
-            headerTintColor: '#fff',
-            headerTitle: 'JetSet',
+            headerTintColor: 'black',
+            headerTitle:"Home Page",
             headerTitleStyle: {
                 flex: 1,
+                textAlign: 'center'
             }
         };
     };
@@ -20,11 +21,21 @@ export default class NewUser extends Component {
 
         return (
             <View style={styles.background}>
-                <View style={styles.container}>
-                    <Button color="#000000"
+                <View style={styles.elementPadding}>
+                    <Image style={styles.usydlogo} source={require('../../../assets/usydlogo.png')}/>
+                </View>
+
+                <View style={styles.elementPadding}>
+                    <Text style={{fontWeight: "bold", fontSize: 20}}>JetSet Survey App</Text>
+                </View>
+
+                <View style={styles.elementPadding}>
+                    <TouchableOpacity
+                        style={styles.adminButton}
                         onPress={() => navigation.navigate('Survey', { survey: 'NewUserQuestions' })}
-                        title="New User"
-                    />
+                    >
+                        <Text style={styles.buttonTextColour}> New Users </Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         );

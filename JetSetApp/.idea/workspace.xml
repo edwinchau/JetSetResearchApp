@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6062d5e6-1bc0-4882-85df-84657eab5d5a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/Styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/usydlogo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/SurveyQuestions/NewUserQuestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/SurveyQuestions/NewUserQuestions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/screens/HomeScreenExample/HomeScreenExample.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/HomeScreenExample/HomeScreenExample.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/HomeScreenExample/Styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/NewUser/NewUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/NewUser/NewUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/NewUser/Styles.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/screens/ResearcherScreen/ResearcherScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/ResearcherScreen/ResearcherScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/ResearcherScreen/Styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/ResearcherScreen/Styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/SurveyScreenExample/Styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/SurveyScreenExample/Styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/SurveyScreenExample/SurveyScreenExample.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/SurveyScreenExample/SurveyScreenExample.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
