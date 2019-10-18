@@ -11,7 +11,7 @@ export default class NewUser extends Component {
             headerTitle:"Home Page",
             headerTitleStyle: {
                 flex: 1,
-                textAlign: 'center'
+                textAlign: 'center',
             }
         };
     };
@@ -31,7 +31,7 @@ export default class NewUser extends Component {
 
                 <View style={styles.elementPadding}>
                     <TouchableOpacity
-                        style={styles.adminButton}
+                        style={styles.button}
                         onPress={() => navigation.navigate('Survey', { survey: 'NewUserQuestions' })}
                     >
                         <Text style={styles.buttonTextColour}> New Users </Text>

@@ -92,7 +92,7 @@ export default class HomeScreenExample extends Component {
     static navigationOptions = () => {
         return {
             headerStyle: styles.headerStyle,
-            headerTintColor: '#fff',
+            headerTintColor: 'black',
             headerTitle: 'JetSet',
             headerTitleStyle: {
                 flex: 1,
@@ -216,13 +216,13 @@ export default class HomeScreenExample extends Component {
                 </Text>
                 {survey}
 
-                {/*<View style={styles.homeButtonContainer}>
+                <View style={styles.homeButtonContainer}>
                     <TouchableOpacity
                         onPress={() => SendData.sendDataEmail()}
                     >
                         <Text style={[styles.buttonTextColour, {textAlign: 'center', fontSize: 17}]}> SEND DATA </Text>
                     </TouchableOpacity>
-                </View>*/}
+                </View>
 
                 <View style={styles.homeButtonContainer}>
                     <TouchableOpacity

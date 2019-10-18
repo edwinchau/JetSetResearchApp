@@ -54,9 +54,8 @@ export default class ResearcherScreen extends Component {
 
     render() {
         return (
-            <View style={styles.backgroundAdmin}>
+            <View style={styles.background}>
                 <ScrollView contentContainerStyle={{flexGrow: 1}} keyboardShouldPersistTaps='handled'>
-
                     <View style = {styles.elementPadding}>
                         <TextInput
                             placeholder=" Please Type in Admin Password First "
@@ -68,7 +67,7 @@ export default class ResearcherScreen extends Component {
 
                     <View style = {styles.elementPadding}>
                         <TouchableOpacity
-                            style={styles.adminButton}
+                            style={styles.button}
                             onPress={() => this.deleteAllFiles()}
                         >
                             <Text style={styles.buttonTextColour}> Delete All Files </Text>
@@ -77,7 +76,7 @@ export default class ResearcherScreen extends Component {
 
                     <View style = {styles.elementPadding}>
                         <TouchableOpacity
-                        style={styles.adminButton}
+                        style={styles.button}
                         onPress={() => this.sendEmail()}>
                             <Text style={styles.buttonTextColour}> Send Email </Text>
                         </TouchableOpacity>

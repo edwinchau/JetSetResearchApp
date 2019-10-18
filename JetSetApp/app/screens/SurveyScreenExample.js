@@ -91,7 +91,7 @@ export default class SurveyScreenExample extends Component {
 
     renderPreviousButton(onPress, enabled) {
         return (
-            <View style={styles.nextPreviousButton}>
+            <View style={styles.surveyButtons}>
                 <Button
                     color={SELECTED_COLOUR}
                     onPress={onPress}
@@ -105,7 +105,7 @@ export default class SurveyScreenExample extends Component {
 
     renderNextButton(onPress, enabled) {
         return (
-            <View style={styles.nextPreviousButton}>
+            <View style={styles.surveyButtons}>
                 <Button
                     color={SELECTED_COLOUR}
                     onPress={onPress}
@@ -119,7 +119,7 @@ export default class SurveyScreenExample extends Component {
 
     renderFinishedButton(onPress, enabled) {
         return (
-            <View style={styles.nextPreviousButton}>
+            <View style={styles.surveyButtons}>
                 <Button
                     title={'finished'}
                     onPress={onPress }
@@ -149,21 +149,22 @@ export default class SurveyScreenExample extends Component {
     renderQuestionText(questionText) {
         return (
             <View style={{ marginLeft: 10, marginRight: 10 }}>
-                <Text numLines={1} style={styles.questionText}>{questionText}</Text>
+                <Text numLines={1} style={styles.surveyQuestionText}>{questionText}</Text>
             </View>
         );
     }
 
+    // Not currently being rendered anywhere. Need examples for styling purposes
     renderTextBox(onChange, placeholder, value) {
         return (
             <View>
                 <TextInput
-                    style={styles.textBox}
+                    style={styles.surveyTextBox}
                     onChangeText={text => onChange(text)}
                     numberOfLines={3}
                     underlineColorAndroid={'white'}
                     placeholder={placeholder}
-                    placeholderTextColor={'rgba(184,184,184,1)'}
+                    placeholderTextColor={'black'}
                     value={value}
                     multiline
                     blurOnSubmit
@@ -175,7 +176,7 @@ export default class SurveyScreenExample extends Component {
 
     renderNumericInput(onChange, value) {
         return (<TextInput
-            style={styles.numericInput}
+            style={styles.surveyNumericInput}
             onChangeText={text => { onChange(text); }}
             value={String(value)}
             keyboardType={'numeric'}
@@ -185,7 +186,7 @@ export default class SurveyScreenExample extends Component {
 
     renderInfoText(infoText) {
         return (
-            <Text style={styles.infoText}>{infoText}</Text>
+            <Text style={styles.surveyInfoText}>{infoText}</Text>
         );
     }
 
@@ -225,7 +226,7 @@ export default class SurveyScreenExample extends Component {
 
                 <TextInput
                     onFocus = {this.dateTimeOnFocus}
-                    style={styles.textBox}
+                    style={styles.surveyTextBox}
                     onContentSizeChange={text => onChange(this.state.surveyDateTime)}
                     numberOfLines={3}
                     placeholder={placeholder}
@@ -251,7 +252,7 @@ export default class SurveyScreenExample extends Component {
 
                 <TextInput
                     onFocus = {this.dateTimeOnFocus}
-                    style={styles.textBox}
+                    style={styles.surveyTextBox}
                     onContentSizeChange={text => onChange(this.state.surveyDateTime)}
                     numberOfLines={3}
                     placeholder={placeholder}
@@ -277,9 +278,9 @@ export default class SurveyScreenExample extends Component {
                         <SimpleSurvey
                             survey={SurveyLocations[this.props.navigation.getParam('survey')]}
                             renderSelector={this.renderButton.bind(this)}
-                            containerStyle={styles.surveyContainer}
-                            selectionGroupContainerStyle={styles.selectionGroupContainer}
-                            navButtonContainerStyle={styles.navButtonContainer}
+                            // containerStyle={styles.surveyContainer}
+                            selectionGroupContainerStyle={styles.surveySelectionGroupContainer}
+                            navButtonContainerStyle={styles.surveyNavButtonContainer}
                             renderPrevious={this.renderPreviousButton.bind(this)}
                             renderNext={this.renderNextButton.bind(this)}
                             renderFinished={this.renderFinishedButton.bind(this)}

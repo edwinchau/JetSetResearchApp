@@ -11,9 +11,6 @@ import * as FileSystem from 'expo-file-system';
  * This has been replaced by using console.log to display the returned values that it is meant to return instead...
  */
 
-
-
-
 class SaveData extends Component {
 
     // Debugger variables
