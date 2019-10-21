@@ -219,13 +219,13 @@ export default class HomeScreenExample extends Component {
                 </Text>
                 {survey}
 
-                <View style={styles.homeButtonContainer}>
-                    <TouchableOpacity
-                        onPress={() => SendData.sendDataEmail()}
-                    >
-                        <Text style={[styles.buttonTextColour, {textAlign: 'center', fontSize: 17}]}> SEND DATA </Text>
-                    </TouchableOpacity>
-                </View>
+                {/*<View style={styles.homeButtonContainer}>*/}
+                {/*    <TouchableOpacity*/}
+                {/*        onPress={() => SendData.sendDataEmail()}*/}
+                {/*    >*/}
+                {/*        <Text style={[styles.buttonTextColour, {textAlign: 'center', fontSize: 17}]}> SEND DATA </Text>*/}
+                {/*    </TouchableOpacity>*/}
+                {/*</View>*/}
 
                 <View style={styles.homeButtonContainer}>
                     <TouchableOpacity

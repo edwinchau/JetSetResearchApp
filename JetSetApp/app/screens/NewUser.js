@@ -34,7 +34,7 @@ export default class NewUser extends Component {
                         style={styles.button}
                         onPress={() => navigation.navigate('Survey', { survey: 'NewUserQuestions' })}
                     >
-                        <Text style={styles.buttonTextColour}> New Users </Text>
+                        <Text style={styles.buttonTextColour}> New User </Text>
                     </TouchableOpacity>
                 </View>
             </View>

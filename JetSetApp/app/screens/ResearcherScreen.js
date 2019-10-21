@@ -1,5 +1,5 @@
  import React, {Component, Fragment} from 'react';
-import { Text, View, TextInput, Button, ScrollView, TouchableOpacity, TouchableElement} from 'react-native';
+import { Text, View, TextInput, Button, ScrollView, TouchableOpacity, Alert} from 'react-native';
 
 import styles from '../resources/Styles'
 import SaveData from '../resources/SaveData';
@@ -37,8 +37,28 @@ export default class ResearcherScreen extends Component {
 
     deleteAllFiles = () => {
         if (this.checkPassword()) {
-            SaveData.deleteAllFiles();
-            alert("Deleted All Files");
+            Alert.alert(
+                'Delete all data?',
+                'Are you sure you want to delete all user data?',
+                [
+                    {
+                        text: 'OK',
+                        onPress: () => {
+                            SaveData.deleteAllFiles();
+                            alert("Deleted All Files");
+                            this.props.navigation.navigate('NewUser');
+                        }
+                    },
+                    {
+                        text: 'Cancel',
+                        onPress: () => {
+                            alert("Files not deleted");
+                        },
+                        style: 'cancel',
+                    },
+                ],
+                { cancelable: false }
+            );
         } else {
             alert("Incorrect password");
         }
