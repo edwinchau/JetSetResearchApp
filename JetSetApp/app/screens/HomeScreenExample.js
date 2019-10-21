@@ -151,31 +151,34 @@ export default class HomeScreenExample extends Component {
 
         // SURVEY BUTTONS
         let survey;
+
+        // Questions displayed in flight
         if (flightStart !== -1 && this.state.time.isBetween(flightStart, flightEnd)) {
             survey = (<Fragment>
                 <View style={styles.homeButtonContainer}>
                     <TouchableOpacity
-                        onPress={() => navigation.navigate('Survey', { survey: 'BreakfastQuestions' })}
+                        onPress={() => navigation.navigate('Survey', { survey: 'FlightBreakfastQuestions' })}
                     >
                         <Text style={[styles.buttonTextColour, {textAlign: 'center', fontSize: 17}]}> BREAKFAST DURING </Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.homeButtonContainer}>
                     <TouchableOpacity
-                        onPress={() => navigation.navigate('Survey', { survey: 'LunchQuestions' })}
+                        onPress={() => navigation.navigate('Survey', { survey: 'FlightLunchQuestions' })}
                     >
                         <Text style={[styles.buttonTextColour, {textAlign: 'center', fontSize: 17}]}> LUNCH DURING </Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.homeButtonContainer}>
                     <TouchableOpacity
-                        onPress={() => navigation.navigate('Survey', { survey: 'DinnerQuestions' })}
+                        onPress={() => navigation.navigate('Survey', { survey: 'FlightDinnerQuestions' })}
                     >
                         <Text style={[styles.buttonTextColour, {textAlign: 'center', fontSize: 17}]}> DINNER DURING </Text>
                     </TouchableOpacity>
                 </View>
             </Fragment>)
         } else {
+            // Questions displayed outside of the flight timings
             survey = (<Fragment>
                 <View style={styles.homeButtonContainer}>
                     <TouchableOpacity
