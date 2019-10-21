@@ -4,11 +4,11 @@ import {
     createAppContainer
 } from 'react-navigation';
 
-import SurveyCompletedScreenExample from './app/screens/SurveyCompletedScreenExample/SurveyCompletedScreenExample'
+import SurveyCompletedScreenExample from './app/screens/SurveyCompletedScreenExample'
 import SurveyScreenExample from './app/screens/SurveyScreenExample';
 import HomeScreenExample from "./app/screens/HomeScreenExample";
 import NewUser from "./app/screens/NewUser";
-import Authentication from "./app/screens/Authentication/Authentication";
+import Authentication from "./app/screens/Authentication";
 import ResearcherPage from "./app/screens/ResearcherScreen"
 
 const appStack = createStackNavigator(

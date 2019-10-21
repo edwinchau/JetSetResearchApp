@@ -1,5 +1,5 @@
 import React from "react";
-import SurveyCompletedScreenExample from "../app/screens/SurveyCompletedScreenExample/SurveyCompletedScreenExample"
+import SurveyCompletedScreenExample from "../app/screens/SurveyCompletedScreenExample"
 import renderer from "react-test-renderer"
 
 describe("<SurveyCompletedScreenExapmle/>", ()=>{

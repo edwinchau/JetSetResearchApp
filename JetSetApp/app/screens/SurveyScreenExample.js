@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { ScrollView, Button, Text, TextInput, View } from 'react-native';
 import { SimpleSurvey } from '../../react-native-simple-survey';
-import { COLORS } from '../resources/validColors';
 import DateTimePicker from "react-native-modal-datetime-picker";
 import DismissKeyboard from 'react-native-dismiss-keyboard';
 import moment from 'moment';
@@ -78,12 +77,6 @@ export default class SurveyScreenExample extends Component {
      */
     onAnswerSubmitted(answer) {
         switch (answer.questionId) {
-            case 'favoriteColor': {
-                if (COLORS.includes(answer.value.toLowerCase())) {
-                    this.setState({ backgroundColor: answer.value.toLowerCase() });
-                }
-                break;
-            }
             default:
                 break;
         }

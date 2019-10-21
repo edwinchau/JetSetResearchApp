@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {Button, Text, View} from 'react-native';
 
-import styles from './Styles'
-import { SurveyAnswersParse, SurveyQuestions } from '../../resources/SurveyAnswersParse'
-import SaveData from '../../resources/SaveData';
-import * as FileSystem from "expo-file-system";
+import styles from '../resources/Styles'
+import { SurveyAnswersParse, SurveyQuestions } from '../resources/SurveyAnswersParse'
+import SaveData from '../resources/SaveData';
 
-const GREEN = 'rgba(141,196,63,1)';
-const PURPLE = 'rgba(108,48,237,1)';
-const defaultAnswers = { favoriteDate: 'nothing', favoriteColor: 'nothing', favoriteNumber: '0', favoritePet: 'nothing' };
 
 export default class SurveyCompletedScreenExample extends Component {
     static navigationOptions = () => {
         return {
             headerStyle: styles.headerStyle,
             headerTintColor: '#fff',
-            headerTitle: 'Survey Results',
+            // headerTitle: 'Survey Results',
             headerTitleStyle: {
                 flex: 1,
             },
@@ -52,16 +48,16 @@ export default class SurveyCompletedScreenExample extends Component {
 
             SaveData.saveSurveyResults(fileSaveLocation, answers, questions);
         }
-        
+
         return (
             <View style={styles.background}>
-                <View style={styles.container}>
-                    <Text>Raw JSON: {JSON.stringify(this.props.navigation.getParam('surveyAnswers', {}))}</Text>
-                    <Button
-                        onPress={() => navigate('Home')}
-                        title="Back Home"
-                    />
-                </View>
+                {/*<View style={styles.container}>*/}
+                {/*    <Text>Raw JSON: {JSON.stringify(this.props.navigation.getParam('surveyAnswers', {}))}</Text>*/}
+                {/*    <Button*/}
+                {/*        onPress={() => navigate('Home')}*/}
+                {/*        title="Back Home"*/}
+                {/*    />*/}
+                {/*</View>*/}
             </View>
         );
     }

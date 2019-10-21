@@ -22,7 +22,7 @@ class SendData extends Component {
                         result1 = JSON.parse(result1)['userID']
 
                         let mailOptions =  {
-                            recipients: ['test@test.com'],
+                            recipients: ['cpc.qantas@sydney.edu.au'],
                             subject: 'JetSet Results UserID:' + result1,
                             attachments: result,
                         }
