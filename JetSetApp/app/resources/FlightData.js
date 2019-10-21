@@ -14,5 +14,13 @@ export const flightData = [
         flightTimeUTCOffset: '-4',
         flightLength: 1380,
         flightLengthOffset: 180,
+    },
+    {
+        flightCode: 'TEST',
+        flightPath: 'Sydney to Sydney',
+        flightTimeStart: '12:00 am',
+        flightTimeUTCOffset: '+11',
+        flightLength: 99999999999,
+        flightLengthOffset: 180,
     }
 ];

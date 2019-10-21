@@ -1,30 +1,30 @@
 export const survey = [
-  {
-    questionType: 'SelectionGroup',
-    questionText:
-        'What meal have you most recently consumed',
-    questionId: 'mealType',
-    optional: false,
-    options: [
-        {
-            optionText: 'First in-flight meal service',
-            value: 'firstMeal'
-        },
-        {
-            optionText: 'Second in-flight meal service',
-            value: 'secondMeal'
-        },
-        {
-            optionText: 'Third in-flight meal service',
-            value: 'thirdMeal'
-        }
-
+    {
+        questionType: 'SelectionGroup',
+        questionText: 'What meal have you most recently consumed',
+        questionId: 'mealType',
+        optional: false,
+        options: [
+            {
+                optionText: 'First in-flight meal service',
+                value: 'firstMeal'
+            },
+            {
+                optionText: 'Second in-flight meal service',
+                value: 'secondMeal'
+            },
+            {
+                optionText: 'Third in-flight meal service',
+                value: 'thirdMeal'
+            }
+        ]
+    },
     {
         questionType: 'TimeInput',
         questionText: 'What time did you have your meal',
         questionId: 'mealTime',
         optional: false,
-        placeholderText: 'Enter meal time',
+        placeholderText: 'Enter meal time'
     },
     {
         questionType: 'SelectionGroup',
@@ -120,7 +120,7 @@ export const survey = [
         questionType: 'SelectionGroup',
         questionText: 'If yes, how long was the nap?',
         questionId: 'napDuration',
-        optional: false,
+        optional: true,
         options: [
             {
                 optionText: 'Did not have a nap',

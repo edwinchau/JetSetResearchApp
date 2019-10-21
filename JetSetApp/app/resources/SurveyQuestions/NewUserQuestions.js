@@ -22,6 +22,10 @@ export const survey = [
             {
                 optionText: ' LHR-SYD dep 10:00 (21:00 Sydney time) from London; arrive 6:00 (17:00 London time)',
                 value: 'LHR'
+            },
+            {
+                optionText: 'All Day Test Flight',
+                value: 'TEST'
             }
         ]
     },
@@ -31,36 +35,36 @@ export const survey = [
         questionId: 'dateOfFlight',
         placeholderText: 'Date of flight',
     },
-    {
-        questionType: 'TimeInput',
-        questionText: 'What time do you usually have breakfast?',
-        questionId: 'timeOfBreakfast',
-        placeholderText: 'Breakfast time',
-    },
-    {
-        questionType: 'TimeInput',
-        questionText: 'What time do you usually have lunch?',
-        questionId: 'timeOfLunch',
-        placeholderText: 'Lunch time',
-    },
-    {
-        questionType: 'TimeInput',
-        questionText: 'What time do you usually have dinner?',
-        questionId: 'timeOfDinner',
-        placeholderText: 'Dinner time',
-    },
-    {
-        questionType: 'TimeInput',
-        questionText: 'What time do you usually go to bed?',
-        questionId: 'timeOfSleep',
-        placeholderText: 'Bed time',
-    },
-    {
-        questionType: 'TimeInput',
-        questionText: 'What time do you usually wake up?',
-        questionId: 'timeOfWakeup',
-        placeholderText: 'Wake up time',
-    },
+    // {
+    //     questionType: 'TimeInput',
+    //     questionText: 'What time do you usually have breakfast?',
+    //     questionId: 'timeOfBreakfast',
+    //     placeholderText: 'Breakfast time',
+    // },
+    // {
+    //     questionType: 'TimeInput',
+    //     questionText: 'What time do you usually have lunch?',
+    //     questionId: 'timeOfLunch',
+    //     placeholderText: 'Lunch time',
+    // },
+    // {
+    //     questionType: 'TimeInput',
+    //     questionText: 'What time do you usually have dinner?',
+    //     questionId: 'timeOfDinner',
+    //     placeholderText: 'Dinner time',
+    // },
+    // {
+    //     questionType: 'TimeInput',
+    //     questionText: 'What time do you usually go to bed?',
+    //     questionId: 'timeOfSleep',
+    //     placeholderText: 'Bed time',
+    // },
+    // {
+    //     questionType: 'TimeInput',
+    //     questionText: 'What time do you usually wake up?',
+    //     questionId: 'timeOfWakeup',
+    //     placeholderText: 'Wake up time',
+    // },
     {
         questionType: 'Info',
         questionText: 'Thank you for adding your details, your response has been logged!'
