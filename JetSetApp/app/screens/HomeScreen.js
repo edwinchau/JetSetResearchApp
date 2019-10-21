@@ -14,7 +14,7 @@ let userSave = {};
 
 import { Notifications } from "expo";
 
-export default class HomeScreenExample extends Component {
+export default class HomeScreen extends Component {
     askPermissions = async () => {
         alert("You need to enable notifications for this app in settings.");
         return true;

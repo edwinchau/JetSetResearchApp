@@ -4,18 +4,18 @@ import {
     createAppContainer
 } from 'react-navigation';
 
-import SurveyCompletedScreenExample from './app/screens/SurveyCompletedScreenExample'
-import SurveyScreenExample from './app/screens/SurveyScreenExample';
-import HomeScreenExample from "./app/screens/HomeScreenExample";
+import SurveyCompletedScreen from './app/screens/SurveyCompletedScreen'
+import SurveyScreen from './app/screens/SurveyScreen';
+import HomeScreen from "./app/screens/HomeScreen";
 import NewUser from "./app/screens/NewUser";
 import Authentication from "./app/screens/Authentication";
 import ResearcherPage from "./app/screens/ResearcherScreen"
 
 const appStack = createStackNavigator(
     {
-      Home: HomeScreenExample,
-      Survey: SurveyScreenExample,
-      SurveyCompleted: SurveyCompletedScreenExample,
+      Home: HomeScreen,
+      Survey: SurveyScreen,
+      SurveyCompleted: SurveyCompletedScreen,
       ResearcherPage: ResearcherPage
     },
     {
@@ -26,8 +26,8 @@ const appStack = createStackNavigator(
 const newUserStack = createStackNavigator(
     {
         NewUser: NewUser,
-        Survey: SurveyScreenExample,
-        SurveyCompleted: SurveyCompletedScreenExample,
+        Survey: SurveyScreen,
+        SurveyCompleted: SurveyCompletedScreen,
     },
     {
         initialRouteName: 'NewUser',

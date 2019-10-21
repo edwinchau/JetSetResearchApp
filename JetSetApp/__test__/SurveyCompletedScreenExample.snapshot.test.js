@@ -1,9 +1,9 @@
 import React from "react";
-import SurveyCompletedScreenExample from "../app/screens/SurveyCompletedScreenExample"
+import SurveyCompletedScreen from "../app/screens/SurveyCompletedScreen"
 import renderer from "react-test-renderer"
 
 describe("<SurveyCompletedScreenExapmle/>", ()=>{
   it("snapshot", ()=>{
-    expect(renderer.create(<SurveyCompletedScreenExample/>).toJSON()).toMatchSnapshot();
+    expect(renderer.create(<SurveyCompletedScreen/>).toJSON()).toMatchSnapshot();
   });
 });

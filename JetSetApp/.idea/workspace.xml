@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6062d5e6-1bc0-4882-85df-84657eab5d5a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__test__/HomeScreenExample.snapshot.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/__test__/HomeScreenExample.snapshot.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__test__/SurveyCompletedScreenExample.snapshot.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/__test__/SurveyCompletedScreenExample.snapshot.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/SendData.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/SendData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/validColors.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/Authentication/Authentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/Authentication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/Authentication/Styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/SurveyCompletedScreenExample/Styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/SurveyCompletedScreenExample/SurveyCompletedScreenExample.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/SurveyCompletedScreenExample.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/SurveyScreenExample.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/SurveyScreenExample.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__test__/__snapshots__/HomeScreenExample.snapshot.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/__test__/__snapshots__/HomeScreenExample.snapshot.test.js.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/HomeScreenExample.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/SurveyCompletedScreenExample.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/SurveyCompletedScreen.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

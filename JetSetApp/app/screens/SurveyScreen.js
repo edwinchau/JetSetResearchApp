@@ -12,7 +12,7 @@ import SurveyLocations from '../resources/SurveyQuestions/SurveyLocations';
 const SELECTED_COLOUR = 'black';
 const UNSELECTED_COLOUR = 'orange';
 
-export default class SurveyScreenExample extends Component {
+export default class SurveyScreen extends Component {
     static navigationOptions = ({ navigation }) => {
         return {
             headerStyle: styles.headerStyle,

@@ -1,10 +1,10 @@
 import React from "react";
-import HomeScreenExample from "../app/screens/HomeScreenExample/HomeScreenExample"
+import HomeScreenExample from "../app/screens/HomeScreen/HomeScreen"
 import renderer from "react-test-renderer"
 
-describe("<HomeScreenExample/>", ()=>{
+describe("<HomeScreen/>", ()=>{
   it("snapshot", ()=>{
     expect(renderer.create(<HomeScreenExample/>).toJSON()).toMatchSnapshot();
-    
+
   });
 });

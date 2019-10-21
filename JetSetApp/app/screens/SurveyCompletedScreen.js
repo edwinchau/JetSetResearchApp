@@ -6,7 +6,7 @@ import { SurveyAnswersParse, SurveyQuestions } from '../resources/SurveyAnswersP
 import SaveData from '../resources/SaveData';
 
 
-export default class SurveyCompletedScreenExample extends Component {
+export default class SurveyCompletedScreen extends Component {
     static navigationOptions = () => {
         return {
             headerStyle: styles.headerStyle,
