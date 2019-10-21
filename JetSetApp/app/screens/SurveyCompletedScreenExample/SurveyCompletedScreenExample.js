@@ -24,6 +24,9 @@ export default class SurveyCompletedScreenExample extends Component {
         };
     };
 
+    componentDidMount() {
+        this.props.navigation.navigate('Home');
+    }
 
     render() {
         const { navigate } = this.props.navigation;
@@ -47,25 +50,18 @@ export default class SurveyCompletedScreenExample extends Component {
             answers = SurveyAnswersParse(answers, surveyQuestions);
             let questions = SurveyQuestions(surveyQuestions);
 
-            SaveData.saveSurveyResults(fileSaveLocation, answers,questions);
+            SaveData.saveSurveyResults(fileSaveLocation, answers, questions);
         }
-
+        
         return (
             <View style={styles.background}>
                 <View style={styles.container}>
-                    {/*<Text style={styles.questionText}>The results are in!</Text>*/}
-                    {/*<Text style={styles.questionText}>Your favorite date: {answers.favoriteDate}</Text>*/}
-                    {/*<Text style={styles.questionText}>Your favorite color: {answers.favoriteColor}</Text>*/}
-                    {/*<Text style={styles.questionText}>Your favorite number: {answers.favoriteNumber}</Text>*/}
-                    {/*<Text style={styles.questionText}>Your favorite pet: {answers.favoritePet.value}</Text>*/}
-                    {/*<Text style={styles.questionText}>Your favorite foods: {answers.favoriteFoods[0].value} and {answers.favoriteFoods[1].value}</Text>*/}
                     <Text>Raw JSON: {JSON.stringify(this.props.navigation.getParam('surveyAnswers', {}))}</Text>
                     <Button
                         onPress={() => navigate('Home')}
                         title="Back Home"
                     />
                 </View>
-
             </View>
         );
     }
