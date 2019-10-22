@@ -4,6 +4,7 @@ import { Text, View, TextInput, Button, ScrollView, TouchableOpacity, Alert} fro
 import styles from '../resources/Styles'
 import SaveData from '../resources/SaveData';
 import SendData from '../resources/SendData';
+import {Notifications} from "expo";
 
 export default class ResearcherScreen extends Component {
 
@@ -45,6 +46,7 @@ export default class ResearcherScreen extends Component {
                         text: 'OK',
                         onPress: () => {
                             SaveData.deleteAllFiles();
+                            Notifications.cancelAllScheduledNotificationsAsync();
                             alert("Deleted All Files");
                             this.props.navigation.navigate('NewUser');
                         }

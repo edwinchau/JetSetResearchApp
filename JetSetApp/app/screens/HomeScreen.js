@@ -6,88 +6,11 @@ import * as FileSystem from "expo-file-system";
 
 import styles from '../resources/Styles'
 
-import SaveData from '../resources/SaveData';
-import SendData from '../resources/SendData';
 import { flightData } from '../resources/FlightData';
 
 let userSave = {};
 
-import { Notifications } from "expo";
-
 export default class HomeScreen extends Component {
-    askPermissions = async () => {
-        alert("You need to enable notifications for this app in settings.");
-        return true;
-    };
-
-    scheduleNotification = async () => {
-        let breakfastNotification = Notifications.scheduleLocalNotificationAsync(
-            {
-                title: "Breakfast survey and PVT reminder (1hr)",
-                body: "Don't forget to fill in your breakfast survey and do the PVT test."
-            },
-            {
-                repeat: "day",
-                // 1 hr
-                time: new Date().getTime() + 3600
-            }
-        );
-        let lunchNotification = Notifications.scheduleLocalNotificationAsync(
-            {
-                title: "Lunch survey and PVT reminder (7hrs)",
-                body: "Don't forget to fill in your lunch survey and do the PVT test."
-            },
-            {
-                repeat: "day",
-                // 7 hrs
-                time: new Date().getTime() + 25200
-            }
-        );
-        let dinnerNotification = Notifications.scheduleLocalNotificationAsync(
-            {
-                title: "Dinner survey and PVT reminder (13hrs)",
-                body: "Don't forget to fill in your dinner survey and do the PVT test."
-            },
-            {
-                repeat: "day",
-                // 13 hours
-                time: new Date().getTime() + 46800
-            }
-        );
-    };
-
-    scheduleFlightNotification = async () => {
-        let firstMealNotification = Notifications.scheduleLocalNotificationAsync(
-            {
-                title: "ON FLIGHT: First meal survey reminder",
-                body: "Don't forget to record when you ate your first meal!"
-            },
-            {
-                // 1 hour since departure
-                time: new Date().getTime() + 3600
-            }
-        );
-        let secondMealNotification = Notifications.scheduleLocalNotificationAsync(
-            {
-                title: "ON FLIGHT: Second meal survey reminder",
-                body: "Don't forget to record when you ate your second meal!"
-            },
-            {
-                // 5 hours since departure
-                time: new Date().getTime() + 18000
-            }
-        );
-        let thirdMealNotification = Notifications.scheduleLocalNotificationAsync(
-            {
-                title: "ON FLIGHT: Second meal survey reminder",
-                body: "Don't forget to record when you ate your second meal!"
-            },
-            {
-                // 16 hours since departure
-                time: new Date().getTime() + 57600
-            }
-        );
-    };
 
     static navigationOptions = () => {
         return {
@@ -217,15 +140,8 @@ export default class HomeScreen extends Component {
                     <Text style={{fontWeight: "bold"}}>Current Time: </Text>
                     {this.state.time.format('h:mm:ss a')}
                 </Text>
-                {survey}
 
-                {/*<View style={styles.homeButtonContainer}>*/}
-                {/*    <TouchableOpacity*/}
-                {/*        onPress={() => SendData.sendDataEmail()}*/}
-                {/*    >*/}
-                {/*        <Text style={[styles.buttonTextColour, {textAlign: 'center', fontSize: 17}]}> SEND DATA </Text>*/}
-                {/*    </TouchableOpacity>*/}
-                {/*</View>*/}
+                {survey}
 
                 <View style={styles.homeButtonContainer}>
                     <TouchableOpacity
@@ -235,32 +151,6 @@ export default class HomeScreen extends Component {
                     </TouchableOpacity>
                 </View>
 
-                {/* <Text style={{fontSize: 20}}>Testing Features</Text>
-
-                <Button color="black"
-                    onPress={() => SaveData.displayAllFiles()}
-                    title="View Files"
-                />
-                <Button color="black"
-                    onPress={() => SaveData.deleteFile("NewUserQuestions.json")}
-                    title="Delete User Save"
-                />
-                <Button color="black"
-                    title="Notifications permission"
-                    onPress={() => this.askPermissions()}
-                />
-                <Button color="black"
-                    title="Start pre/post flight notifications"
-                    onPress={() => this.scheduleNotification()}
-                />
-                <Button color="black"
-                    title="Start during flight notifications"
-                    onPress={() => this.scheduleFlightNotification()}
-                />
-                <Button color="black"
-                    title="Cancel all notifications"
-                    onPress={() => Notifications.cancelAllScheduledNotificationsAsync()}
-                /> */}
             </View>
 
         );

@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6062d5e6-1bc0-4882-85df-84657eab5d5a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__test__/HomeScreenExample.snapshot.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/__test__/HomeScreenExample.snapshot.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__test__/SurveyCompletedScreenExample.snapshot.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/__test__/SurveyCompletedScreenExample.snapshot.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__test__/__snapshots__/HomeScreenExample.snapshot.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/__test__/__snapshots__/HomeScreenExample.snapshot.test.js.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/HomeScreenExample.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/HomeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/SurveyCompletedScreenExample.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/SurveyCompletedScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/NewUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/NewUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/ResearcherScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/ResearcherScreen.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +50,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
