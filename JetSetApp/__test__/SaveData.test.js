@@ -1,32 +1,52 @@
 import SaveData from "../app/resources/SaveData"
 import * as FileSystem from 'expo-file-system';
 
-var promiseHolder = 0;
+jest.mock("../node_modules/expo-file-system/src/FileSystem");
+const localTestingFile = "../__mock__/testing.txt"
 
-describe('\nsaveNewFile() is tested.\n', ()=>{
-  it("A file is going to be created.",async ()=>{
-      await FileSystem.writeAsStringAsync("cao","test.txt");
-      promiseHolder = await FileSystem.getInfoAsync("test.txt");
-      gan = await FileSystem.readAsStringAsync("test.txt");
-      console.log(promiseHolder)
-      console.log(gan)
+describe('\nThis is test suits for SaveData.\n', ()=>{
+  it("appendToFile() is tested.",async ()=>{
+      FileSystem.documentDirectory = "../__mock__/";
+      await SaveData.appendToFile("some text", localTestingFile);
+      expect(FileSystem.getInfoAsync).toHaveBeenCalled();
+      expect(FileSystem.readAsStringAsync).toHaveBeenCalled();
+      expect(FileSystem.writeAsStringAsync).toHaveBeenCalled();
   });
-});
 
-// describe('\nappendToFile() is tested.\n', ()=>{
-//   it("File is found, read, and appended.",async ()=>{
-//     const filename = "testing.txt";
-//     const result = await SaveData.appendToFile("append this to file", FileSystem.documentDirectory + filename);
-//     expect(result).toBe(false);
-//   });
-//
-//   it("File is found but there is no permission to read",async ()=>{
-//     const result = await SaveData.appendToFile("hello from Wednesday",'noReadPermission');
-//     expect(result).toBe(false);
-//   });
-//
-//   it("File does not exist", async ()=>{
-//     const result = await SaveData.appendToFile("unexisted file.",'unexisted');
-//     expect(result).toBe(false);
-//   });
-// });
+  it("saveNewFile() is tested.", async () =>{
+    await SaveData.saveNewFile("testing for saveNewFile()", localTestingFile);
+    expect(FileSystem.getInfoAsync).toHaveBeenCalled();
+    expect(FileSystem.writeAsStringAsync).toHaveBeenCalled();
+  });
+
+  it("delteFile() is tested.", async() =>{
+    await SaveData.deleteFile("testing.txt");
+    expect(FileSystem.getInfoAsync).toHaveBeenCalled();
+    expect(FileSystem.deleteAsync).toHaveBeenCalled();
+  });
+
+  it("viewFile() is tested.", async ()=>{
+    await SaveData.viewFile("testing.txt");
+    expect(FileSystem.readAsStringAsync).toHaveBeenCalled();
+  });
+
+  it("displayAllFiles() is tested.", ()=>{
+    SaveData.displayAllFiles();
+    expect(FileSystem.readDirectoryAsync).toHaveBeenCalled();
+  });
+
+  it("saveSurveyResults() is tested.", async ()=>{
+    SaveData.saveSurveyResults(localTestingFile, "some answers", "some questions");
+    expect(FileSystem.readAsStringAsync).toHaveBeenCalled();
+    expect(FileSystem.getInfoAsync).toHaveBeenCalled();
+    expect(FileSystem.writeAsStringAsync).toHaveBeenCalled();
+  });
+
+  it("deleteAllFiles() is tested.", ()=>{
+    SaveData.deleteAllFiles();
+    expect(FileSystem.readDirectoryAsync).toHaveBeenCalled();
+    expect(FileSystem.getInfoAsync).toHaveBeenCalled();
+    expect(FileSystem.deleteAsync).toHaveBeenCalled();
+  });
+
+});
