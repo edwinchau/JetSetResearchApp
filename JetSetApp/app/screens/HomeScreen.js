@@ -127,7 +127,6 @@ export default class HomeScreen extends Component {
             </Fragment>)
         }
 
-        // To Get the testing feature, uncomment ScrollView and the block of code
         return (
 
             <View style={styles.background}>
