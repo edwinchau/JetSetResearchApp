@@ -17,15 +17,15 @@ export const survey = [
         options: [
             {
                 optionText: 'JFK-SYD',
-                value: 'JFK-SYD dep 21:00 (12:00 Sydney time) from New York; arrive 17:30 (7:30 New York time)'
+                value: 'JFK'
             },
             {
                 optionText: 'LHR-SYD',
-                value: 'LHR-SYD dep 10:00 (21:00 Sydney time) from London; arrive 6:00 (17:00 London time)'
+                value: 'LHR'
             },
             {
                 optionText: 'TEST-SYD',
-                value: 'All Day Test Flight'
+                value: 'TEST'
             }
         ]
     },
