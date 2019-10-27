@@ -94,9 +94,8 @@ export default class NewUser extends Component {
                 <View style={styles.elementPadding}>
                     <Image style={styles.usydlogo} source={require('../../assets/usydlogo.png')}/>
                 </View>
-
                 <View style={styles.elementPadding}>
-                    <Text style={{fontWeight: "bold", fontSize: 20}}>JetSet Survey App</Text>
+                    <Text style={styles.mainText}>JetSet Survey App</Text>
                 </View>
 
                 <View style={styles.elementPadding}>
@@ -107,7 +106,7 @@ export default class NewUser extends Component {
                             navigation.navigate('Survey', { survey: 'NewUserQuestions' });
                         }}
                     >
-                        <Text style={styles.buttonTextColour}> New User </Text>
+                        <Text style={styles.buttonText}> New User </Text>
                     </TouchableOpacity>
                 </View>
             </View>
