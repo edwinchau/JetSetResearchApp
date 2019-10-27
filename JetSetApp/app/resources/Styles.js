@@ -1,13 +1,17 @@
 import { StyleSheet } from 'react-native';
 
-const defaultColor = '#DF4425'
+let defaultColor = '#FFFFFF';
+let defaultTextSize = 23;
 
-let styles = StyleSheet.create({
-
+const styles = StyleSheet.create({
+    mainText: {
+        fontWeight: "bold", 
+        fontSize: 30
+    },
     usydlogo: {
         // USYD Logo
-        width: 150,
-        height: 150
+        width: 250,
+        height: 250
     },
     headerStyle: {
         backgroundColor: defaultColor,
@@ -21,13 +25,6 @@ let styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: defaultColor,
     },
-    // backgroundAdmin: {
-    //     flex: 1,
-    //     alignItems: 'center',
-    //     backgroundColor: defaultColor,
-    //     paddingVertical: 10 // Pads from the top of the container
-    //     // justifyContent: 'space-between'
-    // },
     elementPadding: {
         // Have space between each element in a container
         // To be used with "View"
@@ -36,23 +33,34 @@ let styles = StyleSheet.create({
     button: {
         // Use Touchable Opactiy and style it using this 
         alignItems: 'center',
-        backgroundColor: 'black',
+        backgroundColor: 'darkorange',
         padding: 10,
+        borderWidth: 2
     },
-    buttonTextColour: {
+    buttonText: {
         color: 'white',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontSize: 20
     },
 
-    surveyButtons: {
+    surveyButtonContainer: {
         flexGrow: 1,
         maxWidth: 100,
-        marginTop: 10,
-        marginBottom: 10
+        marginTop: 20,
+        marginBottom: 20,
+        backgroundColor: 'darkorange',
+        borderWidth: 2
+    },
+    surveyButton: {
+        color: "yellow"
+    },
+    surveyQuestionContainer: {
+        marginLeft: 10, 
+        marginRight: 10
     },
     surveyQuestionText: {
         marginBottom: 20,
-        fontSize: 20,
+        fontSize: defaultTextSize,
         fontWeight: 'bold',
         textAlign: 'center'
     },
@@ -81,31 +89,51 @@ let styles = StyleSheet.create({
     },
     surveyInfoText: {
         marginBottom: 20,
-        fontSize: 20,
+        fontSize: defaultTextSize,
+        fontWeight: "bold",
         textAlign: "center"
     },
     surveySelectionGroupContainer: {
         flexDirection: 'column',
-        backgroundColor: defaultColor,
         alignContent: 'flex-end',
+        marginLeft: 40,
+        marginRight: 40,
+    },
+    surveySelectionGroupContainerOption: {
+        marginTop: 5, 
+        marginBottom: 5, 
+        justifyContent: 'flex-start',
+        borderWidth: 2,
+        backgroundColor: 'orange'
     },
     surveyNavButtonContainer: {
         flexDirection: 'row',
-        justifyContent: 'space-around',
+        justifyContent: 'space-around'
     },
 
+    homeInformation: {
+        fontSize: 20
+    },
     homeButtonContainer: {
         minWidth: '70%',
         maxWidth: '90%',
         alignItems: 'stretch',
         justifyContent: 'center',
-        backgroundColor: 'black',
         elevation: 20,
         borderRadius: 15,
         paddingTop: 5,
         paddingBottom: 5,
         marginTop: 10,
         marginBottom: 10,
+        backgroundColor: 'darkorange',
+        borderColor: 'black',
+        borderWidth: 2
+    },
+    homeButtonText: {
+        textAlign: 'center', 
+        fontSize: 20,
+        color: 'white',
+        fontWeight: 'bold'
     },
 
     passwordTextbox: {
@@ -117,21 +145,8 @@ let styles = StyleSheet.create({
         marginRight: 10,
         minWidth: '70%',
         maxWidth: '90%',
+        fontSize: 15
     },
-
-
-    // ------------------ Below is unused ----------------------
-
-    // container: {
-    //     minWidth: '30%',
-    //     maxWidth: '90%',
-    //     borderWidth:1,
-    //     borderColor:'black',
-    //     backgroundColor: 'black',
-    //     alignItems:'center',
-    //     justifyContent:'center',
-    //     borderRadius:50,
-    // }
 });
 
 module.exports = styles;

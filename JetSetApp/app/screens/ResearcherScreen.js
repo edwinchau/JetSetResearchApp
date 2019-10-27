@@ -80,7 +80,7 @@ export default class ResearcherScreen extends Component {
                 <ScrollView contentContainerStyle={{flexGrow: 1}} keyboardShouldPersistTaps='handled'>
                     <View style = {styles.elementPadding}>
                         <TextInput
-                            placeholder=" Please Type in Admin Password First "
+                            placeholder="Please Type in Admin Password"
                             style = {styles.passwordTextbox}
                             secureTextEntry={true}
                             onChangeText={this.handlePassword}
@@ -92,7 +92,7 @@ export default class ResearcherScreen extends Component {
                             style={styles.button}
                             onPress={() => this.deleteAllFiles()}
                         >
-                            <Text style={styles.buttonTextColour}> Delete All Files </Text>
+                            <Text style={styles.buttonText}> Delete All Files </Text>
                         </TouchableOpacity>
                     </View>
 
@@ -100,7 +100,7 @@ export default class ResearcherScreen extends Component {
                         <TouchableOpacity
                         style={styles.button}
                         onPress={() => this.sendEmail()}>
-                            <Text style={styles.buttonTextColour}> Send Email </Text>
+                            <Text style={styles.buttonText}> Send Email </Text>
                         </TouchableOpacity>
                     </View>
                 </ScrollView>

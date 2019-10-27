@@ -78,50 +78,50 @@ export default class HomeScreen extends Component {
         // Questions displayed in flight
         if (flightStart !== -1 && this.state.time.isBetween(flightStart, flightEnd)) {
             survey = (<Fragment>
-                <View style={styles.homeButtonContainer}>
+                <View style={[styles.homeButtonContainer]}>
                     <TouchableOpacity
                         onPress={() => navigation.navigate('Survey', { survey: 'FlightBreakfastQuestions' })}
                     >
-                        <Text style={[styles.buttonTextColour, {textAlign: 'center', fontSize: 17}]}> BREAKFAST DURING </Text>
+                        <Text style={styles.homeButtonText}> BREAKFAST DURING </Text>
                     </TouchableOpacity>
                 </View>
-                <View style={styles.homeButtonContainer}>
+                <View style={[styles.homeButtonContainer]}>
                     <TouchableOpacity
                         onPress={() => navigation.navigate('Survey', { survey: 'FlightLunchQuestions' })}
                     >
-                        <Text style={[styles.buttonTextColour, {textAlign: 'center', fontSize: 17}]}> LUNCH DURING </Text>
+                        <Text style={styles.homeButtonText}> LUNCH DURING </Text>
                     </TouchableOpacity>
                 </View>
-                <View style={styles.homeButtonContainer}>
+                <View style={[styles.homeButtonContainer]}>
                     <TouchableOpacity
                         onPress={() => navigation.navigate('Survey', { survey: 'FlightDinnerQuestions' })}
                     >
-                        <Text style={[styles.buttonTextColour, {textAlign: 'center', fontSize: 17}]}> DINNER DURING </Text>
+                        <Text style={styles.homeButtonText}> DINNER DURING </Text>
                     </TouchableOpacity>
                 </View>
             </Fragment>)
         } else {
             // Questions displayed outside of the flight timings
             survey = (<Fragment>
-                <View style={styles.homeButtonContainer}>
+                <View style={[styles.homeButtonContainer]}>
                     <TouchableOpacity
                         onPress={() => navigation.navigate('Survey', { survey: 'BreakfastQuestions' })}
                     >
-                        <Text style={[styles.buttonTextColour, {textAlign: 'center', fontSize: 17}]}> BREAKFAST PRE/POST </Text>
+                        <Text style={styles.homeButtonText}> BREAKFAST PRE/POST </Text>
                     </TouchableOpacity>
                 </View>
-                <View style={styles.homeButtonContainer}>
+                <View style={[styles.homeButtonContainer]}>
                     <TouchableOpacity
                         onPress={() => navigation.navigate('Survey', { survey: 'LunchQuestions' })}
                     >
-                        <Text style={[styles.buttonTextColour, {textAlign: 'center', fontSize: 17}]}> LUNCH PRE/POST </Text>
+                        <Text style={styles.homeButtonText}> LUNCH PRE/POST </Text>
                     </TouchableOpacity>
                 </View>
-                <View style={styles.homeButtonContainer}>
+                <View style={[styles.homeButtonContainer]}>
                     <TouchableOpacity
                         onPress={() => navigation.navigate('Survey', { survey: 'DinnerQuestions' })}
                     >
-                        <Text style={[styles.buttonTextColour, {textAlign: 'center', fontSize: 17}]}> DINNER PRE/POST </Text>
+                        <Text style={styles.homeButtonText}> DINNER PRE/POST </Text>
                     </TouchableOpacity>
                 </View>
             </Fragment>)
@@ -132,12 +132,12 @@ export default class HomeScreen extends Component {
             <View style={styles.background}>
                 <Image style={styles.usydlogo} source={require('../../assets/usydlogo.png')}/>
                 <Text>
-                    <Text style={{fontWeight: "bold"}}>Current Date: </Text>
-                    {this.state.time.format('MMMM Do YYYY')}
+                    <Text style={[styles.homeInformation, {fontWeight: 'bold'}]}>Current Date: </Text>
+                    <Text style={styles.homeInformation}>{this.state.time.format('MMMM Do YYYY')}</Text>                 
                 </Text>
                 <Text>
-                    <Text style={{fontWeight: "bold"}}>Current Time: </Text>
-                    {this.state.time.format('h:mm:ss a')}
+                    <Text style={[styles.homeInformation, {fontWeight: 'bold'}]}>Current Time: </Text>
+                    <Text style={styles.homeInformation}>{this.state.time.format('h:mm:ss a')}</Text>
                 </Text>
 
                 {survey}
@@ -146,7 +146,7 @@ export default class HomeScreen extends Component {
                     <TouchableOpacity
                         onPress={() => navigation.navigate('ResearcherPage')}
                     >
-                        <Text style={[styles.buttonTextColour, {textAlign: 'center', fontSize: 17}]}> RESEARCHER MENU </Text>
+                        <Text style={styles.homeButtonText}> RESEARCHER MENU </Text>
                     </TouchableOpacity>
                 </View>
 
