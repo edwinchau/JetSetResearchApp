@@ -82,21 +82,21 @@ export default class HomeScreen extends Component {
                     <TouchableOpacity
                         onPress={() => navigation.navigate('Survey', { survey: 'FlightBreakfastQuestions' })}
                     >
-                        <Text style={styles.homeButtonText}> BREAKFAST DURING </Text>
+                        <Text style={styles.buttonText}> BREAKFAST DURING </Text>
                     </TouchableOpacity>
                 </View>
                 <View style={[styles.homeButtonContainer]}>
                     <TouchableOpacity
                         onPress={() => navigation.navigate('Survey', { survey: 'FlightLunchQuestions' })}
                     >
-                        <Text style={styles.homeButtonText}> LUNCH DURING </Text>
+                        <Text style={styles.buttonText}> LUNCH DURING </Text>
                     </TouchableOpacity>
                 </View>
                 <View style={[styles.homeButtonContainer]}>
                     <TouchableOpacity
                         onPress={() => navigation.navigate('Survey', { survey: 'FlightDinnerQuestions' })}
                     >
-                        <Text style={styles.homeButtonText}> DINNER DURING </Text>
+                        <Text style={styles.buttonText}> DINNER DURING </Text>
                     </TouchableOpacity>
                 </View>
             </Fragment>)
@@ -107,21 +107,21 @@ export default class HomeScreen extends Component {
                     <TouchableOpacity
                         onPress={() => navigation.navigate('Survey', { survey: 'BreakfastQuestions' })}
                     >
-                        <Text style={styles.homeButtonText}> BREAKFAST PRE/POST </Text>
+                        <Text style={styles.buttonText}> BREAKFAST PRE/POST </Text>
                     </TouchableOpacity>
                 </View>
                 <View style={[styles.homeButtonContainer]}>
                     <TouchableOpacity
                         onPress={() => navigation.navigate('Survey', { survey: 'LunchQuestions' })}
                     >
-                        <Text style={styles.homeButtonText}> LUNCH PRE/POST </Text>
+                        <Text style={styles.buttonText}> LUNCH PRE/POST </Text>
                     </TouchableOpacity>
                 </View>
                 <View style={[styles.homeButtonContainer]}>
                     <TouchableOpacity
                         onPress={() => navigation.navigate('Survey', { survey: 'DinnerQuestions' })}
                     >
-                        <Text style={styles.homeButtonText}> DINNER PRE/POST </Text>
+                        <Text style={styles.buttonText}> DINNER PRE/POST </Text>
                     </TouchableOpacity>
                 </View>
             </Fragment>)
@@ -149,7 +149,7 @@ export default class HomeScreen extends Component {
                     <TouchableOpacity
                         onPress={() => navigation.navigate('ResearcherPage')}
                     >
-                        <Text style={styles.homeButtonText}> RESEARCHER MENU </Text>
+                        <Text style={styles.buttonText}> RESEARCHER MENU </Text>
                     </TouchableOpacity>
                 </View>
 

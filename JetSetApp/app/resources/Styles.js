@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 let defaultColor = '#FFFFFF';
-let defaultTextSize = 23;
+let defaultTextSize = 30;
 
 const styles = StyleSheet.create({
     mainText: {
@@ -38,9 +38,10 @@ const styles = StyleSheet.create({
         borderWidth: 2
     },
     buttonText: {
-        color: 'white',
+        color: 'black',
         fontWeight: 'bold',
-        fontSize: 20
+        fontSize: 20,
+        textAlign: 'center'
     },
 
     surveyButtonContainer: {
@@ -110,6 +111,16 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-around'
     },
+    surveyOptionButtonContainer: {
+        flex: 1, 
+        color: 'black'
+    },
+    surveyOptionText: {
+        color: 'black',
+        fontWeight: 'bold',
+        fontSize: 30,
+        textAlign: 'center'
+    },
 
     homeInformation: {
         fontSize: 20
@@ -143,12 +154,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'maroon',
         borderColor: 'black',
         borderWidth: 2
-    },
-    homeButtonText: {
-        textAlign: 'center',
-        fontSize: 20,
-        color: 'white',
-        fontWeight: 'bold'
     },
 
     passwordTextbox: {

@@ -123,18 +123,22 @@ export default class SurveyScreen extends Component {
     }
 
     renderButton(data, index, isSelected, onPress) {
-        let textColor = isSelected ? "black" : "white"
-        let backgroundColor = isSelected ? "rgb(219, 162, 4)" : "orange"
+        let backgroundColor = isSelected ? "yellow" : "orange"
         return (
             <View
             key={`selection_button_view_${index}`}
             style={[styles.surveySelectionGroupContainerOption, {backgroundColor: backgroundColor}]}>
-                <Button
+                {/* <Button
                     title={data.optionText}
                     onPress={onPress}
                     color={textColor}
                     key={`button_${index}`}
-                />
+                /> */}
+                <TouchableOpacity
+                    style={styles.surveyOptionButtonContainer}
+                    onPress={onPress}>
+                    <Text style={styles.surveyOptionText}>{data.optionText}</Text>
+                </TouchableOpacity>
             </View>
         );
     }
