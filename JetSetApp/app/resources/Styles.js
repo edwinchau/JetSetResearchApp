@@ -5,7 +5,7 @@ let defaultTextSize = 23;
 
 const styles = StyleSheet.create({
     mainText: {
-        fontWeight: "bold", 
+        fontWeight: "bold",
         fontSize: 30
     },
     usydlogo: {
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         elevation: 5,
     },
     background: {
-        // General Layout of the app 
+        // General Layout of the app
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         paddingVertical: 5
     },
     button: {
-        // Use Touchable Opactiy and style it using this 
+        // Use Touchable Opactiy and style it using this
         alignItems: 'center',
         backgroundColor: 'darkorange',
         padding: 10,
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         color: "yellow"
     },
     surveyQuestionContainer: {
-        marginLeft: 10, 
+        marginLeft: 10,
         marginRight: 10
     },
     surveyQuestionText: {
@@ -100,8 +100,8 @@ const styles = StyleSheet.create({
         marginRight: 40,
     },
     surveySelectionGroupContainerOption: {
-        marginTop: 5, 
-        marginBottom: 5, 
+        marginTop: 5,
+        marginBottom: 5,
         justifyContent: 'flex-start',
         borderWidth: 2,
         backgroundColor: 'orange'
@@ -129,8 +129,23 @@ const styles = StyleSheet.create({
         borderColor: 'black',
         borderWidth: 2
     },
+    researcherButtonContainer: {
+        minWidth: '70%',
+        maxWidth: '90%',
+        alignItems: 'stretch',
+        justifyContent: 'center',
+        elevation: 20,
+        borderRadius: 15,
+        paddingTop: 5,
+        paddingBottom: 5,
+        marginTop: 10,
+        marginBottom: 10,
+        backgroundColor: 'maroon',
+        borderColor: 'black',
+        borderWidth: 2
+    },
     homeButtonText: {
-        textAlign: 'center', 
+        textAlign: 'center',
         fontSize: 20,
         color: 'white',
         fontWeight: 'bold'

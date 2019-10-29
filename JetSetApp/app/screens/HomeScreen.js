@@ -145,7 +145,7 @@ export default class HomeScreen extends Component {
 
                 {survey}
 
-                <View style={styles.homeButtonContainer}>
+                <View style={styles.researcherButtonContainer}>
                     <TouchableOpacity
                         onPress={() => navigation.navigate('ResearcherPage')}
                     >
