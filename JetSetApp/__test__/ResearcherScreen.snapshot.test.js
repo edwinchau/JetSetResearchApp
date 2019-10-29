@@ -1,5 +1,5 @@
 import React from "react";
-import ResearcherScreen from "../app/screens/ResearcherScreen/ResearcherScreen"
+import ResearcherScreen from "../app/screens/ResearcherScreen"
 import renderer from "react-test-renderer"
 
 describe("<ResearcherScreen/>", ()=>{

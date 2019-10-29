@@ -71,7 +71,7 @@ export default class Authentication extends Component {
     }
 
     render() {
-        const { navigate } = this.props.navigation;
+        const { navigation } = this.props;
 
         return (
             <View style={styles.background}>
