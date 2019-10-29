@@ -133,11 +133,14 @@ export default class HomeScreen extends Component {
                 <Image style={styles.usydlogo} source={require('../../assets/usydlogo.png')}/>
                 <Text>
                     <Text style={[styles.homeInformation, {fontWeight: 'bold'}]}>Current Date: </Text>
-                    <Text style={styles.homeInformation}>{this.state.time.format('MMMM Do YYYY')}</Text>                 
+                    <Text style={styles.homeInformation}>{this.state.time.format('MMMM Do YYYY')}</Text>
                 </Text>
                 <Text>
                     <Text style={[styles.homeInformation, {fontWeight: 'bold'}]}>Current Time: </Text>
                     <Text style={styles.homeInformation}>{this.state.time.format('h:mm:ss a')}</Text>
+                </Text>
+                <Text>
+                    <Text style={styles.homeInformation}>Insert User Instructions</Text>
                 </Text>
 
                 {survey}

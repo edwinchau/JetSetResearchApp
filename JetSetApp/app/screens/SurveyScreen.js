@@ -173,7 +173,6 @@ export default class SurveyScreen extends Component {
             onChangeText={text => { onChange(text); }}
             value={String(value)}
             keyboardType={'numeric'}
-            maxLength={3}
         />);
     }
 
