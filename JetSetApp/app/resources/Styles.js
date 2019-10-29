@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: 'darkorange',
         padding: 10,
-        borderWidth: 2
+        borderWidth: 2,
+        borderRadius: 10
     },
     buttonText: {
         color: 'black',
@@ -50,7 +51,8 @@ const styles = StyleSheet.create({
         marginTop: 20,
         marginBottom: 20,
         backgroundColor: 'darkorange',
-        borderWidth: 2
+        borderWidth: 2,
+        borderRadius: 10
     },
     surveyButton: {
         color: "yellow"
