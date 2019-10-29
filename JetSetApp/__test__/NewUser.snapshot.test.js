@@ -1,5 +1,5 @@
 import React from "react";
-import NewUser from "../app/screens/NewUser/NewUser"
+import NewUser from "../app/screens/NewUser"
 import renderer from "react-test-renderer"
 
 describe("<NewUser/>", ()=>{

@@ -5,8 +5,6 @@ import * as FileSystem from 'expo-file-system';
 jest.mock("../node_modules/expo-file-system/src/FileSystem");
 jest.mock("../node_modules/expo-mail-composer/src/MailComposer");
 
-const p = "../__fakeFiles__";
-
 describe("This is test suits for SendData", ()=> {
   it("sendDataEmail() is tested.", async ()=>{
     await SendData.sendDataEmail();

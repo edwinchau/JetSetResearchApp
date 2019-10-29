@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1572238659468" clover="3.2.0">
+  <project timestamp="1572238659469" name="All files">
+    <metrics statements="182" coveredstatements="93" conditionals="26" coveredconditionals="6" methods="69" coveredmethods="26" elements="277" coveredelements="125" complexity="0" loc="182" ncloc="182" packages="3" files="8" classes="8"/>
+    <package name="app.resources">
+      <metrics statements="130" coveredstatements="76" conditionals="18" coveredconditionals="4" methods="50" coveredmethods="22"/>
+      <file name="FlightData.js" path="D:\jetset\JetSetApp\app\resources\FlightData.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="SaveData.js" path="D:\jetset\JetSetApp\app\resources\SaveData.js">
+        <metrics statements="91" coveredstatements="53" conditionals="6" coveredconditionals="2" methods="40" coveredmethods="16"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="57" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="68" count="1" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="85" count="1" type="stmt"/>
+        <line num="96" count="2" type="stmt"/>
+        <line num="99" count="2" type="stmt"/>
+        <line num="102" count="2" type="stmt"/>
+        <line num="103" count="2" type="stmt"/>
+        <line num="107" count="2" type="stmt"/>
+        <line num="108" count="2" type="stmt"/>
+        <line num="112" count="2" type="stmt"/>
+        <line num="113" count="2" type="stmt"/>
+        <line num="118" count="0" type="stmt"/>
+        <line num="122" count="0" type="stmt"/>
+        <line num="125" count="2" type="stmt"/>
+        <line num="134" count="2" type="stmt"/>
+        <line num="137" count="1" type="stmt"/>
+        <line num="140" count="1" type="stmt"/>
+        <line num="142" count="1" type="stmt"/>
+        <line num="144" count="1" type="stmt"/>
+        <line num="145" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="148" count="1" type="stmt"/>
+        <line num="149" count="1" type="stmt"/>
+        <line num="153" count="1" type="stmt"/>
+        <line num="154" count="1" type="stmt"/>
+        <line num="159" count="0" type="stmt"/>
+        <line num="166" count="0" type="stmt"/>
+        <line num="169" count="1" type="stmt"/>
+        <line num="178" count="2" type="stmt"/>
+        <line num="181" count="1" type="stmt"/>
+        <line num="184" count="1" type="stmt"/>
+        <line num="187" count="1" type="stmt"/>
+        <line num="188" count="1" type="stmt"/>
+        <line num="193" count="0" type="stmt"/>
+        <line num="194" count="0" type="stmt"/>
+        <line num="198" count="1" type="stmt"/>
+        <line num="207" count="2" type="stmt"/>
+        <line num="210" count="1" type="stmt"/>
+        <line num="211" count="1" type="stmt"/>
+        <line num="214" count="1" type="stmt"/>
+        <line num="215" count="1" type="stmt"/>
+        <line num="219" count="0" type="stmt"/>
+        <line num="222" count="1" type="stmt"/>
+        <line num="225" count="2" type="stmt"/>
+        <line num="227" count="1" type="stmt"/>
+        <line num="229" count="1" type="stmt"/>
+        <line num="230" count="1" type="stmt"/>
+        <line num="233" count="0" type="stmt"/>
+        <line num="234" count="0" type="stmt"/>
+        <line num="239" count="2" type="stmt"/>
+        <line num="241" count="1" type="stmt"/>
+        <line num="242" count="1" type="stmt"/>
+        <line num="245" count="0" type="stmt"/>
+        <line num="246" count="0" type="stmt"/>
+        <line num="247" count="0" type="stmt"/>
+        <line num="248" count="0" type="stmt"/>
+        <line num="250" count="0" type="stmt"/>
+        <line num="252" count="0" type="stmt"/>
+        <line num="253" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="256" count="0" type="stmt"/>
+        <line num="258" count="0" type="stmt"/>
+        <line num="262" count="0" type="stmt"/>
+        <line num="263" count="0" type="stmt"/>
+        <line num="268" count="0" type="stmt"/>
+        <line num="275" count="0" type="stmt"/>
+        <line num="282" count="0" type="stmt"/>
+        <line num="291" count="0" type="stmt"/>
+        <line num="309" count="0" type="stmt"/>
+        <line num="315" count="0" type="stmt"/>
+        <line num="321" count="0" type="stmt"/>
+        <line num="327" count="0" type="stmt"/>
+        <line num="333" count="0" type="stmt"/>
+        <line num="339" count="0" type="stmt"/>
+        <line num="352" count="2" type="stmt"/>
+      </file>
+      <file name="SendData.js" path="D:\jetset\JetSetApp\app\resources\SendData.js">
+        <metrics statements="10" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="2"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+      </file>
+      <file name="Styles.js" path="D:\jetset\JetSetApp\app\resources\Styles.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="137" count="2" type="stmt"/>
+      </file>
+      <file name="SurveyAnswersParse.js" path="D:\jetset\JetSetApp\app\resources\SurveyAnswersParse.js">
+        <metrics statements="25" coveredstatements="15" conditionals="12" coveredconditionals="2" methods="5" coveredmethods="4"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="66" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="73" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.screens">
+      <metrics statements="51" coveredstatements="16" conditionals="8" coveredconditionals="2" methods="19" coveredmethods="4"/>
+      <file name="HomeScreen.js" path="D:\jetset\JetSetApp\app\screens\HomeScreen.js">
+        <metrics statements="34" coveredstatements="14" conditionals="6" coveredconditionals="2" methods="16" coveredmethods="3"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="79" count="1" type="cond" truecount="2" falsecount="2"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="105" count="1" type="stmt"/>
+        <line num="108" count="0" type="stmt"/>
+        <line num="115" count="0" type="stmt"/>
+        <line num="122" count="0" type="stmt"/>
+        <line num="131" count="1" type="stmt"/>
+        <line num="148" count="0" type="stmt"/>
+      </file>
+      <file name="SurveyCompletedScreen.js" path="D:\jetset\JetSetApp\app\screens\SurveyCompletedScreen.js">
+        <metrics statements="17" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="39" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="assets">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="usydlogo.png" path="D:\jetset\JetSetApp\assets\usydlogo.png">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

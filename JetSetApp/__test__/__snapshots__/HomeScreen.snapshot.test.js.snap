@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomeScreen/> snapshot for home screen 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#DF4425",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Image
+    source={1}
+    style={
+      Object {
+        "height": 150,
+        "width": 150,
+      }
+    }
+  />
+  <Text>
+    <Text
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Current Date: 
+    </Text>
+    October 28th 2019
+  </Text>
+  <Text>
+    <Text
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Current Time: 
+    </Text>
+    4:41:28 pm
+  </Text>
+  <View
+    style={
+      Object {
+        "alignItems": "stretch",
+        "backgroundColor": "black",
+        "borderRadius": 15,
+        "elevation": 20,
+        "justifyContent": "center",
+        "marginBottom": 10,
+        "marginTop": 10,
+        "maxWidth": "90%",
+        "minWidth": "70%",
+        "paddingBottom": 5,
+        "paddingTop": 5,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontWeight": "bold",
+            },
+            Object {
+              "fontSize": 17,
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+         BREAKFAST PRE/POST 
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "stretch",
+        "backgroundColor": "black",
+        "borderRadius": 15,
+        "elevation": 20,
+        "justifyContent": "center",
+        "marginBottom": 10,
+        "marginTop": 10,
+        "maxWidth": "90%",
+        "minWidth": "70%",
+        "paddingBottom": 5,
+        "paddingTop": 5,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontWeight": "bold",
+            },
+            Object {
+              "fontSize": 17,
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+         LUNCH PRE/POST 
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "stretch",
+        "backgroundColor": "black",
+        "borderRadius": 15,
+        "elevation": 20,
+        "justifyContent": "center",
+        "marginBottom": 10,
+        "marginTop": 10,
+        "maxWidth": "90%",
+        "minWidth": "70%",
+        "paddingBottom": 5,
+        "paddingTop": 5,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontWeight": "bold",
+            },
+            Object {
+              "fontSize": 17,
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+         DINNER PRE/POST 
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "stretch",
+        "backgroundColor": "black",
+        "borderRadius": 15,
+        "elevation": 20,
+        "justifyContent": "center",
+        "marginBottom": 10,
+        "marginTop": 10,
+        "maxWidth": "90%",
+        "minWidth": "70%",
+        "paddingBottom": 5,
+        "paddingTop": 5,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontWeight": "bold",
+            },
+            Object {
+              "fontSize": 17,
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+         RESEARCHER MENU 
+      </Text>
+    </View>
+  </View>
+</View>
+`;
