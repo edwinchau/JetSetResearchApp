@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around'
     },
     surveyOptionButtonContainer: {
-        flex: 1, 
+        flex: 1,
         color: 'black'
     },
     surveyOptionText: {
@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
         paddingBottom: 5,
         marginTop: 10,
         marginBottom: 10,
-        backgroundColor: 'maroon',
+        backgroundColor: 'red',
         borderColor: 'black',
         borderWidth: 2
     },
