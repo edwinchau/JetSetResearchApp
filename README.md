@@ -10,5 +10,5 @@ The JetSet application provides a uniform interface for participants and researc
 * [Edwin Chau](https://github.com/edwinchau)
 * [Brendon Lam](https://github.com/blam135)
 * [Sophia Polito](https://github.com/sophia-pol)
-* [Yannis Weng](#)
+* [Yanis Weng](#)
 * [Rowena Yu](https://github.com/rowenayu)
