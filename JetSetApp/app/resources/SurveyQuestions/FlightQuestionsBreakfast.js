@@ -4,14 +4,14 @@ export const survey = [
        questionText: 'What time did you go to sleep?',
        questionId: 'mealTime',
        optional: false,
-       placeholderText: 'Enter meal time',
+       placeholderText: 'Enter time your went to sleep',
    },
    {
         questionType: 'TimeInput',
         questionText: 'What time did you wake up?',
         questionId: 'mealTime',
         optional: false,
-        placeholderText: 'Enter meal time',
+        placeholderText: 'Enter time you woke up',
     },
    {
         questionType: 'TimeInput',
@@ -69,6 +69,13 @@ export const survey = [
                 value: 'NoNap'
             }
           ]
+    },
+    {
+        questionType: 'TimeInput',
+        questionText: 'If yes, what time did you start the nap?',
+        questionId: 'napTime',
+        optional: true,
+        placeholderText: 'Enter nap time',
     },
     {
         questionType: 'SelectionGroup',

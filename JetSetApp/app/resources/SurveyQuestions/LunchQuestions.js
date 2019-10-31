@@ -51,23 +51,23 @@ export const survey = [
                 value: '0'
             },
             {
-                optionText: '1 cup',
+                optionText: '1 beverage',
                 value: '1'
             },
             {
-                optionText: '2 cups',
+                optionText: '2 beverages',
                 value: '2'
             },
             {
-                optionText: '3 cups',
+                optionText: '3 beverages',
                 value: '3'
             },
             {
-                optionText: '4 cups',
+                optionText: '4 beverages',
                 value: '4'
             },
             {
-                optionText: '5 or more cups',
+                optionText: '5 or more beverages',
                 value: '5'
             }
         ]
